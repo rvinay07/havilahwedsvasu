@@ -55,10 +55,13 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
     assert.match(content, /4\s*Feb(?:ruary)?\s*2026/i, 'Engagement date must be 4 February 2026');
   });
 
-  await t.test('Contact numbers contain all three family numbers', () => {
-    assert.match(content, /8978148996/, 'Must contain general phone number');
-    assert.match(content, /9652296062/, 'Must contain Vasu groom phone number');
-    assert.match(content, /6281047922/, 'Must contain Hoshi family phone number');
+  await t.test('Contact numbers contain all three family numbers with correct designations', () => {
+    assert.match(content, /9652296062/, 'Must contain Vasu (Groom) phone number');
+    assert.match(content, /8978148996/, 'Must contain Hoshi (Groom Brother) phone number');
+    assert.match(content, /6281047922/, 'Must contain N. Jephaniah (Groom Father) phone number');
+    assert.match(content, /Vasu\s*\(Groom\)/i, 'Must label Vasu as Groom');
+    assert.match(content, /Hoshi\s*\(Groom'?s\s*Brother\)/i, 'Must label Hoshi as Groom Brother');
+    assert.match(content, /Jephaniah\s*\(Groom'?s\s*Father\)/i, 'Must label Jephaniah as Groom Father');
   });
 
   await t.test('Minister of the ceremony is accurately defined', () => {

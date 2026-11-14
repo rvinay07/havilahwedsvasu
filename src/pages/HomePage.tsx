@@ -11,8 +11,7 @@ import {
   Clock,
   CheckCircle2,
   Navigation,
-  Maximize2,
-  Phone
+  Maximize2
 } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation as SwiperNav, Pagination as SwiperPagination, Autoplay as SwiperAutoplay } from 'swiper/modules';
@@ -729,38 +728,6 @@ export const HomePage: React.FC = () => {
                 Your browser does not support the video tag.
               </video>
             </motion.div>
-          </div>
-        </div>
-
-        {/* Family Contact Information Cards */}
-        <div className="py-16 px-4 max-w-4xl mx-auto">
-          <div className="text-center mb-10">
-            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-              Connect With Families
-            </p>
-            <h3 className="font-serif text-2xl sm:text-3xl text-plum dark:text-darktext-primary font-medium">
-              Family Contact Details
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            {weddingConfig.contactNumbers.map((c) => (
-              <a
-                key={c.tel}
-                href={`tel:${c.tel}`}
-                className="p-5 rounded-2xl bg-white dark:bg-midnight-card border border-rose/25 dark:border-midnight-border shadow-wedding hover:border-rose dark:hover:border-champagne transition-all text-center group"
-              >
-                <div className="w-10 h-10 rounded-full bg-rose-light dark:bg-midnight-elevated text-rose dark:text-champagne flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                  <Phone className="w-4 h-4" />
-                </div>
-                <p className="text-xs uppercase tracking-wider text-plum-muted dark:text-darktext-secondary font-bold mb-1">
-                  {c.label}
-                </p>
-                <p className="font-serif text-base text-plum dark:text-darktext-primary font-semibold group-hover:text-rose dark:group-hover:text-champagne transition-colors">
-                  {c.number}
-                </p>
-              </a>
-            ))}
           </div>
         </div>
       </section>
