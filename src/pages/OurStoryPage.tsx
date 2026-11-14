@@ -223,13 +223,9 @@ export const OurStoryPage: React.FC = () => {
                     {milestone.badge}
                   </span>
 
-                  <h3 className="font-serif text-2xl text-plum dark:text-darktext-primary font-medium mb-1">
+                  <h3 className="font-serif text-2xl text-plum dark:text-darktext-primary font-medium mb-2">
                     {milestone.title}
                   </h3>
-
-                  <p className="font-serif italic text-sm text-rose dark:text-champagne mb-3">
-                    {milestone.scripture}
-                  </p>
 
                   <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary leading-relaxed">
                     {milestone.description}

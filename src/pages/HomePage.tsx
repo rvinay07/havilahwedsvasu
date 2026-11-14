@@ -4,9 +4,7 @@ import gsap from 'gsap';
 import {
   Calendar,
   ArrowRight,
-  Heart,
   MapPin,
-  BookOpen,
   Share2,
   Clock,
   CheckCircle2,
@@ -431,12 +429,6 @@ export const HomePage: React.FC = () => {
                       {milestone.title}
                     </h4>
 
-                    {milestone.scripture && (
-                      <p className="font-serif italic text-sm text-rose dark:text-champagne mb-3">
-                        {milestone.scripture}
-                      </p>
-                    )}
-
                     <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary leading-relaxed">
                       {milestone.description}
                     </p>
@@ -527,63 +519,41 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-8">
-              {/* Venue & Countdown */}
-              <div className="space-y-6">
-                <div className="flex items-start gap-3.5">
-                  <MapPin className="w-5 h-5 text-rose dark:text-champagne mt-1 shrink-0" />
-                  <div>
-                    <h4 className="font-serif text-xl text-plum dark:text-darktext-primary font-semibold">
-                      {ceremony.venue}
-                    </h4>
-                    <p className="text-sm text-plum-muted dark:text-darktext-secondary">
-                      {ceremony.address}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="p-5 rounded-2xl bg-cream/50 dark:bg-midnight-elevated/60 border border-rose/20 dark:border-midnight-border">
-                  <Countdown targetDate={ceremony.date} label="Countdown to Holy Matrimony" />
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2">
-                  <a
-                    href={ceremony.mapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-olive hover:bg-olive-dark dark:bg-midnight-elevated dark:border dark:border-midnight-border dark:hover:border-champagne dark:hover:text-champagne text-white dark:text-darktext-primary font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-sm"
-                  >
-                    <Navigation className="w-4 h-4" /> Google Maps ↗
-                  </a>
-                  <a
-                    href={ceremony.calendarUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-rose hover:bg-rose-dark dark:bg-champagne dark:hover:bg-champagne-hover text-white dark:text-midnight font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-rose-glow dark:shadow-champagne-glow"
-                  >
-                    <Calendar className="w-4 h-4" /> Add to Calendar 📅
-                  </a>
+            <div className="max-w-2xl mx-auto space-y-6">
+              <div className="flex items-start gap-3.5">
+                <MapPin className="w-5 h-5 text-rose dark:text-champagne mt-1 shrink-0" />
+                <div>
+                  <h4 className="font-serif text-xl text-plum dark:text-darktext-primary font-semibold">
+                    {ceremony.venue}
+                  </h4>
+                  <p className="text-sm text-plum-muted dark:text-darktext-secondary">
+                    {ceremony.address}
+                  </p>
                 </div>
               </div>
 
-              {/* Ceremony Schedule */}
-              <div className="p-6 rounded-2xl bg-cream-soft dark:bg-midnight-elevated/40 border border-rose/20 dark:border-midnight-border">
-                <h4 className="font-serif text-xl text-plum dark:text-darktext-primary font-medium mb-4 flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-rose dark:text-champagne" /> Order of Holy Matrimony
-                </h4>
-                <div className="space-y-3.5 border-l-2 border-rose/30 dark:border-midnight-border pl-4 ml-1">
-                  {ceremony.schedule.map((item, idx) => (
-                    <div key={idx} className="relative">
-                      <span className="text-xs font-bold text-rose dark:text-champagne block">
-                        {item.time}
-                      </span>
-                      <span className="text-sm text-plum-muted dark:text-darktext-secondary">
-                        {item.text}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+              <div className="p-5 rounded-2xl bg-cream/50 dark:bg-midnight-elevated/60 border border-rose/20 dark:border-midnight-border">
+                <Countdown targetDate={ceremony.date} label="Countdown to Holy Matrimony" />
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2">
+                <a
+                  href={ceremony.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-olive hover:bg-olive-dark dark:bg-midnight-elevated dark:border dark:border-midnight-border dark:hover:border-champagne dark:hover:text-champagne text-white dark:text-darktext-primary font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-sm"
+                >
+                  <Navigation className="w-4 h-4" /> Google Maps ↗
+                </a>
+                <a
+                  href={ceremony.calendarUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-rose hover:bg-rose-dark dark:bg-champagne dark:hover:bg-champagne-hover text-white dark:text-midnight font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-rose-glow dark:shadow-champagne-glow"
+                >
+                  <Calendar className="w-4 h-4" /> Add to Calendar 📅
+                </a>
               </div>
             </div>
           </motion.article>
@@ -634,63 +604,41 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-8">
-              {/* Venue & Countdown */}
-              <div className="space-y-6">
-                <div className="flex items-start gap-3.5">
-                  <MapPin className="w-5 h-5 text-rose dark:text-champagne mt-1 shrink-0" />
-                  <div>
-                    <h4 className="font-serif text-xl text-plum dark:text-darktext-primary font-semibold">
-                      {reception.venue}
-                    </h4>
-                    <p className="text-sm text-plum-muted dark:text-darktext-secondary">
-                      {reception.address}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="p-5 rounded-2xl bg-cream/50 dark:bg-midnight-elevated/60 border border-rose/20 dark:border-midnight-border">
-                  <Countdown targetDate={reception.date} label="Countdown to Reception" />
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2">
-                  <a
-                    href={reception.mapsUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-olive hover:bg-olive-dark dark:bg-midnight-elevated dark:border dark:border-midnight-border dark:hover:border-champagne dark:hover:text-champagne text-white dark:text-darktext-primary font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-sm"
-                  >
-                    <Navigation className="w-4 h-4" /> Google Maps ↗
-                  </a>
-                  <a
-                    href={reception.calendarUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-rose hover:bg-rose-dark dark:bg-champagne dark:hover:bg-champagne-hover text-white dark:text-midnight font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-rose-glow dark:shadow-champagne-glow"
-                  >
-                    <Calendar className="w-4 h-4" /> Add to Calendar 📅
-                  </a>
+            <div className="max-w-2xl mx-auto space-y-6">
+              <div className="flex items-start gap-3.5">
+                <MapPin className="w-5 h-5 text-rose dark:text-champagne mt-1 shrink-0" />
+                <div>
+                  <h4 className="font-serif text-xl text-plum dark:text-darktext-primary font-semibold">
+                    {reception.venue}
+                  </h4>
+                  <p className="text-sm text-plum-muted dark:text-darktext-secondary">
+                    {reception.address}
+                  </p>
                 </div>
               </div>
 
-              {/* Reception Schedule */}
-              <div className="p-6 rounded-2xl bg-cream-soft dark:bg-midnight-elevated/40 border border-rose/20 dark:border-midnight-border">
-                <h4 className="font-serif text-xl text-plum dark:text-darktext-primary font-medium mb-4 flex items-center gap-2">
-                  <Clock className="w-4 h-4 text-rose dark:text-champagne" /> Evening Program
-                </h4>
-                <div className="space-y-3.5 border-l-2 border-rose/30 dark:border-midnight-border pl-4 ml-1">
-                  {reception.schedule.map((item, idx) => (
-                    <div key={idx} className="relative">
-                      <span className="text-xs font-bold text-rose dark:text-champagne block">
-                        {item.time}
-                      </span>
-                      <span className="text-sm text-plum-muted dark:text-darktext-secondary">
-                        {item.text}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+              <div className="p-5 rounded-2xl bg-cream/50 dark:bg-midnight-elevated/60 border border-rose/20 dark:border-midnight-border">
+                <Countdown targetDate={reception.date} label="Countdown to Reception" />
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2">
+                <a
+                  href={reception.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-olive hover:bg-olive-dark dark:bg-midnight-elevated dark:border dark:border-midnight-border dark:hover:border-champagne dark:hover:text-champagne text-white dark:text-darktext-primary font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-sm"
+                >
+                  <Navigation className="w-4 h-4" /> Google Maps ↗
+                </a>
+                <a
+                  href={reception.calendarUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-rose hover:bg-rose-dark dark:bg-champagne dark:hover:bg-champagne-hover text-white dark:text-midnight font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-rose-glow dark:shadow-champagne-glow"
+                >
+                  <Calendar className="w-4 h-4" /> Add to Calendar 📅
+                </a>
               </div>
             </div>
           </motion.article>
@@ -849,124 +797,29 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* =========================================================================
-          SECTION 5: BLESSINGS (Core Scripture, Verses, Prayer & WhatsApp Share)
+          SECTION 5: BLESSINGS & INVITATION SHARING
           ========================================================================= */}
       <section id="blessings" className="scroll-mt-20 border-t border-rose/20 dark:border-midnight-border">
-        {/* Core Scripture Focal Card */}
-        <div className="pt-20 pb-16 px-4 max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="p-8 sm:p-14 rounded-3xl bg-white dark:bg-midnight-card border border-rose/30 dark:border-midnight-border shadow-wedding relative overflow-hidden transition-colors"
-          >
-            <div className="text-rose dark:text-champagne text-3xl font-serif mb-3" aria-hidden="true">
+        {/* WhatsApp Share Station */}
+        <div className="py-20 sm:py-24 px-4 bg-cream-soft dark:bg-midnight-subtle text-center transition-colors">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-rose dark:text-champagne text-3xl font-serif mb-2" aria-hidden="true">
               ✝
             </div>
-            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-3">
-              Foundational Covenant Scripture
-            </p>
-            <div className="w-16 h-[1.5px] bg-rose/50 dark:bg-champagne/50 mx-auto mb-6" />
-
-            <blockquote className="font-serif italic text-2xl sm:text-3xl md:text-4xl text-plum dark:text-darktext-primary leading-relaxed mb-4">
-              “{weddingConfig.coreVerse.quote}”
-            </blockquote>
-
-            <cite className="font-sans text-sm tracking-widest text-rose dark:text-champagne uppercase font-bold not-italic">
-              — {weddingConfig.coreVerse.reference}
-            </cite>
-          </motion.div>
-        </div>
-
-        {/* 6 Scriptures on Christian Marriage */}
-        <div className="py-16 px-4 bg-cream/40 dark:bg-midnight-subtle border-y border-rose/20 dark:border-midnight-border transition-colors">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-14">
-              <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-                Biblical Foundations
-              </p>
-              <h3 className="font-serif text-3xl sm:text-4xl text-plum dark:text-darktext-primary font-medium">
-                Verses on Christian Marriage
-              </h3>
-              <div className="w-16 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-3" />
-              <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary max-w-md mx-auto">
-                Sacred scripture illuminating selflessness, patient devotion, and holy covenant.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {weddingConfig.scriptures.map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.08, duration: 0.5 }}
-                  className="p-7 rounded-2xl bg-white dark:bg-midnight-card border border-rose/25 dark:border-midnight-border shadow-wedding flex flex-col justify-between transition-colors"
-                >
-                  <div>
-                    <div className="w-9 h-9 rounded-full bg-rose-light dark:bg-midnight-elevated text-rose dark:text-champagne flex items-center justify-center mb-4">
-                      <BookOpen className="w-4 h-4" />
-                    </div>
-                    <blockquote className="font-serif italic text-base sm:text-lg text-plum dark:text-darktext-primary leading-relaxed mb-6">
-                      “{item.quote}”
-                    </blockquote>
-                  </div>
-                  <cite className="block text-xs uppercase tracking-widest text-rose dark:text-champagne font-bold not-italic pt-4 border-t border-rose/15 dark:border-midnight-border">
-                    {item.reference}
-                  </cite>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Devotional Prayer for the Couple */}
-        <div className="py-20 px-4 max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-midnight-card border border-rose/30 dark:border-midnight-border shadow-wedding relative transition-colors"
-          >
-            <div className="w-12 h-12 rounded-full bg-rose-light dark:bg-midnight-elevated text-rose dark:text-champagne flex items-center justify-center mx-auto mb-4">
-              <Heart className="w-6 h-6 fill-rose dark:fill-champagne text-rose dark:text-champagne" />
-            </div>
             <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-              A Prayer for Vasu &amp; Mercy Havilah
+              Share the Joy
             </p>
-            <h3 className="font-serif text-3xl text-plum dark:text-darktext-primary font-medium mb-4">
-              Walking in His Sovereign Grace
-            </h3>
-            <div className="w-16 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto mb-6" />
-
-            <p className="font-serif italic text-lg sm:text-xl text-plum-muted dark:text-darktext-secondary leading-relaxed max-w-2xl mx-auto">
-              “Heavenly Father, we thank You for joining Vasu and Mercy Havilah in holy matrimony.
-              May their home be filled with Your peace, their hearts with Your unconditional love,
-              and their days with joyful praise. Grant them patience, wisdom, and steadfast faithfulness,
-              that through their marriage Your light may shine brightly to all. In the precious name of Jesus Christ, Amen.”
-            </p>
-          </motion.div>
-        </div>
-
-        {/* Final WhatsApp Share Station */}
-        <div className="py-16 px-4 bg-cream-soft dark:bg-midnight-subtle border-t border-rose/20 dark:border-midnight-border text-center transition-colors">
-          <div className="max-w-2xl mx-auto">
-            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-              Share the Blessing
-            </p>
-            <h3 className="font-serif text-2xl sm:text-3xl text-plum dark:text-darktext-primary mb-3">
+            <h2 className="font-serif text-3xl sm:text-4xl text-plum dark:text-darktext-primary mb-3">
               Share This Invitation with Family &amp; Friends
-            </h3>
-            <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary max-w-lg mx-auto mb-6">
+            </h2>
+            <div className="w-16 h-[1.5px] bg-rose/40 dark:bg-champagne/40 mx-auto mb-6" />
+            <p className="font-sans text-sm sm:text-base text-plum-muted dark:text-darktext-secondary max-w-lg mx-auto mb-8">
               Forward our wedding invitation card and celebration details on WhatsApp.
             </p>
             <button
               onClick={handleWhatsAppShare}
               type="button"
-              className="inline-flex items-center gap-2 px-7 py-3 rounded-md bg-[#25D366] hover:bg-[#1EBE5B] text-white font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-[#25D366] hover:bg-[#1EBE5B] text-white font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer"
             >
               <Share2 className="w-4 h-4" /> Share on WhatsApp
             </button>
