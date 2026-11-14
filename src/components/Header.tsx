@@ -305,9 +305,9 @@ export const Header: React.FC = () => {
                 <div className="h-[1.5px] w-16 bg-rose/40 dark:bg-champagne/40 mx-auto" />
 
                 {/* Navigation Links List */}
-                <nav onClickCapture={handleNavContainerClick} className="flex flex-col gap-2 mt-2" aria-label="Mobile navigation">
+                <nav className="flex flex-col gap-2 mt-2" aria-label="Mobile navigation">
                   {navLinks.map((link, idx) => {
-                    const isCurrentActive = isHomePage ? activeSection === link.id : location.pathname === link.to;
+                    const isCurrentActive = location.pathname === link.to || (link.to === '/' && (location.pathname === '' || location.pathname === '/index.html'));
                     return (
                       <motion.div
                         key={link.to}
