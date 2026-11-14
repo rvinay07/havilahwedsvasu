@@ -121,7 +121,8 @@ test('Mobile-First Responsiveness & Cross-Device Adaptation', async (t) => {
     const floatContent = fs.readFileSync(path.join(ROOT, 'src/components/FloatingControls.tsx'), 'utf8');
     assert.match(floatContent, /bottom-3\s+right-3\s+sm:bottom-6\s+sm:right-6/, 'Floating controls must use compact margins on mobile');
     assert.match(floatContent, /safe-area-inset-bottom/, 'Floating controls must respect safe-area-inset-bottom');
-    assert.match(floatContent, /w-10\s+h-10\s+sm:w-11\s+sm:h-11/, 'Music button must be appropriately sized for mobile without occluding cards');
+    assert.match(floatContent, /Music ON/, 'Music button must have minimal Music ON text');
+    assert.match(floatContent, /Music OFF/, 'Music button must have minimal Music OFF text');
   });
 
   await t.test('Couple portrait photos scale responsively on compact mobile viewports', () => {

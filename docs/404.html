@@ -32,13 +32,57 @@
       } catch (e) {}
     })();
   </script>
-  <script type="module" crossorigin src="./assets/main-DTt9kdQx.js"></script>
+  <script type="module" crossorigin src="./assets/main-Cu59CVXL.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/vendor-react-Bsso2vuI.js">
   <link rel="modulepreload" crossorigin href="./assets/vendor-motion-DmEXVujp.js">
   <link rel="modulepreload" crossorigin href="./assets/vendor-media-ByJRg2Gk.js">
-  <link rel="stylesheet" crossorigin href="./assets/main-BRBPXx0s.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-Dkk6WX5F.css">
 </head>
 <body class="bg-cream-warm dark:bg-midnight text-plum dark:text-darktext-primary antialiased selection:bg-rose-soft dark:selection:bg-champagne/30 selection:text-plum dark:selection:text-darktext-primary min-h-screen overflow-x-hidden transition-colors">
+  <!-- Early Preloaded Wedding Hymn Audio for Instant Launch Autoplay -->
+  <audio id="wedding-bg-audio" src="./assets/music/wedding.mp3" loop preload="auto" playsinline></audio>
+  <script>
+    (function() {
+      var audio = document.getElementById('wedding-bg-audio');
+      if (!audio) return;
+      audio.volume = 0.75;
+      
+      var hasStarted = false;
+      function tryPlay() {
+        if (hasStarted || !audio.paused) return;
+        var p = audio.play();
+        if (p !== undefined) {
+          p.then(function() {
+            hasStarted = true;
+          }).catch(function() {
+            // Autoplay restricted until interaction
+          });
+        }
+      }
+
+      // 1. Attempt immediately on HTML parse
+      tryPlay();
+
+      // 2. Attempt on DOM ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', tryPlay, { once: true });
+      }
+
+      // 3. One-time gesture unlock on ANY first interaction (touch, click, scroll, mouse movement)
+      var events = ['click', 'touchstart', 'touchend', 'scroll', 'mousemove', 'pointerdown', 'pointermove', 'wheel', 'keydown'];
+      function unlockOnInteraction() {
+        if (!hasStarted) {
+          tryPlay();
+        }
+        events.forEach(function(e) {
+          window.removeEventListener(e, unlockOnInteraction, true);
+        });
+      }
+      events.forEach(function(e) {
+        window.addEventListener(e, unlockOnInteraction, { capture: true, passive: true, once: true });
+      });
+    })();
+  </script>
   <div id="root"></div>
 </body>
 </html>

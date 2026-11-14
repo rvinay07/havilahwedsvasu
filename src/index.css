@@ -88,6 +88,33 @@
 .eq-bar-2 { animation: eqBar2 0.7s ease-in-out infinite 0.15s; }
 .eq-bar-3 { animation: eqBar3 0.9s ease-in-out infinite 0.3s; }
 
+/* Music button pulse glow */
+@keyframes musicPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(201, 130, 113, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(201, 130, 113, 0);
+  }
+}
+
+@keyframes musicPulseDark {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(214, 184, 120, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(214, 184, 120, 0);
+  }
+}
+
+.animate-music-pulse {
+  animation: musicPulse 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+[data-theme="dark"] .animate-music-pulse {
+  animation: musicPulseDark 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 /* Lightbox custom overrides */
 .yarl__portal {
   --yarl__color_backdrop: rgba(16, 24, 32, 0.98) !important;

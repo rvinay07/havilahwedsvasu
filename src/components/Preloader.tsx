@@ -7,7 +7,7 @@ export const Preloader: React.FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(false);
-    }, 900);
+    }, 700);
     return () => clearTimeout(timer);
   }, []);
 
@@ -16,13 +16,13 @@ export const Preloader: React.FC = () => {
       {visible && (
         <motion.div
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-cream-warm dark:bg-midnight text-plum dark:text-darktext-primary select-none transition-colors"
+          exit={{ opacity: 0, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] } }}
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-cream-warm dark:bg-midnight text-plum dark:text-darktext-primary select-none transition-colors pointer-events-none"
         >
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
+            transition={{ duration: 0.4, ease: 'easeOut' }}
             className="text-center"
           >
             <div className="font-serif text-4xl sm:text-5xl font-medium tracking-wide">
@@ -31,7 +31,7 @@ export const Preloader: React.FC = () => {
             <motion.div
               initial={{ width: 16 }}
               animate={{ width: 72 }}
-              transition={{ duration: 0.7, ease: 'easeInOut' }}
+              transition={{ duration: 0.6, ease: 'easeInOut' }}
               className="h-[1.5px] bg-rose dark:bg-champagne mx-auto my-3"
             />
             <p className="font-sans text-[0.68rem] tracking-[0.25em] text-plum-muted dark:text-champagne uppercase font-bold">
