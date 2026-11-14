@@ -1,0 +1,78 @@
+================================================================================
+CHRISTIAN WEDDING INVITATION WEBSITE - PROJECT SUMMARY
+Couple: Vasu & Mercy Havilah
+Live URL: https://vasuwedshavilah.vercel.app/
+Repository: https://github.com/rvinay07/vasu-havilah-wedding-invitation (main)
+================================================================================
+
+1. MAJOR CHANGES
+--------------------------------------------------------------------------------
+- Stack Modernization: Migrated from static HTML/CSS/JS to React 18, Vite 5,
+  TypeScript 5, and Tailwind CSS.
+- Single Source of Truth: Centralized all wedding details, timings, venues,
+  and media in src/config/weddingConfig.ts.
+- Dual Luxury Themes: Added Warm Cream Editorial (Light) and Midnight Champagne
+  (Dark) with persistent toggle.
+- Autoplay & Audio Unlock: Instant 0ms HTML5 autoplay with first touch/click
+  gesture unlock and live equalizer pill (Music ON / OFF).
+- Standardized Dates: Engagement (4 Feb 2026), Holy Matrimony (3 Feb 2027),
+  Reception (4 Feb 2027). Zero RSVP forms, zero Thanksgiving mentions.
+- WhatsApp Integrations: Added guest invitation generator and developer connect.
+- Automated Testing: 49 unit tests + 95 CDP browser assertions (100% passing).
+- Multi-Cloud Hosting: Production CI/CD on Vercel and GitHub Pages.
+
+
+2. MAJOR ROLES
+--------------------------------------------------------------------------------
+- Frontend Architect: Component hierarchy, HashRouter SPA routing, typed config.
+- UI/UX Designer: Sacred monogram (V + M), dual palettes, letterpress serifs.
+- Audio & Media Engineer: Browser autoplay compliance, HTTP 206 streaming, lightboxes.
+- QA & Test Engineer: 49 unit tests, 95 CDP browser assertions across 6 viewports.
+- DevOps Engineer: Vite code splitting, Linux case normalization, dual deployments.
+
+
+3. PREVIOUS VS CURRENT COMPARISON
+--------------------------------------------------------------------------------
++-------------------+--------------------------------+--------------------------------+
+| Dimension         | Previous Version (Static)      | Current Version (React + Vite) |
++-------------------+--------------------------------+--------------------------------+
+| Architecture      | Static HTML5, 600-line script  | React 18, Vite 5, TypeScript 5 |
+| Data Source       | Hardcoded in separate HTMLs    | Centralized weddingConfig.ts   |
+| Navigation        | Full page reloads (.html)      | Client-side SPA (HashRouter)   |
+| Theming           | Single static light palette    | Dual Theme (Light & Dark)      |
+| Music             | Blocked by browser autoplay    | First-touch unlock + equalizer |
+| Mobile View       | Horizontal overflows           | 0 overflow across 320px-430px  |
+| Gallery           | Static images, LFS bugs        | Swiper carousel & Lightbox     |
+| Events & Rules    | Thanksgiving & RSVP forms      | Ceremony & Reception; No RSVP  |
+| WhatsApp Share    | None                           | Formatted invite & dev connect |
+| Test Coverage     | 0 tests                        | 49 unit tests + 95 CDP tests   |
+| Deployment        | Manual GitHub Pages upload     | Automated Vercel & GH Pages    |
++-------------------+--------------------------------+--------------------------------+
+
+
+4. IMPROVEMENTS SUMMARY
+--------------------------------------------------------------------------------
+[New Features]
+- Real-time wedding countdown grid with Google Calendar sync and .ics downloads.
+- Touch-friendly fullscreen photo lightbox with zoom and counter.
+- WhatsApp invitation generator with venues, map links, and contact numbers.
+- Developer WhatsApp connect button in footer.
+
+[Bug Fixes]
+- Fixed premature listener removal: Audio reliably starts on first touch/click.
+- Eliminated horizontal scroll overflows on 320px-390px mobile screens.
+- Normalized image file casing (.jpg / .JPG) for Linux/Vercel compatibility.
+- Standardized engagement date to 4 February 2026 across all files.
+
+[UI/UX Polish]
+- Minimalist 700ms monogram splash replacing intrusive modal popups.
+- Floating action pill showing animated equalizer waves and Music ON/OFF state.
+- Mobile drawer navigation with scroll lock and 44px+ tap targets.
+- High-contrast letterpress typography meeting WCAG AAA standards.
+
+[Technical Optimizations]
+- Vite bundle splitting (vendor-react, vendor-motion, vendor-media).
+- HTTP 206 Partial Content support for smooth audio/video streaming.
+- Automated 95-assertion Chrome DevTools Protocol test suite.
+================================================================================
+

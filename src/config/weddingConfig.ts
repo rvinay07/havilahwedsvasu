@@ -47,10 +47,10 @@ export const weddingConfig = {
       date: "2027-02-03T09:00:00",
       displayDate: "3 February 2027",
       displayTime: "9:00 AM",
-      venue: "Mahendra Kalyana Mandapam",
-      address: "Tilak Nagar, Guntakal",
-      mapsUrl: "https://maps.app.goo.gl/Mic6WHfh54kWS1m6A",
-      calendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Celebration+of+VASU+%26+MERCY+HAVILAH&dates=20270203T033000Z/20270203T083000Z&details=Holy+Matrimony+of+Vasu+and+Mercy+Havilah.&location=Mahendra+Kalyana+Mandapam,+Tilak+Nagar,+Guntakal",
+      venue: "AB Function Hall AC",
+      address: "Behind SSGS Degree College, SN Pet, Guntakal",
+      mapsUrl: "https://maps.app.goo.gl/V26a9HupTv4vn8A28",
+      calendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Celebration+of+VASU+%26+MERCY+HAVILAH&dates=20270203T033000Z/20270203T083000Z&details=Holy+Matrimony+of+Vasu+and+Mercy+Havilah.&location=AB+Function+Hall+AC,+Behind+SSGS+Degree+College,+SN+Pet,+Guntakal",
       schedule: [
         { time: "08:30 AM", text: "Arrival of Guests & Prelude Worship Hymns" },
         { time: "09:00 AM", text: "Holy Matrimony Service & Scripture Readings" },
@@ -103,7 +103,7 @@ export const weddingConfig = {
       badge: "Upcoming · 3 Feb 2027",
       title: "The Holy Matrimony",
       scripture: "“What God has joined together, let no one separate.” — Matthew 19:6",
-      description: "We will exchange our sacred wedding vows before God and family at Mahendra Kalyana Mandapam, Tilak Nagar, Guntakal at 9:00 AM."
+      description: "We will exchange our sacred wedding vows before God and family at AB Function Hall AC, Behind SSGS Degree College, SN Pet, Guntakal at 9:00 AM."
     },
     {
       id: "reception",

@@ -178,7 +178,7 @@ export const HomePage: React.FC = () => {
                 Wednesday, 3 February 2027 | 9:00 AM
               </p>
               <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary">
-                Mahendra Kalyana Mandapam, Tilak Nagar, Guntakal
+                AB Function Hall AC, Behind SSGS Degree College, SN Pet, Guntakal
               </p>
             </div>
           </motion.div>

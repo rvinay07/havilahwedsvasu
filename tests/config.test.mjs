@@ -38,9 +38,9 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
 
   await t.test('Ceremony date, timing and venue are correct', () => {
     assert.match(content, /2027-02-03T09:00:00/, 'Ceremony date must be 3 Feb 2027 9:00 AM');
-    assert.match(content, /Mahendra Kalyana Mandapam/, 'Venue must be Mahendra Kalyana Mandapam');
-    assert.match(content, /Tilak Nagar,\s*Guntakal/, 'Address must be Tilak Nagar, Guntakal');
-    assert.match(content, /https:\/\/maps\.app\.goo\.gl\/Mic6WHfh54kWS1m6A/, 'Must contain valid Google Maps URL for ceremony');
+    assert.match(content, /AB Function Hall AC/, 'Venue must be AB Function Hall AC');
+    assert.match(content, /Behind SSGS Degree College,\s*SN Pet,\s*Guntakal/, 'Address must be Behind SSGS Degree College, SN Pet, Guntakal');
+    assert.match(content, /https:\/\/maps\.app\.goo\.gl\/V26a9HupTv4vn8A28/, 'Must contain valid Google Maps URL for ceremony');
   });
 
   await t.test('Reception date, timing and venue are correct', () => {
