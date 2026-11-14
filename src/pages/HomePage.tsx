@@ -198,31 +198,6 @@ export const HomePage: React.FC = () => {
             </motion.div>
           </div>
         </div>
-
-        {/* Countdown Preview */}
-        <div className="py-16 px-4 bg-cream/50 dark:bg-midnight-subtle border-y border-rose/20 dark:border-midnight-border transition-colors">
-          <div className="max-w-2xl mx-auto text-center">
-            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-              In God’s Perfect Timing
-            </p>
-            <h2 className="font-serif text-2xl sm:text-3xl text-plum dark:text-darktext-primary mb-6">
-              Counting Down to Sacred Vows
-            </h2>
-
-            <Countdown targetDate={weddingConfig.events.ceremony.date} label="Days Until Holy Matrimony" />
-
-            <div className="mt-6">
-              <a
-                href={weddingConfig.events.ceremony.calendarUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-md bg-olive hover:bg-olive-dark dark:bg-champagne dark:hover:bg-champagne-hover dark:text-midnight text-white font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-sm"
-              >
-                <Calendar className="w-4 h-4" /> Add Wedding to Calendar
-              </a>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* =========================================================================
@@ -242,7 +217,7 @@ export const HomePage: React.FC = () => {
           </h2>
           <div className="w-16 h-[1.5px] bg-rose/40 dark:bg-champagne/40 mx-auto mb-4" />
           <p className="font-serif italic text-lg text-plum-muted dark:text-darktext-secondary max-w-xl mx-auto leading-relaxed">
-            “He has made everything beautiful in its time.” — Ecclesiastes 3:11
+            United in faith, surrounded by family love, and walking together in God’s path.
           </p>
         </div>
 
@@ -461,41 +436,31 @@ export const HomePage: React.FC = () => {
           </p>
         </div>
 
-        {/* Parents Formal Invitation Card */}
-        <div className="pb-16 px-4 max-w-4xl mx-auto">
+        {/* Upcoming Events Stack */}
+        <div className="pb-20 px-4 max-w-5xl mx-auto space-y-12">
+          {/* MINISTER OF THE CEREMONY */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="p-8 sm:p-10 rounded-3xl bg-white dark:bg-midnight-card border border-rose/30 dark:border-midnight-border shadow-wedding text-center transition-colors"
+            className="p-7 sm:p-9 rounded-3xl bg-cream-soft/60 dark:bg-midnight-card border border-rose/30 dark:border-midnight-border shadow-wedding text-center max-w-2xl mx-auto transition-colors"
           >
+            <div className="text-rose dark:text-champagne text-2xl font-serif mb-2" aria-hidden="true">
+              ✝
+            </div>
             <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-              Formal Invitation from Families
+              {weddingConfig.minister.heading}
             </p>
-            <h3 className="font-serif text-2xl sm:text-3xl text-plum dark:text-darktext-primary font-medium mb-4">
-              In the Presence of God
-            </h3>
-            <div className="w-16 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto mb-5" />
-            <p className="font-serif text-lg text-plum-muted dark:text-darktext-secondary leading-relaxed max-w-2xl mx-auto">
-              We, the families of{' '}
-              <strong className="text-plum dark:text-darktext-primary">
-                {weddingConfig.groomFather} &amp; {weddingConfig.groomMother}
-              </strong>{' '}
-              along with{' '}
-              <strong className="text-plum dark:text-darktext-primary">
-                {weddingConfig.brideFather} &amp; {weddingConfig.brideMother}
-              </strong>,
-              request the honour of your presence and prayers at the Holy Matrimony and Reception uniting our beloved children{' '}
-              <strong className="text-rose dark:text-champagne font-semibold">
-                {weddingConfig.groomName} &amp; {weddingConfig.brideName}
-              </strong>.
+            <h4 className="font-serif text-2xl sm:text-3xl font-medium text-plum dark:text-darktext-primary mb-2">
+              {weddingConfig.minister.name}
+            </h4>
+            <div className="w-12 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-3" />
+            <p className="font-serif italic text-sm sm:text-base text-plum-muted dark:text-darktext-secondary">
+              {weddingConfig.minister.role}
             </p>
           </motion.div>
-        </div>
 
-        {/* Upcoming Events Stack */}
-        <div className="pb-20 px-4 max-w-5xl mx-auto space-y-12">
           {/* EVENT 1: WEDDING CEREMONY */}
           <motion.article
             initial={{ opacity: 0, y: 25 }}
@@ -557,29 +522,6 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
           </motion.article>
-
-          {/* MINISTER OF THE CEREMONY */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="p-7 sm:p-9 rounded-3xl bg-cream-soft/60 dark:bg-midnight-card border border-rose/30 dark:border-midnight-border shadow-wedding text-center max-w-2xl mx-auto transition-colors"
-          >
-            <div className="text-rose dark:text-champagne text-2xl font-serif mb-2" aria-hidden="true">
-              ✝
-            </div>
-            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-              {weddingConfig.minister.heading}
-            </p>
-            <h4 className="font-serif text-2xl sm:text-3xl font-medium text-plum dark:text-darktext-primary mb-2">
-              {weddingConfig.minister.name}
-            </h4>
-            <div className="w-12 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-3" />
-            <p className="font-serif italic text-sm sm:text-base text-plum-muted dark:text-darktext-secondary">
-              {weddingConfig.minister.role}
-            </p>
-          </motion.div>
 
           {/* EVENT 2: WEDDING RECEPTION */}
           <motion.article
