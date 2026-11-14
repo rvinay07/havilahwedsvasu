@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import {
@@ -7,7 +6,6 @@ import {
   ArrowRight,
   Heart,
   MapPin,
-  Image as ImageIcon,
   BookOpen,
   Share2,
   Clock,
@@ -78,45 +76,10 @@ export const HomePage: React.FC = () => {
     description: photo.alt,
   }));
 
-  const gateways = [
-    {
-      targetId: 'our-story',
-      to: '/our-story',
-      title: 'Our Story & Journey',
-      description: 'Two paths guided by God\'s providence, our completed engagement celebration, and our personal timeline of faith.',
-      icon: Heart,
-      badge: 'Love & Testimony'
-    },
-    {
-      targetId: 'wedding-details',
-      to: '/wedding-details',
-      title: 'Wedding Details & Venues',
-      description: 'Holy Matrimony in Guntakal and Reception in Proddatur, complete with timings, maps, and schedules.',
-      icon: MapPin,
-      badge: 'Celebrations'
-    },
-    {
-      targetId: 'gallery',
-      to: '/gallery',
-      title: 'Photo Gallery',
-      description: 'Pre-wedding portraits and cherished moments of laughter, family love, and joy in an interactive fullscreen gallery.',
-      icon: ImageIcon,
-      badge: 'Moments'
-    },
-    {
-      targetId: 'blessings',
-      to: '/blessings',
-      title: 'Scriptures & Blessings',
-      description: 'Selected Bible verses on Christian marriage, the foundational covenant in Christ, and prayers for our journey.',
-      icon: BookOpen,
-      badge: 'Holy Word'
-    }
-  ];
-
   return (
     <div className="overflow-hidden">
       {/* =========================================================================
-          SECTION 1: HOME (Hero, Joyful Invitation, Countdown, WhatsApp Share)
+          SECTION 1: HOME (Hero, Joyful Invitation & Countdown)
           ========================================================================= */}
       <section id="home" className="relative scroll-mt-20">
         {/* Cinematic Hero */}
@@ -261,94 +224,6 @@ export const HomePage: React.FC = () => {
                 <Calendar className="w-4 h-4" /> Add Wedding to Calendar
               </a>
             </div>
-          </div>
-        </div>
-
-        {/* Celebration Gateway Cards */}
-        <div className="py-20 px-4 max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-              Celebration Highlights
-            </p>
-            <h2 className="font-serif text-3xl sm:text-4xl text-plum dark:text-darktext-primary">
-              Wedding Itinerary &amp; Story
-            </h2>
-            <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary max-w-md mx-auto mt-2">
-              Discover our testimony of faith, upcoming ceremony details, gallery, and scriptures.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {gateways.map((g, idx) => {
-              const Icon = g.icon;
-              return (
-                <motion.div
-                  key={g.to}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1, duration: 0.5 }}
-                >
-                  <div
-                    onClick={() => scrollToSection(g.targetId)}
-                    className="group block p-7 sm:p-9 rounded-2xl bg-white dark:bg-midnight-card border border-rose/25 dark:border-midnight-border shadow-wedding hover:shadow-wedding-lg hover:border-rose dark:hover:border-champagne transition-all relative overflow-hidden cursor-pointer"
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 rounded-full bg-rose-light dark:bg-midnight-elevated text-rose dark:text-champagne flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Icon className="w-6 h-6" />
-                      </div>
-                      <span className="text-[0.65rem] uppercase tracking-widest font-bold px-3 py-1 rounded-full bg-pear-pill dark:bg-midnight-elevated text-olive dark:text-darksage">
-                        {g.badge}
-                      </span>
-                    </div>
-
-                    <h3 className="font-serif text-2xl text-plum dark:text-darktext-primary font-medium group-hover:text-rose dark:group-hover:text-champagne transition-colors mb-2">
-                      {g.title}
-                    </h3>
-                    <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary leading-relaxed mb-4">
-                      {g.description}
-                    </p>
-
-                    <div className="flex items-center justify-between pt-2 border-t border-rose/10 dark:border-midnight-border">
-                      <div className="flex items-center gap-1.5 text-xs uppercase tracking-wider font-bold text-rose dark:text-champagne group-hover:translate-x-1 transition-transform">
-                        <span>Explore Section</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </div>
-                      <Link
-                        to={g.to}
-                        onClick={(e) => e.stopPropagation()}
-                        className="text-[0.7rem] uppercase tracking-wider font-semibold text-plum-muted dark:text-darktext-secondary hover:text-rose dark:hover:text-champagne transition-colors"
-                        title={`Open dedicated ${g.title} page`}
-                      >
-                        Dedicated Page ↗
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* WhatsApp Sharing Station */}
-        <div className="py-16 px-4 bg-cream-soft dark:bg-midnight-subtle border-t border-rose/20 dark:border-midnight-border text-center transition-colors">
-          <div className="max-w-2xl mx-auto">
-            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-              Share the Blessing
-            </p>
-            <h2 className="font-serif text-2xl sm:text-3xl text-plum dark:text-darktext-primary mb-3">
-              Invite Family &amp; Friends on WhatsApp
-            </h2>
-            <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary max-w-lg mx-auto mb-6">
-              Easily forward our digital wedding invitation and Google Maps directions directly to your loved ones.
-            </p>
-            <button
-              onClick={handleWhatsAppShare}
-              type="button"
-              className="inline-flex items-center gap-2 px-7 py-3 rounded-md bg-[#25D366] hover:bg-[#1EBE5B] text-white font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer"
-            >
-              <Share2 className="w-4 h-4" /> Share on WhatsApp
-            </button>
           </div>
         </div>
       </section>
