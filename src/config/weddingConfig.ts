@@ -10,8 +10,8 @@ export const weddingConfig = {
   
   contactNumbers: [
     { label: "Vasu", number: "+91 9652296062", tel: "+919652296062" },
-    { label: "Hoshi", number: "+91 8978148996", tel: "+918978148996" },
-    { label: "Jephaniah", number: "+91 6281047922", tel: "+916281047922" }
+    { label: "Hoshi", number: "+91 6281047922", tel: "+916281047922" },
+    { label: "Jephaniah", number: "+91 8978148996", tel: "+918978148996" }
   ],
 
   hostingUrl: "https://vasuwedshavilah.vercel.app/",
@@ -186,8 +186,8 @@ export function getWeddingShareMessage(): string {
     ``,
     `📞 Contacts:`,
     `• Vasu (Groom): +91 9652296062`,
-    `• Hoshi (Groom's Brother): +91 8978148996`,
-    `• N. Jephaniah (Groom's Father): +91 6281047922`,
+    `• Hoshi (Groom's Brother): +91 6281047922`,
+    `• N. Jephaniah (Groom's Father): +91 8978148996`,
     `━━━━━━━━━━━━━━━━━━━━`,
     ``,
     `🌐 View digital invitation, photos, timings & maps:`,

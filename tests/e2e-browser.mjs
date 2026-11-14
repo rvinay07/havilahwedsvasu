@@ -82,7 +82,7 @@ class SimpleCDP {
 
   close() {
     if (this.ws) {
-      try { this.ws.close(); } catch {}
+      try { this.ws.close(); } catch { }
     }
   }
 }
@@ -126,7 +126,7 @@ async function runE2E() {
           break;
         }
       }
-    } catch {}
+    } catch { }
   }
 
   if (!targetWs) {
