@@ -35,7 +35,7 @@
 </head>
 <body class="bg-cream-warm dark:bg-midnight text-plum dark:text-darktext-primary antialiased selection:bg-rose-soft dark:selection:bg-champagne/30 selection:text-plum dark:selection:text-darktext-primary min-h-screen overflow-x-hidden transition-colors">
   <!-- Early Preloaded Wedding Hymn Audio for Instant Launch Autoplay -->
-  <audio id="wedding-bg-audio" src="./assets/music/wedding.mp3" loop preload="auto" playsinline></audio>
+  <audio id="wedding-bg-audio" src="./assets/music/wedding.mp3" autoplay loop preload="auto" playsinline></audio>
   <script>
     (function() {
       var audio = document.getElementById('wedding-bg-audio');
@@ -43,38 +43,49 @@
       audio.volume = 0.75;
       
       var hasStarted = false;
+      var events = ['click', 'touchstart', 'touchend', 'mousedown', 'pointerdown', 'keydown'];
+
+      function removeListeners() {
+        events.forEach(function(e) {
+          window.removeEventListener(e, onGesture, true);
+          document.removeEventListener(e, onGesture, true);
+        });
+      }
+
       function tryPlay() {
-        if (hasStarted || !audio.paused) return;
+        if (hasStarted || (!audio.paused && audio.currentTime > 0)) {
+          hasStarted = true;
+          removeListeners();
+          return;
+        }
         var p = audio.play();
         if (p !== undefined) {
           p.then(function() {
             hasStarted = true;
+            removeListeners();
           }).catch(function() {
-            // Autoplay restricted until interaction
+            // Autoplay restricted until interaction - keep listeners active!
           });
         }
+      }
+
+      function onGesture() {
+        tryPlay();
       }
 
       // 1. Attempt immediately on HTML parse
       tryPlay();
 
-      // 2. Attempt on DOM ready
+      // 2. Attempt on DOM ready and window load
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', tryPlay, { once: true });
       }
+      window.addEventListener('load', tryPlay, { once: true });
 
-      // 3. One-time gesture unlock on ANY first interaction (touch, click, scroll, mouse movement)
-      var events = ['click', 'touchstart', 'touchend', 'scroll', 'mousemove', 'pointerdown', 'pointermove', 'wheel', 'keydown'];
-      function unlockOnInteraction() {
-        if (!hasStarted) {
-          tryPlay();
-        }
-        events.forEach(function(e) {
-          window.removeEventListener(e, unlockOnInteraction, true);
-        });
-      }
+      // 3. User gesture unlock on ANY first tap/click/key anywhere on the page
       events.forEach(function(e) {
-        window.addEventListener(e, unlockOnInteraction, { capture: true, passive: true, once: true });
+        window.addEventListener(e, onGesture, { capture: true, passive: true });
+        document.addEventListener(e, onGesture, { capture: true, passive: true });
       });
     })();
   </script>

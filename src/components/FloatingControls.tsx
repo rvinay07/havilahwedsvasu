@@ -45,40 +45,46 @@ export const FloatingControls: React.FC = () => {
     }
 
     // Attach interaction listeners as extra safeguard across browsers
+    const gestureEvents: Array<keyof WindowEventMap> = [
+      'click',
+      'touchstart',
+      'touchend',
+      'mousedown',
+      'pointerdown',
+      'keydown',
+    ];
+
+    const removeInteractionListeners = () => {
+      gestureEvents.forEach(evt => {
+        window.removeEventListener(evt, onUserInteraction, true);
+        document.removeEventListener(evt, onUserInteraction, true);
+      });
+    };
+
     const onUserInteraction = async () => {
       if (userPausedRef.current) {
         removeInteractionListeners();
         return;
       }
-      if (audioRef.current && audioRef.current.paused) {
+      const audio = audioRef.current;
+      if (!audio) return;
+      if (audio.paused) {
         try {
-          await audioRef.current.play();
+          await audio.play();
           setIsPlaying(true);
-        } catch {}
+          removeInteractionListeners();
+        } catch {
+          // Playback not yet permitted, keep listeners active for next gesture
+        }
+      } else {
+        setIsPlaying(true);
+        removeInteractionListeners();
       }
-      removeInteractionListeners();
     };
 
-    const events: Array<keyof WindowEventMap> = [
-      'click',
-      'touchstart',
-      'touchend',
-      'scroll',
-      'mousemove',
-      'pointerdown',
-      'pointermove',
-      'wheel',
-      'keydown',
-    ];
-
-    const removeInteractionListeners = () => {
-      events.forEach(evt => {
-        window.removeEventListener(evt, onUserInteraction, true);
-      });
-    };
-
-    events.forEach(evt => {
-      window.addEventListener(evt, onUserInteraction, { capture: true, passive: true, once: true });
+    gestureEvents.forEach(evt => {
+      window.addEventListener(evt, onUserInteraction, { capture: true, passive: true });
+      document.addEventListener(evt, onUserInteraction, { capture: true, passive: true });
     });
 
     return () => {
