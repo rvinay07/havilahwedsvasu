@@ -22,16 +22,15 @@ export const Footer: React.FC = () => {
         </p>
 
         {/* Contact Numbers */}
-        <div className="w-full max-w-2xl py-4 border-y border-rose/25 dark:border-midnight-border flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs uppercase tracking-wider text-cream/80 dark:text-darktext-primary font-bold mb-6">
-          <span className="text-rose dark:text-champagne w-full mb-1">Family Contacts:</span>
+        <div className="w-full max-w-xl py-3.5 border-y border-rose/25 dark:border-midnight-border flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs tracking-wider text-cream/85 dark:text-darktext-primary font-medium mb-6">
           {weddingConfig.contactNumbers.map((c) => (
             <a
               key={c.tel}
               href={`tel:${c.tel}`}
               className="hover:text-rose dark:hover:text-champagne transition-colors py-1 px-2.5 rounded hover:bg-rose/10 dark:hover:bg-midnight-elevated inline-flex items-center gap-1.5"
             >
-              <span className="text-cream/70 dark:text-darktext-secondary font-medium">{c.label}:</span>
-              <span>{c.number}</span>
+              <span className="text-cream/70 dark:text-darktext-secondary">{c.label}:</span>
+              <span className="font-semibold">{c.number}</span>
             </a>
           ))}
         </div>

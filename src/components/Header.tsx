@@ -94,7 +94,6 @@ export const Header: React.FC = () => {
     { to: '/our-story', id: 'our-story', label: 'Our Story' },
     { to: '/wedding-details', id: 'wedding-details', label: 'Wedding Details' },
     { to: '/gallery', id: 'gallery', label: 'Gallery' },
-    { to: '/blessings', id: 'blessings', label: 'Blessings' },
   ];
 
   const isHomePage = location.pathname === '/' || location.pathname === '/index.html' || location.pathname === '';
@@ -105,7 +104,7 @@ export const Header: React.FC = () => {
   useEffect(() => {
     if (!isHomePage) return;
 
-    const sectionIds = ['home', 'our-story', 'wedding-details', 'gallery', 'blessings'];
+    const sectionIds = ['home', 'our-story', 'wedding-details', 'gallery'];
 
     const handleScroll = () => {
       const scrollPos = window.scrollY + 200;
@@ -128,7 +127,6 @@ export const Header: React.FC = () => {
     '/our-story': 'our-story',
     '/wedding-details': 'wedding-details',
     '/gallery': 'gallery',
-    '/blessings': 'blessings',
   };
 
   const handleNavContainerClick = (e: React.MouseEvent) => {

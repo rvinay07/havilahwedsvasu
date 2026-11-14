@@ -165,7 +165,6 @@ async function runE2E() {
     { path: '/#/our-story', name: 'Our Story' },
     { path: '/#/wedding-details', name: 'Wedding Details' },
     { path: '/#/gallery', name: 'Gallery' },
-    { path: '/#/blessings', name: 'Blessings' },
   ];
 
   let totalAssertions = 0;

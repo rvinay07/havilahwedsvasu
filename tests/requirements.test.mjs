@@ -53,17 +53,15 @@ test('Strict Business Rules & Prohibitions Verification', async (t) => {
     assert.match(content, /path=["']\/our-story["']/, 'Must register /our-story route');
     assert.match(content, /path=["']\/wedding-details["']/, 'Must register /wedding-details route');
     assert.match(content, /path=["']\/gallery["']/, 'Must register /gallery route');
-    assert.match(content, /path=["']\/blessings["']/, 'Must register /blessings route');
   });
 
-  await t.test('Header navigation contains all 5 mandatory pages', () => {
+  await t.test('Header navigation contains all 4 mandatory pages', () => {
     const headerPath = path.join(ROOT, 'src/components/Header.tsx');
     const content = fs.readFileSync(headerPath, 'utf8');
     assert.match(content, /label:\s*["']Home["']/, 'Header must have Home link');
     assert.match(content, /label:\s*["']Our Story["']/, 'Header must have Our Story link');
     assert.match(content, /label:\s*["']Wedding Details["']/, 'Header must have Wedding Details link');
     assert.match(content, /label:\s*["']Gallery["']/, 'Header must have Gallery link');
-    assert.match(content, /label:\s*["']Blessings["']/, 'Header must have Blessings link');
   });
 
   await t.test('Header uses sacred monogram V ✝ M', () => {
@@ -116,13 +114,12 @@ test('Strict Business Rules & Prohibitions Verification', async (t) => {
       'closeMenu must not call e.preventDefault() so NavLink redirect works'
     );
 
-    // Verify all 5 routes are mapped to NavLink
+    // Verify all 4 routes are mapped to NavLink
     const expectedRoutes = [
       { to: '/', label: 'Home' },
       { to: '/our-story', label: 'Our Story' },
       { to: '/wedding-details', label: 'Wedding Details' },
       { to: '/gallery', label: 'Gallery' },
-      { to: '/blessings', label: 'Blessings' },
     ];
 
     for (const r of expectedRoutes) {

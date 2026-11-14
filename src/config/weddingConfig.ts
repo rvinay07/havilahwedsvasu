@@ -9,9 +9,9 @@ export const weddingConfig = {
   brideMother: "S.ESTHER",
   
   contactNumbers: [
-    { label: "Vasu (Groom)", number: "+91 9652296062", tel: "+919652296062" },
-    { label: "Hoshi (Groom's Brother)", number: "+91 8978148996", tel: "+918978148996" },
-    { label: "N. Jephaniah (Groom's Father)", number: "+91 6281047922", tel: "+916281047922" }
+    { label: "Vasu", number: "+91 9652296062", tel: "+919652296062" },
+    { label: "Hoshi", number: "+91 8978148996", tel: "+918978148996" },
+    { label: "Jephaniah", number: "+91 6281047922", tel: "+916281047922" }
   ],
 
   hostingUrl: "https://vasuwedshavilah.vercel.app/",

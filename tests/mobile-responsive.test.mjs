@@ -40,7 +40,6 @@ test('Mobile-First Responsiveness & Cross-Device Adaptation', async (t) => {
       'src/pages/OurStoryPage.tsx',
       'src/pages/WeddingDetailsPage.tsx',
       'src/pages/GalleryPage.tsx',
-      'src/pages/BlessingsPage.tsx',
     ];
 
     for (const relPath of pageFiles) {

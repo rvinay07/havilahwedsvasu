@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -10,7 +10,6 @@ import { HomePage } from './pages/HomePage';
 import { OurStoryPage } from './pages/OurStoryPage';
 import { WeddingDetailsPage } from './pages/WeddingDetailsPage';
 import { GalleryPage } from './pages/GalleryPage';
-import { BlessingsPage } from './pages/BlessingsPage';
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
@@ -45,8 +44,8 @@ const AnimatedRoutes: React.FC = () => {
           <Route path="/events.html" element={<WeddingDetailsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/gallery.html" element={<GalleryPage />} />
-          <Route path="/blessings" element={<BlessingsPage />} />
-          <Route path="/blessings.html" element={<BlessingsPage />} />
+          <Route path="/blessings" element={<Navigate to="/" replace />} />
+          <Route path="/blessings.html" element={<Navigate to="/" replace />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
       </motion.div>
