@@ -50,8 +50,9 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
     assert.match(content, /https:\/\/maps\.app\.goo\.gl\/g9VhPVfzPj7Lbq7h9/, 'Must contain valid Google Maps URL for reception');
   });
 
-  await t.test('Engagement is recorded as completed milestone', () => {
+  await t.test('Engagement is recorded as completed milestone with 4 Feb 2026 date', () => {
     assert.match(content, /id:\s*["']engagement["'][\s\S]*?status:\s*["']completed["']/, 'Engagement must be marked as status: completed');
+    assert.match(content, /4\s*Feb(?:ruary)?\s*2026/i, 'Engagement date must be 4 February 2026');
   });
 
   await t.test('Contact numbers contain all three family numbers', () => {

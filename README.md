@@ -31,7 +31,7 @@ A digital Christian wedding invitation celebrating the Holy Matrimony of **Vasu 
 ## 📂 Multi-Page Architecture
 
 1. **Home (`/`)**: Cinematic hero, formal sacred invitation card, live countdown preview, 4 gateway exploration cards, WhatsApp share banner.
-2. **Our Story (`/our-story`)**: Couple portraits, family cards, faith journey timeline with **Engagement as an already completed milestone** (Song of Solomon 3:4).
+2. **Our Story (`/our-story`)**: Couple portraits, family cards, faith journey timeline with **Engagement on 4 February 2026** as an already completed milestone (Song of Solomon 3:4).
 3. **Wedding Details (`/wedding-details`)**:
    - **Wedding Ceremony:** 3 February 2027, 9:00 AM at Mahendra Kalyana Mandapam, Tilak Nagar, Guntakal. Live countdown, Google Maps directions, Add to Calendar, and Order of Service.
    - **Wedding Reception:** 4 February 2027, 7:00 PM at Sri Thimmaih Kalyana Mandapam, Bollavaram Rural, Proddatur. Live countdown, Google Maps directions, Add to Calendar, and Program.
