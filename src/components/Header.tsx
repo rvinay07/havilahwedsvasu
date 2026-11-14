@@ -90,12 +90,75 @@ export const Header: React.FC = () => {
   };
 
   const navLinks = [
-    { to: '/', label: 'Home' },
-    { to: '/our-story', label: 'Our Story' },
-    { to: '/wedding-details', label: 'Wedding Details' },
-    { to: '/gallery', label: 'Gallery' },
-    { to: '/blessings', label: 'Blessings' },
+    { to: '/', id: 'home', label: 'Home' },
+    { to: '/our-story', id: 'our-story', label: 'Our Story' },
+    { to: '/wedding-details', id: 'wedding-details', label: 'Wedding Details' },
+    { to: '/gallery', id: 'gallery', label: 'Gallery' },
+    { to: '/blessings', id: 'blessings', label: 'Blessings' },
   ];
+
+  const isHomePage = location.pathname === '/' || location.pathname === '/index.html' || location.pathname === '';
+
+  const [activeSection, setActiveSection] = useState('home');
+
+  // Real-time ScrollSpy on Single-Page Homepage
+  useEffect(() => {
+    if (!isHomePage) return;
+
+    const sectionIds = ['home', 'our-story', 'wedding-details', 'gallery', 'blessings'];
+
+    const handleScroll = () => {
+      const scrollPos = window.scrollY + 200;
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sectionIds[i]);
+        if (el && el.offsetTop <= scrollPos) {
+          setActiveSection(sectionIds[i]);
+          break;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isHomePage]);
+
+  const sectionIdMap: Record<string, string> = {
+    '/': 'home',
+    '/our-story': 'our-story',
+    '/wedding-details': 'wedding-details',
+    '/gallery': 'gallery',
+    '/blessings': 'blessings',
+  };
+
+  const handleNavContainerClick = (e: React.MouseEvent) => {
+    if (!isHomePage) return;
+    const target = (e.target as HTMLElement).closest('a');
+    if (!target) return;
+    const href = target.getAttribute('href') || '';
+    const route = href.replace(/^#/, '');
+    const sectionId = sectionIdMap[route];
+    if (sectionId) {
+      e.preventDefault();
+      closeMenu();
+      const el = document.getElementById(sectionId);
+      if (el) {
+        const yOffset = sectionId === 'home' ? 0 : -75;
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isHomePage) {
+      e.preventDefault();
+      closeMenu();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      closeMenu();
+    }
+  };
 
   // Elevated styling when scrolled or when menu is open
   const isHeaderElevated = isScrolled || menuOpen;
@@ -113,8 +176,8 @@ export const Header: React.FC = () => {
           {/* Logo / Sacred Monogram */}
           <NavLink
             to="/"
-            onClick={closeMenu}
-            className="flex items-center gap-1 font-serif text-xl sm:text-2xl font-semibold tracking-wider hover:opacity-85 transition-opacity py-1 select-none"
+            onClick={handleLogoClick}
+            className="flex items-center gap-1 font-serif text-xl sm:text-2xl font-semibold tracking-wider hover:opacity-85 transition-opacity py-1 select-none cursor-pointer"
             aria-label="Vasu & Mercy Havilah Wedding Home"
           >
             <span className={isHeaderElevated ? 'text-plum dark:text-darktext-primary' : 'text-white'}>
@@ -128,26 +191,28 @@ export const Header: React.FC = () => {
 
           {/* Desktop Navigation (Visible on Large Screens 1024px+) */}
           <nav
+            onClickCapture={handleNavContainerClick}
             className="hidden lg:flex items-center gap-6 xl:gap-8 font-sans text-xs tracking-[0.14em] uppercase font-bold"
             aria-label="Main desktop navigation"
           >
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                className={({ isActive }) =>
-                  `relative py-1.5 transition-colors hover:text-rose dark:hover:text-champagne ${
-                    isActive
+            {navLinks.map((link) => {
+              const isCurrentActive = isHomePage ? activeSection === link.id : location.pathname === link.to;
+              return (
+                <NavLink
+                  key={link.to}
+                  to={link.to}
+                  className={`relative py-1.5 transition-colors hover:text-rose dark:hover:text-champagne cursor-pointer ${
+                    isCurrentActive
                       ? 'text-rose dark:text-champagne font-extrabold after:content-[""] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-rose dark:after:bg-champagne after:rounded-full'
                       : isHeaderElevated
                       ? 'text-plum/80 dark:text-darktext-secondary'
                       : 'text-white/90'
-                  }`
-                }
-              >
-                {link.label}
-              </NavLink>
-            ))}
+                  }`}
+                >
+                  {link.label}
+                </NavLink>
+              );
+            })}
           </nav>
 
           {/* Action Group: Theme Toggle & Animated Hamburger Menu */}
@@ -240,29 +305,30 @@ export const Header: React.FC = () => {
                 <div className="h-[1.5px] w-16 bg-rose/40 dark:bg-champagne/40 mx-auto" />
 
                 {/* Navigation Links List */}
-                <nav className="flex flex-col gap-2 mt-2" aria-label="Mobile navigation">
-                  {navLinks.map((link, idx) => (
-                    <motion.div
-                      key={link.to}
-                      initial={{ opacity: 0, y: 12 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.04 * idx, duration: 0.2 }}
-                    >
-                      <NavLink
-                        to={link.to}
-                        onClick={closeMenu}
-                        className={({ isActive }) =>
-                          `block py-3.5 px-5 rounded-2xl font-serif text-xl sm:text-2xl tracking-wide transition-all ${
-                            isActive
+                <nav onClickCapture={handleNavContainerClick} className="flex flex-col gap-2 mt-2" aria-label="Mobile navigation">
+                  {navLinks.map((link, idx) => {
+                    const isCurrentActive = isHomePage ? activeSection === link.id : location.pathname === link.to;
+                    return (
+                      <motion.div
+                        key={link.to}
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.04 * idx, duration: 0.2 }}
+                      >
+                        <NavLink
+                          to={link.to}
+                          onClick={closeMenu}
+                          className={`block py-3.5 px-5 rounded-2xl font-serif text-xl sm:text-2xl tracking-wide transition-all ${
+                            isCurrentActive
                               ? 'bg-rose/10 dark:bg-champagne/10 text-rose dark:text-champagne font-bold border border-rose/25 dark:border-champagne/25 shadow-xs'
                               : 'text-plum/85 dark:text-darktext-primary hover:bg-cream dark:hover:bg-midnight-card hover:text-rose dark:hover:text-champagne'
-                          }`
-                        }
-                      >
-                        {link.label}
-                      </NavLink>
-                    </motion.div>
-                  ))}
+                          }`}
+                        >
+                          {link.label}
+                        </NavLink>
+                      </motion.div>
+                    );
+                  })}
                 </nav>
               </div>
 
