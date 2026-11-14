@@ -1,4 +1,4 @@
-import { EventDetail, StoryMilestone, GalleryPhoto, BibleVerse } from '../types/wedding';
+import { EventDetail, StoryMilestone, GalleryPhoto, BibleVerse, MinisterDetail } from '../types/wedding';
 
 export const weddingConfig = {
   groomName: "VASU",
@@ -79,6 +79,12 @@ export const weddingConfig = {
       ]
     } as EventDetail
   },
+
+  minister: {
+    heading: "The Minister of the Ceremony",
+    name: "Rev. A. P. Solomon Vijay Raj",
+    role: "Officiating the Holy Matrimony & Pastoral Blessing"
+  } as MinisterDetail,
 
   milestones: [
     {

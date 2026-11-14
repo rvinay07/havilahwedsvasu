@@ -61,6 +61,11 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
     assert.match(content, /6281047922/, 'Must contain Hoshi family phone number');
   });
 
+  await t.test('Minister of the ceremony is accurately defined', () => {
+    assert.match(content, /heading:\s*["']The Minister of the Ceremony["']/, 'Must define heading: The Minister of the Ceremony');
+    assert.match(content, /Rev\.\s*A\.\s*P\.\s*Solomon Vijay Raj/, 'Must define minister name Rev. A. P. Solomon Vijay Raj');
+  });
+
   await t.test('All referenced media assets physically exist on disk', () => {
     const mediaFiles = [
       'assets/images/hero.jpg',

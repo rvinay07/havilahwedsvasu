@@ -36,3 +36,9 @@ export interface BibleVerse {
   context?: string;
 }
 
+export interface MinisterDetail {
+  heading: string;
+  name: string;
+  role?: string;
+}
+
