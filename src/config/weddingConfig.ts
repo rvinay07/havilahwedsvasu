@@ -22,7 +22,7 @@ export const weddingConfig = {
     displayPhone: "+91 9866450060",
     whatsappUrl: "https://wa.me/919866450060?text=Hi%20Vinay%2C%20loved%20the%20wedding%20invitation%20website%20for%20Vasu%20%26%20Havilah!%20Would%20like%20to%20connect%20with%20you."
   },
-  designerCredit: "Developed by Vinay · +91 9866450060",
+  designerCredit: "Designed & Built by Vinay · +91 9866450060",
   
   coreVerse: {
     quote: "Therefore what God has joined together, let no one separate.",
