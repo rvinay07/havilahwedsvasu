@@ -122,12 +122,12 @@ export const weddingConfig = {
   ] as StoryMilestone[],
 
   gallery: [
-    { src: "./assets/images/gallery-1.jpg", caption: "A walk of grace and peace", alt: "Vasu and Mercy Havilah portrait 1" },
-    { src: "./assets/images/gallery-2.jpg", caption: "Walking together in faith", alt: "Vasu and Mercy Havilah portrait 2" },
-    { src: "./assets/images/gallery-3.jpg", caption: "Joy and laughter in His light", alt: "Vasu and Mercy Havilah portrait 3" },
-    { src: "./assets/images/gallery-4.jpg", caption: "Joyful beginnings guided by love", alt: "Vasu and Mercy Havilah portrait 4" },
-    { src: "./assets/images/gallery-5.jpg", caption: "A cherished promise sealed before God", alt: "Vasu and Mercy Havilah portrait 5" },
-    { src: "./assets/images/gallery-6.jpg", caption: "Forever united in His holy love", alt: "Vasu and Mercy Havilah portrait 6" },
+    { src: "./assets/images/gallery-1.jpg", caption: "", alt: "Vasu and Mercy Havilah portrait 1" },
+    { src: "./assets/images/gallery-2.jpg", caption: "", alt: "Vasu and Mercy Havilah portrait 2" },
+    { src: "./assets/images/gallery-3.jpg", caption: "", alt: "Vasu and Mercy Havilah portrait 3" },
+    { src: "./assets/images/gallery-4.jpg", caption: "", alt: "Vasu and Mercy Havilah portrait 4" },
+    { src: "./assets/images/gallery-5.jpg", caption: "", alt: "Vasu and Mercy Havilah portrait 5" },
+    { src: "./assets/images/gallery-6.jpg", caption: "", alt: "Vasu and Mercy Havilah portrait 6" },
   ] as GalleryPhoto[],
 
   scriptures: [

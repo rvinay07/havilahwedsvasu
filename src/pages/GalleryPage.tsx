@@ -23,7 +23,6 @@ export const GalleryPage: React.FC = () => {
 
   const slides = weddingConfig.gallery.map((photo) => ({
     src: photo.src,
-    title: photo.caption,
     description: photo.alt,
   }));
 
@@ -78,8 +77,7 @@ export const GalleryPage: React.FC = () => {
                     alt={photo.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-plum-midnight/85 dark:from-midnight/90 via-transparent to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity flex items-end p-4 sm:p-6 justify-between text-white dark:text-darktext-primary">
-                    <p className="font-serif italic text-lg sm:text-xl">{photo.caption}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-plum-midnight/85 dark:from-midnight/90 via-transparent to-transparent opacity-90 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity flex items-end p-4 sm:p-6 justify-end text-white dark:text-darktext-primary">
                     <span className="p-2 rounded-full bg-rose/80 dark:bg-champagne dark:text-midnight backdrop-blur-sm shadow-md">
                       <Maximize2 className="w-4 h-4" />
                     </span>
@@ -124,11 +122,6 @@ export const GalleryPage: React.FC = () => {
                     <Maximize2 className="w-5 h-5" />
                   </span>
                 </div>
-              </div>
-              <div className="p-4 text-center">
-                <p className="font-serif italic text-base text-plum dark:text-darktext-primary group-hover:text-rose dark:group-hover:text-champagne transition-colors">
-                  {photo.caption}
-                </p>
               </div>
             </motion.div>
           ))}
