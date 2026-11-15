@@ -340,63 +340,53 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
 
-        {/* Faith Journey Timeline */}
-        <div className="py-20 px-4 max-w-4xl mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
+        {/* Faith Journey - Minimal Milestones */}
+        <div className="py-12 sm:py-16 px-4 max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-1.5">
               Timeline of Faith
             </p>
-            <h3 className="font-serif text-3xl sm:text-4xl text-plum dark:text-darktext-primary font-medium">
+            <h3 className="font-serif text-2xl sm:text-3xl text-plum dark:text-darktext-primary font-medium">
               Milestones Along the Way
             </h3>
-            <div className="w-16 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-3" />
-            <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary max-w-md mx-auto">
-              Reflecting on God's faithful guidance from our very first steps to our holy covenant.
-            </p>
+            <div className="w-12 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto mt-2.5" />
           </div>
 
-          <div className="relative border-l-2 border-rose/30 dark:border-midnight-border ml-7 sm:ml-10 pl-6 sm:pl-10 space-y-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {weddingConfig.milestones.map((milestone, idx) => {
               const isCompleted = milestone.status === 'completed';
               return (
                 <motion.div
                   key={milestone.id}
-                  initial={{ opacity: 0, x: -15 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="relative"
+                  transition={{ duration: 0.4, delay: idx * 0.08 }}
+                  className="p-5 rounded-2xl bg-white dark:bg-midnight-card border border-rose/20 dark:border-midnight-border shadow-xs hover:border-rose/40 dark:hover:border-champagne/40 transition-all flex flex-col justify-between"
                 >
-                  <div
-                    className={`absolute -left-[35px] sm:-left-[51px] top-1.5 w-6 h-6 rounded-full flex items-center justify-center border-2 ${
-                      isCompleted
-                        ? 'bg-olive dark:bg-darksage text-white dark:text-midnight border-olive dark:border-darksage'
-                        : 'bg-rose dark:bg-champagne text-white dark:text-midnight border-rose dark:border-champagne'
-                    }`}
-                  >
-                    {isCompleted ? <CheckCircle2 className="w-3.5 h-3.5" /> : <Clock className="w-3.5 h-3.5" />}
-                  </div>
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <span
+                        className={`text-[0.62rem] uppercase tracking-wider font-bold px-2.5 py-0.5 rounded-full ${
+                          isCompleted
+                            ? 'bg-pear-pill dark:bg-midnight-elevated text-olive dark:text-darksage'
+                            : 'bg-rose-light dark:bg-midnight-elevated text-rose-deep dark:text-champagne'
+                        }`}
+                      >
+                        {milestone.badge}
+                      </span>
+                      {isCompleted ? (
+                        <CheckCircle2 className="w-4 h-4 text-olive dark:text-darksage shrink-0" />
+                      ) : (
+                        <Clock className="w-4 h-4 text-rose dark:text-champagne shrink-0" />
+                      )}
+                    </div>
 
-                  <div
-                    className={`p-6 sm:p-7 rounded-2xl bg-white dark:bg-midnight-card border shadow-wedding transition-colors ${
-                      isCompleted ? 'border-pear/60 dark:border-midnight-border' : 'border-rose/30 dark:border-midnight-border'
-                    }`}
-                  >
-                    <span
-                      className={`inline-block text-[0.62rem] uppercase tracking-widest font-bold px-3 py-1 rounded-full mb-3 ${
-                        isCompleted
-                          ? 'bg-pear-pill dark:bg-midnight-elevated text-olive dark:text-darksage'
-                          : 'bg-rose-light dark:bg-midnight-elevated text-rose-deep dark:text-champagne'
-                      }`}
-                    >
-                      {milestone.badge}
-                    </span>
-
-                    <h4 className="font-serif text-xl sm:text-2xl text-plum dark:text-darktext-primary font-medium mb-2">
+                    <h4 className="font-serif text-lg sm:text-xl text-plum dark:text-darktext-primary font-medium mb-1.5">
                       {milestone.title}
                     </h4>
 
-                    <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary leading-relaxed">
+                    <p className="font-sans text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary leading-relaxed">
                       {milestone.description}
                     </p>
                   </div>
