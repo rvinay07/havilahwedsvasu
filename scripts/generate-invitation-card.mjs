@@ -278,7 +278,7 @@ async function generate() {
       
       <div class="details-box">
         <div class="event-date">Wednesday, 3 February 2027 · 9:00 AM</div>
-        <div class="event-venue">AB Function Hall AC</div>
+        <div class="event-venue">AB Function Hall (AC)</div>
         <div class="event-address">Behind SSGS Degree College, SN Pet, Guntakal</div>
       </div>
 

@@ -340,7 +340,7 @@ export const Header: React.FC = () => {
                 <div className="text-xs text-plum-muted dark:text-darktext-secondary">
                   <p className="flex items-center justify-center gap-1">
                     <MapPin className="w-3.5 h-3.5 text-rose dark:text-champagne" />
-                    <span>AB Function Hall AC, Guntakal</span>
+                    <span>AB Function Hall (AC), Guntakal</span>
                   </p>
                 </div>
 
