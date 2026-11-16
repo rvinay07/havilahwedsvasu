@@ -518,20 +518,13 @@ export const HomePage: React.FC = () => {
                 >
                   <Calendar className="w-4 h-4" /> Add to Calendar 📅
                 </a>
-                <button
-                  onClick={handleWhatsAppShare}
-                  type="button"
-                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-[#25D366] hover:bg-[#1EBE5B] text-white font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-md cursor-pointer"
-                >
-                  <Share2 className="w-4 h-4" /> Share on WhatsApp
-                </button>
               </div>
             </div>
           </motion.article>
         </div>
 
-        {/* WhatsApp Sharing Station - Prominently Highlighted Above Pre-Wedding Film */}
-        <WhatsAppShareStation className="border-t border-rose/20 dark:border-midnight-border bg-cream-soft/40 dark:bg-midnight-subtle" />
+        {/* Minimal WhatsApp Sharing Station Above Pre-Wedding Film */}
+        <WhatsAppShareStation className="border-t border-rose/20 dark:border-midnight-border bg-cream-soft/30 dark:bg-midnight-subtle" />
 
         {/* Pre-Wedding Film Player */}
         <div className="py-20 px-4 bg-cream/40 dark:bg-midnight-subtle border-t border-rose/20 dark:border-midnight-border text-center transition-colors">

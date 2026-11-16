@@ -1,19 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Navigation, Clock, Share2 } from 'lucide-react';
-import { weddingConfig, getWeddingShareMessage } from '../config/weddingConfig';
+import { Calendar, MapPin, Navigation, Clock } from 'lucide-react';
+import { weddingConfig } from '../config/weddingConfig';
 import { PageHero } from '../components/PageHero';
 import { Countdown } from '../components/Countdown';
 import { WhatsAppShareStation } from '../components/WhatsAppShareStation';
 
 export const WeddingDetailsPage: React.FC = () => {
   const { ceremony } = weddingConfig.events;
-
-  const handleWhatsAppShare = () => {
-    const shareMessage = getWeddingShareMessage();
-    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareMessage)}`;
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-  };
 
   return (
     <div className="overflow-hidden">
@@ -109,13 +103,6 @@ export const WeddingDetailsPage: React.FC = () => {
                 >
                   <Calendar className="w-4 h-4" /> Add to Calendar 📅
                 </a>
-                <button
-                  onClick={handleWhatsAppShare}
-                  type="button"
-                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-[#25D366] hover:bg-[#1EBE5B] text-white font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-md cursor-pointer"
-                >
-                  <Share2 className="w-4 h-4" /> Share on WhatsApp
-                </button>
               </div>
             </div>
 
