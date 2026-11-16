@@ -523,8 +523,8 @@ export const HomePage: React.FC = () => {
           </motion.article>
         </div>
 
-        {/* Minimal WhatsApp Sharing Station Above Pre-Wedding Film */}
-        <WhatsAppShareStation className="border-t border-rose/20 dark:border-midnight-border bg-cream-soft/30 dark:bg-midnight-subtle" />
+        {/* Minimal WhatsApp Sharing Button Above Pre-Wedding Film */}
+        <WhatsAppShareStation className="pt-2 pb-14" />
 
         {/* Pre-Wedding Film Player */}
         <div className="py-20 px-4 bg-cream/40 dark:bg-midnight-subtle border-t border-rose/20 dark:border-midnight-border text-center transition-colors">
