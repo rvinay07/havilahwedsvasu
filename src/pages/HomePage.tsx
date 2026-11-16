@@ -22,6 +22,7 @@ import 'yet-another-react-lightbox/styles.css';
 import { weddingConfig, getWeddingShareMessage } from '../config/weddingConfig';
 import { AmbientCanvas } from '../components/AmbientCanvas';
 import { Countdown } from '../components/Countdown';
+import { WhatsAppShareStation } from '../components/WhatsAppShareStation';
 
 export const HomePage: React.FC = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);
@@ -529,6 +530,9 @@ export const HomePage: React.FC = () => {
           </motion.article>
         </div>
 
+        {/* WhatsApp Sharing Station - Prominently Highlighted Above Pre-Wedding Film */}
+        <WhatsAppShareStation className="border-t border-rose/20 dark:border-midnight-border bg-cream-soft/40 dark:bg-midnight-subtle" />
+
         {/* Pre-Wedding Film Player */}
         <div className="py-20 px-4 bg-cream/40 dark:bg-midnight-subtle border-t border-rose/20 dark:border-midnight-border text-center transition-colors">
           <div className="max-w-4xl mx-auto">
@@ -673,31 +677,6 @@ export const HomePage: React.FC = () => {
           index={photoIndex}
           slides={gallerySlides}
         />
-      </section>
-
-      {/* =========================================================================
-          SECTION 5: SHARE INVITATION VIA WHATSAPP
-          ========================================================================= */}
-      <section className="py-16 sm:py-20 px-4 bg-cream-soft dark:bg-midnight-subtle border-t border-rose/20 dark:border-midnight-border text-center transition-colors">
-        <div className="max-w-2xl mx-auto">
-          <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-            Share the Joy
-          </p>
-          <h3 className="font-serif text-3xl sm:text-4xl text-plum dark:text-darktext-primary font-medium mb-3">
-            Invite Family &amp; Friends on WhatsApp
-          </h3>
-          <div className="w-16 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto mb-4" />
-          <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary max-w-lg mx-auto mb-6 leading-relaxed">
-            Forward our digital wedding invitation card, Holy Matrimony ceremony details, and Google Maps directions directly on WhatsApp.
-          </p>
-          <button
-            onClick={handleWhatsAppShare}
-            type="button"
-            className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#25D366] hover:bg-[#1EBE5B] text-white font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer"
-          >
-            <Share2 className="w-4 h-4" /> Share Invitation via WhatsApp
-          </button>
-        </div>
       </section>
     </div>
   );

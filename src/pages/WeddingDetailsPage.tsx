@@ -4,6 +4,7 @@ import { Calendar, MapPin, Navigation, Clock, Share2 } from 'lucide-react';
 import { weddingConfig, getWeddingShareMessage } from '../config/weddingConfig';
 import { PageHero } from '../components/PageHero';
 import { Countdown } from '../components/Countdown';
+import { WhatsAppShareStation } from '../components/WhatsAppShareStation';
 
 export const WeddingDetailsPage: React.FC = () => {
   const { ceremony } = weddingConfig.events;
@@ -174,6 +175,9 @@ export const WeddingDetailsPage: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* WhatsApp Sharing Station Above Footer */}
+      <WhatsAppShareStation className="border-t border-rose/20 dark:border-midnight-border bg-cream-soft/40 dark:bg-midnight-subtle" />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Heart, CheckCircle2, Clock } from 'lucide-react';
 import { weddingConfig } from '../config/weddingConfig';
 import { PageHero } from '../components/PageHero';
+import { WhatsAppShareStation } from '../components/WhatsAppShareStation';
 
 export const OurStoryPage: React.FC = () => {
   return (
@@ -247,6 +248,9 @@ export const OurStoryPage: React.FC = () => {
           </Link>
         </div>
       </section>
+
+      {/* WhatsApp Sharing Station Above Footer */}
+      <WhatsAppShareStation className="border-t border-rose/20 dark:border-midnight-border bg-cream-soft/40 dark:bg-midnight-subtle" />
     </div>
   );
 };
