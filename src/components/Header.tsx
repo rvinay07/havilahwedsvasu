@@ -9,9 +9,10 @@ export const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     try {
-      return (localStorage.getItem('weddingTheme') as 'light' | 'dark') || 'light';
+      const saved = localStorage.getItem('weddingTheme');
+      return (saved === 'light' || saved === 'dark') ? saved : 'dark';
     } catch {
-      return 'light';
+      return 'dark';
     }
   });
 
