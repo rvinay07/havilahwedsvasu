@@ -8,7 +8,8 @@ import {
   Clock,
   CheckCircle2,
   Navigation,
-  Maximize2
+  Maximize2,
+  Share2
 } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation as SwiperNav, Pagination as SwiperPagination, Autoplay as SwiperAutoplay } from 'swiper/modules';
@@ -18,7 +19,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'yet-another-react-lightbox/styles.css';
 
-import { weddingConfig } from '../config/weddingConfig';
+import { weddingConfig, getWeddingShareMessage } from '../config/weddingConfig';
 import { AmbientCanvas } from '../components/AmbientCanvas';
 import { Countdown } from '../components/Countdown';
 
@@ -28,6 +29,12 @@ export const HomePage: React.FC = () => {
   const [photoIndex, setPhotoIndex] = useState(0);
 
   const { ceremony } = weddingConfig.events;
+
+  const handleWhatsAppShare = () => {
+    const shareMessage = getWeddingShareMessage();
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareMessage)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -179,13 +186,22 @@ export const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-rose/20 dark:border-midnight-border text-sm text-plum-muted dark:text-darktext-secondary space-y-1">
-                <p className="font-bold text-plum dark:text-darktext-primary font-serif text-lg sm:text-xl">
-                  Wednesday, 3 February 2027 | 9:00 AM
-                </p>
-                <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary">
-                  {ceremony.venue}, {ceremony.address}
-                </p>
+              <div className="mt-8 pt-6 border-t border-rose/20 dark:border-midnight-border flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="text-sm text-plum-muted dark:text-darktext-secondary space-y-1 text-center sm:text-left">
+                  <p className="font-bold text-plum dark:text-darktext-primary font-serif text-lg sm:text-xl">
+                    Wednesday, 3 February 2027 | 9:00 AM
+                  </p>
+                  <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary">
+                    {ceremony.venue}, {ceremony.address}
+                  </p>
+                </div>
+                <button
+                  onClick={handleWhatsAppShare}
+                  type="button"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#1EBE5B] text-white font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer shrink-0"
+                >
+                  <Share2 className="w-4 h-4" /> Share Invitation
+                </button>
               </div>
             </motion.div>
           </div>
@@ -501,6 +517,13 @@ export const HomePage: React.FC = () => {
                 >
                   <Calendar className="w-4 h-4" /> Add to Calendar 📅
                 </a>
+                <button
+                  onClick={handleWhatsAppShare}
+                  type="button"
+                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-[#25D366] hover:bg-[#1EBE5B] text-white font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-md cursor-pointer"
+                >
+                  <Share2 className="w-4 h-4" /> Share on WhatsApp
+                </button>
               </div>
             </div>
           </motion.article>
@@ -650,6 +673,31 @@ export const HomePage: React.FC = () => {
           index={photoIndex}
           slides={gallerySlides}
         />
+      </section>
+
+      {/* =========================================================================
+          SECTION 5: SHARE INVITATION VIA WHATSAPP
+          ========================================================================= */}
+      <section className="py-16 sm:py-20 px-4 bg-cream-soft dark:bg-midnight-subtle border-t border-rose/20 dark:border-midnight-border text-center transition-colors">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
+            Share the Joy
+          </p>
+          <h3 className="font-serif text-3xl sm:text-4xl text-plum dark:text-darktext-primary font-medium mb-3">
+            Invite Family &amp; Friends on WhatsApp
+          </h3>
+          <div className="w-16 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto mb-4" />
+          <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary max-w-lg mx-auto mb-6 leading-relaxed">
+            Forward our digital wedding invitation card, Holy Matrimony ceremony details, and Google Maps directions directly on WhatsApp.
+          </p>
+          <button
+            onClick={handleWhatsAppShare}
+            type="button"
+            className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#25D366] hover:bg-[#1EBE5B] text-white font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-md hover:scale-105 active:scale-95 cursor-pointer"
+          >
+            <Share2 className="w-4 h-4" /> Share Invitation via WhatsApp
+          </button>
+        </div>
       </section>
     </div>
   );
