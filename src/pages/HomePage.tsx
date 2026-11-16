@@ -27,7 +27,7 @@ export const HomePage: React.FC = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
-  const { ceremony, reception } = weddingConfig.events;
+  const { ceremony } = weddingConfig.events;
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -352,7 +352,7 @@ export const HomePage: React.FC = () => {
             <div className="w-12 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto mt-2.5" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {weddingConfig.milestones.map((milestone, idx) => {
               const isCompleted = milestone.status === 'completed';
               return (
@@ -398,7 +398,7 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* =========================================================================
-          SECTION 3: WEDDING DETAILS (Holy Matrimony, Reception, Video & Contacts)
+          SECTION 3: WEDDING DETAILS (Holy Matrimony Service, Video & Contacts)
           ========================================================================= */}
       <section id="wedding-details" className="scroll-mt-20 border-t border-rose/20 dark:border-midnight-border">
         {/* Section Header */}
@@ -407,14 +407,14 @@ export const HomePage: React.FC = () => {
             ✝
           </div>
           <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-            Save the Dates
+            Save the Date
           </p>
           <h2 className="font-serif text-3xl sm:text-5xl text-plum dark:text-darktext-primary font-medium mb-4">
-            Wedding Celebrations &amp; Venues
+            Holy Matrimony Service &amp; Venue
           </h2>
           <div className="w-16 h-[1.5px] bg-rose/40 dark:bg-champagne/40 mx-auto mb-4" />
           <p className="font-sans text-base text-plum-muted dark:text-darktext-secondary max-w-xl mx-auto leading-relaxed">
-            Two sacred gatherings, one joyful covenant. We warmly invite you to celebrate with us.
+            A sacred covenant in Christ. We warmly invite you to celebrate our Holy Matrimony.
           </p>
         </div>
 
@@ -495,68 +495,6 @@ export const HomePage: React.FC = () => {
                 </a>
                 <a
                   href={ceremony.calendarUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-rose hover:bg-rose-dark dark:bg-champagne dark:hover:bg-champagne-hover text-white dark:text-midnight font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-rose-glow dark:shadow-champagne-glow"
-                >
-                  <Calendar className="w-4 h-4" /> Add to Calendar 📅
-                </a>
-              </div>
-            </div>
-          </motion.article>
-
-          {/* EVENT 2: WEDDING RECEPTION */}
-          <motion.article
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-midnight-card border border-rose/30 dark:border-midnight-border shadow-wedding relative overflow-hidden transition-colors"
-          >
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-rose/20 dark:border-midnight-border pb-6 mb-8">
-              <div>
-                <span className="text-xs uppercase tracking-widest text-olive dark:text-darksage font-bold">
-                  {reception.eyebrow}
-                </span>
-                <h3 className="font-serif text-3xl sm:text-4xl text-plum dark:text-darktext-primary font-medium mt-1">
-                  {reception.title}
-                </h3>
-              </div>
-              <div className="text-left md:text-right">
-                <p className="font-serif text-2xl text-rose dark:text-champagne font-semibold">{reception.displayDate}</p>
-                <p className="text-sm text-plum-muted dark:text-darktext-secondary font-medium">{reception.displayTime}</p>
-              </div>
-            </div>
-
-            <div className="max-w-2xl mx-auto space-y-6">
-              <div className="flex items-start gap-3.5">
-                <MapPin className="w-5 h-5 text-rose dark:text-champagne mt-1 shrink-0" />
-                <div>
-                  <h4 className="font-serif text-xl text-plum dark:text-darktext-primary font-semibold">
-                    {reception.venue}
-                  </h4>
-                  <p className="text-sm text-plum-muted dark:text-darktext-secondary">
-                    {reception.address}
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-5 rounded-2xl bg-cream/50 dark:bg-midnight-elevated/60 border border-rose/20 dark:border-midnight-border">
-                <Countdown targetDate={reception.date} label="Countdown to Reception" />
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2">
-                <a
-                  href={reception.mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-olive hover:bg-olive-dark dark:bg-midnight-elevated dark:border dark:border-midnight-border dark:hover:border-champagne dark:hover:text-champagne text-white dark:text-darktext-primary font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-sm"
-                >
-                  <Navigation className="w-4 h-4" /> Google Maps ↗
-                </a>
-                <a
-                  href={reception.calendarUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-rose hover:bg-rose-dark dark:bg-champagne dark:hover:bg-champagne-hover text-white dark:text-midnight font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-rose-glow dark:shadow-champagne-glow"

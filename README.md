@@ -14,9 +14,8 @@ A digital Christian wedding invitation celebrating the Holy Matrimony of **Vasu 
 | **Core Scripture** | *“Therefore what God has joined together, let no one separate.”* — **Matthew 19:6** |
 | **Engagement Ceremony** | **4 February 2026** *(Celebrated Milestone)* |
 | **Holy Matrimony Service** | **Wednesday, 3 February 2027 at 9:00 AM**<br>📍 **AB Function Hall AC**, Behind SSGS Degree College, SN Pet, Guntakal ([Google Maps](https://maps.app.goo.gl/V26a9HupTv4vn8A28)) |
-| **Wedding Reception** | **Thursday, 4 February 2027 at 7:00 PM**<br>📍 **Sri Thimmaih Kalyana Mandapam**, Bollavaram Rural, Proddatur ([Google Maps](https://maps.app.goo.gl/g9VhPVfzPj7Lbq7h9)) |
 | **Family Contacts** | • **General Information:** `+91 8978148996`<br>• **Vasu (Groom):** `+91 9652296062`<br>• **Hoshi (Family):** `+91 6281047922` |
-| **Strict Policies** | Strictly **NO RSVP** forms/buttons · Strictly **NO Thanksgiving service** |
+| **Strict Policies** | Strictly **NO RSVP** forms/buttons · Strictly **NO Thanksgiving service** · Reception details excluded per family preference |
 
 ---
 
@@ -80,7 +79,6 @@ The application features a toggleable dual-palette system designed for visual el
 
 3. **Wedding Details (`/wedding-details`)**:
    * **Holy Matrimony Service:** 3 February 2027, 9:00 AM at AB Function Hall AC, Guntakal. Live countdown, Google Maps directions, Add to Calendar, and Order of Service.
-   * **Wedding Reception:** 4 February 2027, 7:00 PM at Sri Thimmaih Kalyana Mandapam, Proddatur. Live countdown, Google Maps directions, Add to Calendar, and Program.
    * Pre-wedding film video player (`wedding.mp4`).
    * Family contact cards with click-to-call links.
 

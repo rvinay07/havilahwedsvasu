@@ -58,25 +58,6 @@ export const weddingConfig = {
         { time: "10:30 AM", text: "Pastoral Blessing & Family Photographs" },
         { time: "11:30 AM", text: "Wedding Feast & Fellowship" }
       ]
-    } as EventDetail,
-
-    reception: {
-      id: "reception",
-      title: "Wedding Reception",
-      eyebrow: "An Evening of Joy",
-      date: "2027-02-04T19:00:00",
-      displayDate: "4 February 2027",
-      displayTime: "7:00 PM",
-      venue: "Sri Thimmaih Kalyana Mandapam",
-      address: "Bollavaram Rural, Proddatur",
-      mapsUrl: "https://maps.app.goo.gl/g9VhPVfzPj7Lbq7h9",
-      calendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Reception+of+VASU+%26+MERCY+HAVILAH&dates=20270204T133000Z/20270204T170000Z&details=Wedding+reception+celebration+of+Vasu+and+Mercy+Havilah.&location=Sri+Thimmaih+Kalyana+Mandapam,+Bollavaram+Rural,+Proddatur",
-      schedule: [
-        { time: "07:00 PM", text: "Welcoming of Guests & Musical Prelude" },
-        { time: "07:30 PM", text: "Grand Entrance of Vasu & Mercy Havilah" },
-        { time: "08:00 PM", text: "Opening Prayer & Cake Cutting" },
-        { time: "08:30 PM", text: "Dinner Banquet & Celebratory Fellowship" }
-      ]
     } as EventDetail
   },
 
@@ -110,14 +91,6 @@ export const weddingConfig = {
       title: "The Holy Matrimony",
       scripture: "“What God has joined together, let no one separate.” — Matthew 19:6",
       description: "We will exchange our sacred wedding vows before God and family at AB Function Hall AC, Behind SSGS Degree College, SN Pet, Guntakal at 9:00 AM."
-    },
-    {
-      id: "reception",
-      status: "upcoming",
-      badge: "Upcoming · 4 Feb 2027",
-      title: "Wedding Reception",
-      scripture: "“A cord of three strands is not quickly broken.” — Ecclesiastes 4:12",
-      description: "An evening of praise, delightful fellowship, and joyful celebration with family and friends at Sri Thimmaih Kalyana Mandapam, Bollavaram Rural, Proddatur at 7:00 PM."
     }
   ] as StoryMilestone[],
 
@@ -178,11 +151,7 @@ export function getWeddingShareMessage(): string {
     `📅 Wednesday, 3 February 2027 at 9:00 AM`,
     `📍 ${weddingConfig.events.ceremony.venue}, ${weddingConfig.events.ceremony.address}`,
     `🗺️ Directions: ${weddingConfig.events.ceremony.mapsUrl}`,
-    ``,
-    `🎉 WEDDING RECEPTION:`,
-    `📅 Thursday, 4 February 2027 at 7:00 PM`,
-    `📍 ${weddingConfig.events.reception.venue}, ${weddingConfig.events.reception.address}`,
-    `🗺️ Directions: ${weddingConfig.events.reception.mapsUrl}`,
+    `━━━━━━━━━━━━━━━━━━━━`,
     ``,
     `📞 Contacts:`,
     `• Vasu (Groom): +91 9652296062`,

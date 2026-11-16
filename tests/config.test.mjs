@@ -30,9 +30,9 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
     assert.match(content, /Matthew 19:6/, 'Must reference Matthew 19:6');
   });
 
-  await t.test('Upcoming events are strictly Ceremony and Reception (No Thanksgiving)', () => {
+  await t.test('Upcoming events are strictly Ceremony (No Reception, No Thanksgiving)', () => {
     assert.match(content, /id:\s*["']ceremony["']/, 'Must have ceremony event');
-    assert.match(content, /id:\s*["']reception["']/, 'Must have reception event');
+    assert.doesNotMatch(content, /reception/i, 'Must NOT contain any Reception service or event per family requirement');
     assert.doesNotMatch(content, /thanksgiving/i, 'Must NOT contain any Thanksgiving service or event');
   });
 
@@ -41,13 +41,6 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
     assert.match(content, /AB Function Hall AC/, 'Venue must be AB Function Hall AC');
     assert.match(content, /Behind SSGS Degree College,\s*SN Pet,\s*Guntakal/, 'Address must be Behind SSGS Degree College, SN Pet, Guntakal');
     assert.match(content, /https:\/\/maps\.app\.goo\.gl\/V26a9HupTv4vn8A28/, 'Must contain valid Google Maps URL for ceremony');
-  });
-
-  await t.test('Reception date, timing and venue are correct', () => {
-    assert.match(content, /2027-02-04T19:00:00/, 'Reception date must be 4 Feb 2027 7:00 PM');
-    assert.match(content, /Sri Thimmaih Kalyana Mandapam/, 'Venue must be Sri Thimmaih Kalyana Mandapam');
-    assert.match(content, /Bollavaram Rural,\s*Proddatur/, 'Address must be Bollavaram Rural, Proddatur');
-    assert.match(content, /https:\/\/maps\.app\.goo\.gl\/g9VhPVfzPj7Lbq7h9/, 'Must contain valid Google Maps URL for reception');
   });
 
   await t.test('Engagement is recorded as completed milestone with 4 Feb 2026 date', () => {
