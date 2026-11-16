@@ -153,6 +153,7 @@ export function getWeddingShareMessage(): string {
     `💍 HOLY MATRIMONY SERVICE:`,
     `📅 Wednesday, 3 February 2027 at 9:00 AM`,
     `📍 ${weddingConfig.events.ceremony.venue}, ${weddingConfig.events.ceremony.address}`,
+    `🗺️ Google Maps: ${weddingConfig.events.ceremony.mapsUrl}`,
     `━━━━━━━━━━━━━━━━━━━━`,
     ``,
     `📞 Contacts:`,
