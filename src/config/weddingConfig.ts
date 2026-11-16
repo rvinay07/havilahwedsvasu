@@ -136,6 +136,9 @@ export function getWeddingShareMessage(): string {
     `✝ WEDDING INVITATION ✝`,
     `VASU & MERCY HAVILAH`,
     ``,
+    `🌐 Digital Invitation & Preview:`,
+    weddingConfig.hostingUrl,
+    ``,
     `"Therefore what God has joined together, let no one separate." — Matthew 19:6`,
     ``,
     `With praise and gratitude to God, we joyfully invite you and your family to celebrate our Holy Matrimony:`,
@@ -150,7 +153,6 @@ export function getWeddingShareMessage(): string {
     `💍 HOLY MATRIMONY SERVICE:`,
     `📅 Wednesday, 3 February 2027 at 9:00 AM`,
     `📍 ${weddingConfig.events.ceremony.venue}, ${weddingConfig.events.ceremony.address}`,
-    `🗺️ Directions: ${weddingConfig.events.ceremony.mapsUrl}`,
     `━━━━━━━━━━━━━━━━━━━━`,
     ``,
     `📞 Contacts:`,
@@ -159,7 +161,7 @@ export function getWeddingShareMessage(): string {
     `• N. Jephaniah (Groom's Father): +91 8978148996`,
     `━━━━━━━━━━━━━━━━━━━━`,
     ``,
-    `🌐 View digital invitation, photos, timings & maps:`,
+    `🌐 Open digital invitation for photos, timings & Google Maps directions:`,
     weddingConfig.hostingUrl
   ].join('\n');
 }
