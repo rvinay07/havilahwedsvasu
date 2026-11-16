@@ -19,24 +19,24 @@ A digital Christian wedding invitation celebrating the Holy Matrimony of **Vasu 
 
 ---
 
-## 🎨 Dual Luxury Design System
+## 🎨 Dual Luxury Design System (Default: Dark Mode)
 
-The application features a toggleable dual-palette system designed for visual elegance, letterpress aesthetics, and WCAG AAA compliance.
+The application features a toggleable dual-palette system designed for visual elegance, letterpress aesthetics, and WCAG AAA compliance, defaulting to **Midnight Champagne Luxury**.
 
-### 1. Radiant Warm Editorial (Light Theme)
-* **Dusty Rose** (`#C98271`): Romantic badges, primary CTAs, heart flourishes (`♥`), monogram accents.
-* **Olive Green** (`#67724A`): Botanical cross accents (`✝`), section eyebrows, secondary calendar buttons.
-* **Soft Pear Green** (`#C2CCA8`): Completed milestone tags, delicate card borders, soft badge pills.
-* **Cream White** (`#FFEDDC` / `#FAF5EE`): Warm stationery parchment washes, card surfaces, countdown backdrops.
-* **Plum Brown** (`#4F3730`): High-contrast letterpress serif typography, hero gradients, and site footer.
-
-### 2. Midnight Champagne Luxury (Dark Theme)
-* **Midnight Canvas** (`#101820`): Deep navy base background (avoids harsh pure blacks).
+### 1. Midnight Champagne Luxury (Default Dark Theme)
+* **Midnight Canvas** (`#101820`): Deep navy base background with early inline initialization to prevent flash of wrong theme.
 * **Midnight Card Surface** (`#1B2732`): Subtle contrasting cards and interactive module surfaces.
 * **Champagne Gold** (`#D6B878`): Regal highlights, primary buttons, active navigation indicator line.
 * **Gold Hover** (`#E6CC91`): Interactive hover glow and button transitions.
 * **Sage Botanical Accent** (`#A6B3A1`): Delicate leaf accents and completed timeline node pills.
 * **Ivory Typography** (`#F1EBDD`): Soft warm primary text with WCAG AAA readability.
+
+### 2. Radiant Warm Editorial (Light Theme)
+* **Dusty Rose** (`#C98271`): Romantic badges, primary CTAs, heart flourishes (`♥`), monogram accents.
+* **Olive Green** (`#67724A`): Botanical cross accents (`✝`), section eyebrows, secondary calendar buttons.
+* **Soft Pear Green** (`#C2CCA8`): Completed milestone tags, delicate card borders, soft badge pills.
+* **Cream White** (`#FFEDDC` / `#FAF5EE`): Warm stationery parchment washes, card surfaces, countdown backdrops.
+* **Plum Brown** (`#4F3730`): High-contrast letterpress serif typography, hero gradients, and site footer.
 
 ---
 
@@ -52,45 +52,53 @@ The application features a toggleable dual-palette system designed for visual el
 
 ---
 
-## 💬 WhatsApp Integrations
+## 💬 WhatsApp Integrations & Link Preview Card
 
-1. **Guest Invitation Share:**
-   * Accessible via **"Invite Family & Friends on WhatsApp"** on the Home and Blessings pages.
-   * Generates a beautifully formatted wedding invitation containing couple names, parentage, ceremony and reception schedules, Google Maps links, family contact numbers, and the live website URL (`https://vasuwedshavilah.vercel.app/`).
-2. **Developer Connect Button:**
+1. **Custom 16:9 WhatsApp Preview Card (`og-preview.jpg`):**
+   * Generated from `gallery-1.jpg` via Chrome CDP (`1280 × 720`, under 100 KB).
+   * Features an arched couple portrait, gold cross `✝`, Cormorant Garamond typography (`VASU & MERCY HAVILAH`), Matthew 19:6, ceremony date, and venue (`AB Function Hall (AC)`).
+   * Backed by fully qualified absolute Open Graph HTTPS metadata for instant WhatsApp crawler rich preview.
+2. **Link Priority in Share Message:**
+   * The Vercel invitation URL (`https://vasuwedshavilah.vercel.app/`) is placed at the very top of the share text as the first link so WhatsApp always generates the wedding card preview snippet.
+   * Direct Google Maps directions link is provided below the venue for 1-click navigation.
+3. **Minimal WhatsApp Share Button:**
+   * Homepage: Positioned above the Pre-Wedding Film.
+   * Subpages: Positioned above the Footer.
+   * Streamlined, lightweight pill button with official SVG icon and subtitle.
+4. **Developer Connect Button:**
    * Styled in the footer as `Developed by Vinay` alongside a circular emerald WhatsApp icon.
    * Pre-fills a personalized connect message: *"Hi Vinay, loved the wedding invitation website for Vasu & Havilah! Would like to connect with you."*
 
 ---
 
-## 📂 Multi-Page Architecture
+## 📂 Multi-Page Architecture (4 Core Pages)
 
 1. **Home (`/`)**:
    * Cinematic hero with Ken Burns photography and GSAP letter-by-letter reveal.
    * Sacred invitation card featuring both families' lineages.
-   * Live countdown timer to 3 February 2027 with Google Calendar sync.
-   * 4 exploration gateway cards leading to subpages.
-   * WhatsApp guest invitation banner.
+   * Live countdown timer to 3 February 2027 with Google Calendar sync and Google Maps button.
+   * Minimal WhatsApp share station above the Pre-Wedding Film.
+   * Embedded Pre-Wedding Film player (`wedding.mp4`).
+   * Photo gallery highlights with direct link to the full gallery.
 
 2. **Our Story (`/our-story`)**:
    * The Couple portrait cards with parentage lines for Vasu and Mercy Havilah.
    * Family portrait cards for the Groom's and Bride's parents.
    * Faith Journey Timeline featuring **Engagement on 4 February 2026** as a celebrated completed milestone (Song of Solomon 3:4).
+   * Minimal WhatsApp share station above the footer.
 
 3. **Wedding Details (`/wedding-details`)**:
    * **Holy Matrimony Service:** 3 February 2027, 9:00 AM at AB Function Hall (AC), Guntakal. Live countdown, Google Maps directions, Add to Calendar, and Order of Service.
    * Pre-wedding film video player (`wedding.mp4`).
+   * Minister of the ceremony card (Rev. A. P. Solomon Vijay Raj).
    * Family contact cards with click-to-call links.
+   * Minimal WhatsApp share station above the footer.
 
 4. **Gallery (`/gallery`)**:
    * 6 high-resolution wedding portraits.
    * Swiper.js touch carousel with autoplay.
    * Responsive editorial grid with touch-friendly fullscreen lightbox (zoom, counter, swipe).
-
-5. **Blessings (`/blessings`)**:
-   * Matthew 19:6 focal scripture.
-   * Collection of 6 biblical marriage scriptures (1 Cor 13, Eccl 4, Col 3, Psalm 127, 1 John 4, Numbers 6).
-   * Devotional prayer for the couple and WhatsApp share banner.
+   * Minimal WhatsApp share station above the footer.
 
 ---
 
@@ -116,10 +124,10 @@ The codebase includes automated unit, integration, and real-browser CDP test sui
 | `npx tsc --noEmit` | Strict TypeScript 5 static type safety check (`0 errors`). |
 | `node --test tests/config.test.mjs` | Centralized configuration integrity (names, dates, parents, scripture, media). |
 | `node --test tests/mobile-responsive.test.mjs` | Mobile viewport coverage (320px–430px), zero horizontal overflow, touch target size $\ge$ 44px. |
-| `node --test tests/requirements.test.mjs` | Strict business rules: zero RSVP, zero Thanksgiving, all 5 routes, scroll locks. |
+| `node --test tests/requirements.test.mjs` | Strict business rules: zero RSVP, zero Thanksgiving, zero Reception, navigation routes, scroll locks. |
 | `node --test tests/server.test.mjs` | Production HTTP server: SPA routing (200 OK), MIME types, HTTP 206 audio streaming, 403 traversal security. |
 | `node --test tests/theme.test.mjs` | Design tokens, color palettes, and CSS custom property verification. |
-| `node tests/e2e-browser.mjs` | Real Headless Chrome DevTools Protocol (CDP) test suite across 6 viewports with **95/95 passing assertions**. |
+| `node tests/e2e-browser.mjs` | Real Headless Chrome DevTools Protocol (CDP) test suite across 6 viewports with **83/83 passing assertions**. |
 
 Run all unit tests:
 ```bash
