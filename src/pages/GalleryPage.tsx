@@ -12,6 +12,7 @@ import { Maximize2 } from 'lucide-react';
 import { weddingConfig } from '../config/weddingConfig';
 import { PageHero } from '../components/PageHero';
 import { WhatsAppShareStation } from '../components/WhatsAppShareStation';
+import { BrideNoteFamilyHighlight } from '../components/BrideNoteFamilyHighlight';
 
 export const GalleryPage: React.FC = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -36,7 +37,12 @@ export const GalleryPage: React.FC = () => {
         description="A visual journey of faith, laughter, and prayer leading up to our holy covenant."
       />
 
-      {/* ================= 1. FEATURED SWIPER CAROUSEL ================= */}
+      {/* ================= 1. FRIENDS FOUNDATION FAMILY & BRIDE'S NOTE ================= */}
+      <section className="pt-16 pb-6 px-4 max-w-5xl mx-auto">
+        <BrideNoteFamilyHighlight />
+      </section>
+
+      {/* ================= 2. FEATURED SWIPER CAROUSEL ================= */}
       <section className="py-16 px-4 max-w-5xl mx-auto">
         <div className="text-center mb-10">
           <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">

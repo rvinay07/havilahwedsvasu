@@ -23,7 +23,7 @@ import { weddingConfig, getWeddingShareMessage } from '../config/weddingConfig';
 import { AmbientCanvas } from '../components/AmbientCanvas';
 import { Countdown } from '../components/Countdown';
 import { WhatsAppShareStation } from '../components/WhatsAppShareStation';
-import { BrideGreetingCard } from '../components/BrideGreetingCard';
+import { BrideNoteFamilyHighlight } from '../components/BrideNoteFamilyHighlight';
 
 export const HomePage: React.FC = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);
@@ -478,9 +478,6 @@ export const HomePage: React.FC = () => {
 
         {/* Upcoming Events Stack */}
         <div className="pb-20 px-4 max-w-5xl mx-auto space-y-12">
-          {/* A Special Note from the Bride */}
-          <BrideGreetingCard className="max-w-3xl mx-auto" />
-
           {/* EVENT 1: WEDDING CEREMONY */}
           <motion.article
             initial={{ opacity: 0, y: 25 }}
@@ -756,6 +753,11 @@ export const HomePage: React.FC = () => {
           <p className="font-sans text-base text-plum-muted dark:text-darktext-secondary max-w-md mx-auto">
             Swipe to browse our favorite portraits or tap to enlarge in fullscreen.
           </p>
+        </div>
+
+        {/* Highlighted Friends Foundation Family Photo & Bride's Note */}
+        <div className="pb-16 px-4 max-w-5xl mx-auto">
+          <BrideNoteFamilyHighlight />
         </div>
 
         {/* Featured Swiper Carousel */}

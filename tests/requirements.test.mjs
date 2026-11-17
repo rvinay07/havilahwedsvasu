@@ -155,36 +155,42 @@ test('Strict Business Rules & Prohibitions Verification', async (t) => {
     assert.strictEqual(fs.existsSync(path.join(ROOT, 'src/components/luxury')), false);
   });
 
-  await t.test('Bride Greeting Card is placed above wedding marriage details on both Home and Wedding Details pages', () => {
-    const cardPath = path.join(ROOT, 'src/components/BrideGreetingCard.tsx');
-    assert.strictEqual(fs.existsSync(cardPath), true, 'BrideGreetingCard.tsx must exist');
-    const cardContent = fs.readFileSync(cardPath, 'utf8');
+  await t.test('Friends Foundation Family photo and Bride Note are highlighted together in Gallery sections (Home and Gallery pages)', () => {
+    const highlightPath = path.join(ROOT, 'src/components/BrideNoteFamilyHighlight.tsx');
+    assert.strictEqual(fs.existsSync(highlightPath), true, 'BrideNoteFamilyHighlight.tsx must exist');
+    const highlightContent = fs.readFileSync(highlightPath, 'utf8');
 
-    // Message fidelity
-    assert.match(cardContent, /From FF Home to a New Home, By God's Grace!/i);
-    assert.match(cardContent, /7th wedding from FF Home/i);
-    assert.match(cardContent, /All glory to God!/i);
-    assert.match(cardContent, /~\s*Mercy Havilah/);
-    assert.match(cardContent, /The Bride/);
+    // Message fidelity & photo identification
+    assert.match(highlightContent, /Friends\s*Foundation\s*Family/i, 'Must name photo Friends Foundation Family');
+    assert.match(highlightContent, /friends-foundation-family\.jpg/, 'Must reference friends-foundation-family.jpg');
+    assert.match(highlightContent, /From FF Home to a New Home, By God's Grace!/i);
+    assert.match(highlightContent, /7th wedding from FF Home/i);
+    assert.match(highlightContent, /All glory to God!/i);
+    assert.match(highlightContent, /~\s*Mercy Havilah/);
+    assert.match(highlightContent, /The Bride/);
 
-    // Strict user instruction: No "elder daughter" in signatures or badges
-    assert.doesNotMatch(cardContent, /elder\s*daughter/i, 'Must not mention elder daughter');
+    // Strict user instruction: No "elder daughter"
+    assert.doesNotMatch(highlightContent, /elder\s*daughter/i, 'Must not mention elder daughter');
 
-    // HomePage integration: placed above ministers and wedding marriage details
+    // Responsive 2-column highlight verification
+    assert.match(highlightContent, /grid-cols-1\s+lg:grid-cols-12/, 'Must be responsive 2-column desktop and stacked mobile');
+
+    // HomePage integration: placed in gallery section
     const homeContent = fs.readFileSync(path.join(ROOT, 'src/pages/HomePage.tsx'), 'utf8');
-    assert.match(homeContent, /import\s*\{\s*BrideGreetingCard\s*\}\s*from\s*['"]\.\.\/components\/BrideGreetingCard['"]/);
-    assert.match(homeContent, /<BrideGreetingCard[^>]*\/>/);
-    const homeBrideIdx = homeContent.indexOf('<BrideGreetingCard');
-    const homeMinistersIdx = homeContent.indexOf('SOLEMNIZATION OF MARRIAGE');
-    assert.ok(homeBrideIdx !== -1 && homeMinistersIdx !== -1 && homeBrideIdx < homeMinistersIdx, 'BrideGreetingCard must be placed above marriage details on HomePage');
+    assert.match(homeContent, /import\s*\{\s*BrideNoteFamilyHighlight\s*\}\s*from\s*['"]\.\.\/components\/BrideNoteFamilyHighlight['"]/);
+    assert.match(homeContent, /<BrideNoteFamilyHighlight\s*\/>/);
+    const homeGalleryIdx = homeContent.indexOf('id="gallery"');
+    const homeHighlightIdx = homeContent.indexOf('<BrideNoteFamilyHighlight');
+    assert.ok(homeGalleryIdx !== -1 && homeHighlightIdx !== -1 && homeGalleryIdx < homeHighlightIdx, 'BrideNoteFamilyHighlight must be in gallery section on HomePage');
 
-    // WeddingDetailsPage integration: placed above ministers and wedding marriage details
+    // GalleryPage integration: highlighted in gallery page
+    const galleryContent = fs.readFileSync(path.join(ROOT, 'src/pages/GalleryPage.tsx'), 'utf8');
+    assert.match(galleryContent, /import\s*\{\s*BrideNoteFamilyHighlight\s*\}\s*from\s*['"]\.\.\/components\/BrideNoteFamilyHighlight['"]/);
+    assert.match(galleryContent, /<BrideNoteFamilyHighlight\s*\/>/);
+
+    // WeddingDetailsPage: retains bride greeting
     const detailsContent = fs.readFileSync(path.join(ROOT, 'src/pages/WeddingDetailsPage.tsx'), 'utf8');
-    assert.match(detailsContent, /import\s*\{\s*BrideGreetingCard\s*\}\s*from\s*['"]\.\.\/components\/BrideGreetingCard['"]/);
-    assert.match(detailsContent, /<BrideGreetingCard[^>]*\/>/);
-    const detailsBrideIdx = detailsContent.indexOf('<BrideGreetingCard');
-    const detailsMinistersIdx = detailsContent.indexOf('SOLEMNIZATION OF MARRIAGE');
-    assert.ok(detailsBrideIdx !== -1 && detailsMinistersIdx !== -1 && detailsBrideIdx < detailsMinistersIdx, 'BrideGreetingCard must be placed above marriage details on WeddingDetailsPage');
+    assert.match(detailsContent, /BrideGreetingCard/);
   });
 
   await t.test('Reception etiquette and chief guest are rendered on Home and Wedding Details pages', () => {

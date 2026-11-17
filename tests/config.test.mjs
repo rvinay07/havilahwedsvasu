@@ -86,6 +86,7 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
       'assets/images/gallery-4.jpg',
       'assets/images/gallery-5.jpg',
       'assets/images/gallery-6.jpg',
+      'assets/images/friends-foundation-family.jpg',
       'assets/music/wedding.mp3',
       'assets/videos/wedding.mp4'
     ];
