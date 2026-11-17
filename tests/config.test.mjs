@@ -36,6 +36,8 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
     assert.match(content, /Friends Foundation/i, 'Must have Friends Foundation venue for reception');
     assert.match(content, /Bacharam,\s*Hyderabad/i, 'Must have Bacharam, Hyderabad location for reception');
     assert.match(content, /https:\/\/maps\.app\.goo\.gl\/ekiJgkWFCmETRwWg6/, 'Must contain Google Maps link for reception');
+    assert.match(content, /U\.?\s*Joshua\s*Ranjit/i, 'Must contain reception officiant U. Joshua Ranjit');
+    assert.match(content, /Pastor\s*Chitti\s*Babu/i, 'Must contain reception chief guest Pastor Chitti Babu');
     assert.doesNotMatch(content, /thanksgiving/i, 'Must NOT contain any Thanksgiving service or event');
   });
 

@@ -631,6 +631,52 @@ export const HomePage: React.FC = () => {
                   </div>
                 </div>
 
+                {/* Reception Officiant & Chief Guest */}
+                {reception.dignitaries && (
+                  <div className="p-6 rounded-2xl bg-cream-soft/80 dark:bg-midnight-elevated/40 border border-rose/20 dark:border-midnight-border">
+                    <h4 className="text-xs uppercase tracking-[0.22em] text-olive dark:text-champagne font-bold mb-4 text-center">
+                      ✝ RECEPTION OFFICIANT &amp; CHIEF GUEST ✝
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {/* Marriage Officiant (Reception) */}
+                      <div className="p-5 rounded-xl bg-white/80 dark:bg-midnight-card/80 border border-rose/15 dark:border-midnight-border text-center flex flex-col justify-between">
+                        <div>
+                          <p className="text-[0.68rem] uppercase tracking-[0.2em] text-rose dark:text-champagne font-bold mb-1.5">
+                            {reception.dignitaries.officiant.title}
+                          </p>
+                          <h5 className="font-serif text-lg sm:text-xl font-semibold text-plum dark:text-darktext-primary mb-1">
+                            {reception.dignitaries.officiant.name}
+                          </h5>
+                        </div>
+                        <div>
+                          <div className="w-10 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2.5" />
+                          <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
+                            {reception.dignitaries.officiant.organization}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Chief Guest */}
+                      <div className="p-5 rounded-xl bg-white/80 dark:bg-midnight-card/80 border border-rose/15 dark:border-midnight-border text-center flex flex-col justify-between">
+                        <div>
+                          <p className="text-[0.68rem] uppercase tracking-[0.2em] text-rose dark:text-champagne font-bold mb-1.5">
+                            {reception.dignitaries.chiefGuest.title}
+                          </p>
+                          <h5 className="font-serif text-lg sm:text-xl font-semibold text-plum dark:text-darktext-primary mb-1">
+                            {reception.dignitaries.chiefGuest.name}
+                          </h5>
+                        </div>
+                        <div>
+                          <div className="w-10 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2.5" />
+                          <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
+                            {reception.dignitaries.chiefGuest.role || 'Honored Chief Guest'}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 <div className="p-5 rounded-2xl bg-cream/50 dark:bg-midnight-elevated/60 border border-rose/20 dark:border-midnight-border">
                   <Countdown targetDate={reception.date} label="Countdown to Wedding Reception" />
                 </div>

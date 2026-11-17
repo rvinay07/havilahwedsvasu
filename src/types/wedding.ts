@@ -1,3 +1,16 @@
+export interface ReceptionDignitaries {
+  officiant: {
+    title: string;
+    name: string;
+    organization: string;
+  };
+  chiefGuest: {
+    title: string;
+    name: string;
+    role?: string;
+  };
+}
+
 export interface EventDetail {
   id: string;
   title: string;
@@ -13,6 +26,7 @@ export interface EventDetail {
     time: string;
     text: string;
   }>;
+  dignitaries?: ReceptionDignitaries;
 }
 
 export interface StoryMilestone {

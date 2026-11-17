@@ -80,7 +80,19 @@ export const weddingConfig = {
         { time: "06:30 PM", text: "Welcome & Guest Arrival" },
         { time: "07:00 PM", text: "Celebration, Greetings & Fellowship" },
         { time: "08:00 PM", text: "Wedding Reception Feast & Dinner" }
-      ]
+      ],
+      dignitaries: {
+        officiant: {
+          title: "MARRIAGE OFFICIANT",
+          name: "U. Joshua Ranjit",
+          organization: "Friends Foundation"
+        },
+        chiefGuest: {
+          title: "CHIEF GUEST",
+          name: "Pastor Chitti Babu",
+          role: "Honored Chief Guest"
+        }
+      }
     } as EventDetail
   },
 
@@ -212,6 +224,8 @@ export function getWeddingShareMessage(): string {
     `📅 Tuesday, 9 February 2027 · 6:30 PM Onwards`,
     `📍 ${weddingConfig.events.reception.venue}, ${weddingConfig.events.reception.address}`,
     `🗺️ Google Maps: ${weddingConfig.events.reception.mapsUrl}`,
+    `✝ Officiant: U. Joshua Ranjit (Friends Foundation)`,
+    `🌟 Chief Guest: Pastor Chitti Babu`,
     `━━━━━━━━━━━━━━━━━━━━`,
     ``,
     `📞 Contacts:`,
