@@ -80,6 +80,9 @@ export const BrideNoteFamilyHighlight: React.FC<BrideNoteFamilyHighlightProps> =
               <h4 className="font-serif text-base sm:text-lg font-semibold text-plum dark:text-darktext-primary">
                 Friends Foundation Family
               </h4>
+              <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary mt-1">
+                Pic : Friends Foundation, Hyderabad · 16 February 2026
+              </p>
             </div>
           </div>
 

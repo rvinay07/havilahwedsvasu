@@ -162,6 +162,7 @@ test('Strict Business Rules & Prohibitions Verification', async (t) => {
 
     // Message fidelity & photo identification
     assert.match(highlightContent, /Friends\s*Foundation\s*Family/i, 'Must name photo Friends Foundation Family');
+    assert.match(highlightContent, /Pic\s*:\s*Friends\s*Foundation,\s*Hyderabad\s*·\s*16\s*February\s*2026/i, 'Must display Pic : Friends Foundation, Hyderabad · 16 February 2026');
     assert.doesNotMatch(highlightContent, /Location\s*&\s*date/i, 'Must not contain demo text Location & date');
     assert.match(highlightContent, /friends-foundation-family\.jpg/, 'Must reference friends-foundation-family.jpg');
     assert.match(highlightContent, /From FF Home to a New Home, By God's Grace!/i);
