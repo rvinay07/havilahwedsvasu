@@ -54,5 +54,16 @@ test('Design Tokens & Dual-Theme System Verification', async (t) => {
     assert.match(cssContent, /--champagne:\s*#9C8DC1/i, 'CSS dark --champagne must use #9C8DC1');
     assert.match(cssContent, /--sage-accent:\s*#B58BC0/i, 'CSS dark --sage-accent must use #B58BC0');
   });
+
+  await t.test('Footer component accurately integrates palette tokens', () => {
+    const footerPath = path.join(ROOT, 'src/components/Footer.tsx');
+    assert.ok(fs.existsSync(footerPath), 'Footer.tsx must exist');
+    const footerContent = fs.readFileSync(footerPath, 'utf8');
+
+    // Footer background uses Deep #292532 (bg-plum) in light mode and midnight in dark mode
+    assert.match(footerContent, /bg-plum\s+dark:bg-midnight/);
+    assert.match(footerContent, /text-cream/);
+    assert.match(footerContent, /text-rose\s+dark:text-champagne/);
+  });
 });
 
