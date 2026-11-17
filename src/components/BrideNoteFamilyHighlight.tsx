@@ -84,7 +84,7 @@ export const BrideNoteFamilyHighlight: React.FC<BrideNoteFamilyHighlightProps> =
                 Friends Foundation Family
               </h4>
               <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary mt-1">
-                Cherished moments with Daddy (U. Joshua Ranjit) &amp; the entire Friends Foundation family on 16 February 2026.
+                Pic : Location &amp; date
               </p>
             </div>
           </div>
