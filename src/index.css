@@ -13,24 +13,24 @@
   }
 
   :root {
-    --color-rose: #C98271;
-    --color-olive: #67724A;
-    --color-pear: #C2CCA8;
-    --color-cream: #FFEDDC;
-    --color-plum: #4F3730;
+    --color-rose: #9C8DC1;
+    --color-olive: #B58BC0;
+    --color-pear: #D3D0DD;
+    --color-cream: #F4F4F6;
+    --color-plum: #292532;
 
-    --bg-page: #FAF5EE;
+    --bg-page: #F4F4F6;
     --bg-card: #FFFFFF;
-    --bg-alt: #F3ECE1;
-    --bg-soft: #FFEDDC;
+    --bg-alt: #EAE8EF;
+    --bg-soft: #D3D0DD;
 
-    --text-main: #4F3730;
-    --text-muted: #70554D;
-    --text-soft: #8E736B;
+    --text-main: #292532;
+    --text-muted: #474154;
+    --text-soft: #686278;
 
-    --border-rose: rgba(201, 130, 113, 0.35);
-    --border-subtle: rgba(79, 55, 48, 0.12);
-    --nav-glass: rgba(250, 245, 238, 0.94);
+    --border-rose: rgba(156, 141, 193, 0.35);
+    --border-subtle: rgba(41, 37, 50, 0.12);
+    --nav-glass: rgba(244, 244, 246, 0.94);
   }
 
   [data-theme="dark"] {

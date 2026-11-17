@@ -132,7 +132,7 @@ export const HomePage: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => scrollToSection('wedding-details')}
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-md bg-rose dark:bg-champagne text-white dark:text-midnight font-sans text-xs uppercase tracking-widest font-bold shadow-rose-glow dark:shadow-champagne-glow hover:bg-rose-dark dark:hover:bg-champagne-hover active:scale-95 transition-all flex items-center justify-center gap-2 touch-manipulation cursor-pointer"
+                  className="w-full sm:w-auto px-7 py-3.5 rounded-md bg-rose dark:bg-champagne text-plum dark:text-midnight font-sans text-xs uppercase tracking-widest font-bold shadow-rose-glow dark:shadow-champagne-glow hover:bg-rose-dark dark:hover:bg-champagne-hover active:scale-95 transition-all flex items-center justify-center gap-2 touch-manipulation cursor-pointer"
                 >
                   Wedding Details &amp; Maps <ArrowRight className="w-4 h-4" />
                 </button>
@@ -575,7 +575,7 @@ export const HomePage: React.FC = () => {
                   href={ceremony.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-olive hover:bg-olive-dark dark:bg-midnight-elevated dark:border dark:border-midnight-border dark:hover:border-champagne dark:hover:text-champagne text-white dark:text-darktext-primary font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-sm"
+                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-olive hover:bg-olive-dark dark:bg-midnight-elevated dark:border dark:border-midnight-border dark:hover:border-champagne dark:hover:text-champagne text-plum dark:text-darktext-primary font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-sm"
                 >
                   <Navigation className="w-4 h-4" /> Google Maps ↗
                 </a>
@@ -583,7 +583,7 @@ export const HomePage: React.FC = () => {
                   href={ceremony.calendarUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-rose hover:bg-rose-dark dark:bg-champagne dark:hover:bg-champagne-hover text-white dark:text-midnight font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-rose-glow dark:shadow-champagne-glow"
+                  className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-rose hover:bg-rose-dark dark:bg-champagne dark:hover:bg-champagne-hover text-plum dark:text-midnight font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-rose-glow dark:shadow-champagne-glow"
                 >
                   <Calendar className="w-4 h-4" /> Add to Calendar 📅
                 </a>
@@ -641,7 +641,7 @@ export const HomePage: React.FC = () => {
                     href={reception.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-olive hover:bg-olive-dark dark:bg-midnight-elevated dark:border dark:border-midnight-border dark:hover:border-champagne dark:hover:text-champagne text-white dark:text-darktext-primary font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-sm"
+                    className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-olive hover:bg-olive-dark dark:bg-midnight-elevated dark:border dark:border-midnight-border dark:hover:border-champagne dark:hover:text-champagne text-plum dark:text-darktext-primary font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-sm"
                   >
                     <Navigation className="w-4 h-4" /> Google Maps ↗
                   </a>
@@ -649,7 +649,7 @@ export const HomePage: React.FC = () => {
                     href={reception.calendarUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-rose hover:bg-rose-dark dark:bg-champagne dark:hover:bg-champagne-hover text-white dark:text-midnight font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-rose-glow dark:shadow-champagne-glow"
+                    className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-rose hover:bg-rose-dark dark:bg-champagne dark:hover:bg-champagne-hover text-plum dark:text-midnight font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-rose-glow dark:shadow-champagne-glow"
                   >
                     <Calendar className="w-4 h-4" /> Add to Calendar 📅
                   </a>

@@ -18,12 +18,20 @@ test('Design Tokens & Dual-Theme System Verification', async (t) => {
   const tailwindContent = fs.readFileSync(tailwindPath, 'utf8');
   const cssContent = fs.readFileSync(cssPath, 'utf8');
 
-  await t.test('Light theme tokens are present and exact', () => {
-    assert.match(tailwindContent, /#C98271/i, 'Dusty Rose #C98271 must exist');
-    assert.match(tailwindContent, /#67724A/i, 'Olive Green #67724A must exist');
-    assert.match(tailwindContent, /#C2CCA8/i, 'Soft Pear Green #C2CCA8 must exist');
-    assert.match(tailwindContent, /#FFEDDC/i, 'Cream White #FFEDDC must exist');
-    assert.match(tailwindContent, /#4F3730/i, 'Plum Brown #4F3730 must exist');
+  await t.test('Light theme tokens match WedBuild palette exact values', () => {
+    assert.match(tailwindContent, /#9C8DC1/i, 'Primary Colour / Main #9C8DC1 must exist in tailwind');
+    assert.match(tailwindContent, /#B58BC0/i, 'Secondary Colour / Accent #B58BC0 must exist in tailwind');
+    assert.match(tailwindContent, /#D3D0DD/i, 'Soft #D3D0DD must exist in tailwind');
+    assert.match(tailwindContent, /#F4F4F6/i, 'Neutral / Page Background #F4F4F6 must exist in tailwind');
+    assert.match(tailwindContent, /#292532/i, 'Deep / Heading Colour #292532 must exist in tailwind');
+
+    assert.match(cssContent, /--bg-page:\s*#F4F4F6/i, 'CSS --bg-page must use #F4F4F6');
+    assert.match(cssContent, /--text-main:\s*#292532/i, 'CSS --text-main must use #292532');
+    assert.match(cssContent, /--color-rose:\s*#9C8DC1/i, 'CSS --color-rose must use #9C8DC1');
+    assert.match(cssContent, /--color-olive:\s*#B58BC0/i, 'CSS --color-olive must use #B58BC0');
+    assert.match(cssContent, /--color-pear:\s*#D3D0DD/i, 'CSS --color-pear must use #D3D0DD');
+    assert.match(cssContent, /--color-cream:\s*#F4F4F6/i, 'CSS --color-cream must use #F4F4F6');
+    assert.match(cssContent, /--color-plum:\s*#292532/i, 'CSS --color-plum must use #292532');
   });
 
   await t.test('Midnight Champagne Luxury dark theme tokens are present and exact', () => {

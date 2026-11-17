@@ -23,10 +23,10 @@ export const AmbientCanvas: React.FC<{ className?: string }> = ({ className = ''
     const isDark = () => document.documentElement.getAttribute('data-theme') === 'dark';
 
     const lightColors = [
-      'rgba(201, 130, 113, ', // Dusty Rose
-      'rgba(103, 114, 74, ',  // Olive Green
-      'rgba(194, 204, 168, ', // Soft Pear Green
-      'rgba(255, 237, 220, ', // Cream White
+      'rgba(156, 141, 193, ', // Main Wisteria Lavender (#9C8DC1)
+      'rgba(181, 139, 192, ', // Accent Lilac Orchid (#B58BC0)
+      'rgba(211, 208, 221, ', // Soft Lavender Mist (#D3D0DD)
+      'rgba(244, 244, 246, ', // Neutral Page Background (#F4F4F6)
     ];
 
     const darkColors = [

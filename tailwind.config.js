@@ -8,37 +8,38 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Light Theme (Preserved untouched)
+        // Lavender Mist Luxury Theme (WedBuild Theme Palette)
         rose: {
-          DEFAULT: '#C98271', // Dusty Rose
-          light: '#FBF0ED',
-          soft: '#F5E2DD',
-          dark: '#B36F5F',
-          deep: '#965345',
+          DEFAULT: '#9C8DC1', // Primary Colour / Main (Wisteria Lavender)
+          light: '#F3F0F8',
+          soft: '#E4DFEE',
+          dark: '#8877B0',
+          deep: '#73629E',
         },
         olive: {
-          DEFAULT: '#67724A', // Olive Green
-          light: '#F2F5EC',
-          dark: '#505A36',
-          deep: '#3A4325',
+          DEFAULT: '#B58BC0', // Secondary Colour / Accent (Lilac Orchid)
+          light: '#F8F1F9',
+          soft: '#ECD9EE',
+          dark: '#A375AF',
+          deep: '#8F5D9C',
         },
         pear: {
-          DEFAULT: '#C2CCA8', // Soft Pear Green
-          light: '#F4F7EE',
-          pill: '#EBF0DF',
-          dark: '#9FA985',
+          DEFAULT: '#D3D0DD', // Soft (Muted Lavender Mist)
+          light: '#F3F2F6',
+          pill: '#E5E3EC',
+          dark: '#B8B4C6',
         },
         cream: {
-          DEFAULT: '#FFEDDC', // Cream White
-          soft: '#FFF9F3',
-          warm: '#FAF5EE',
+          DEFAULT: '#F4F4F6', // Neutral (Page Background)
+          soft: '#FAF9FB',
+          warm: '#F4F4F6',    // Page Background
         },
         plum: {
-          DEFAULT: '#4F3730', // Plum Brown
-          soft: '#70554D',
-          muted: '#8E736B',
-          dark: '#3B2822',
-          midnight: '#1F1614',
+          DEFAULT: '#292532', // Deep / Heading Colour / Button Text
+          soft: '#474154',
+          muted: '#686278',
+          dark: '#1D1924',
+          midnight: '#131018',
         },
 
         // Midnight Champagne Luxury Dark Theme
@@ -71,10 +72,10 @@ export default {
         champagne: ['Champagne', '"Cormorant Garamond"', 'Garamond', 'Georgia', 'serif'],
       },
       boxShadow: {
-        'wedding': '0 10px 30px rgba(79, 55, 48, 0.08)',
-        'wedding-lg': '0 20px 50px rgba(79, 55, 48, 0.12)',
-        'rose-glow': '0 10px 25px rgba(201, 130, 113, 0.35)',
-        'olive-glow': '0 10px 25px rgba(103, 114, 74, 0.35)',
+        'wedding': '0 10px 30px rgba(41, 37, 50, 0.08)',
+        'wedding-lg': '0 20px 50px rgba(41, 37, 50, 0.12)',
+        'rose-glow': '0 10px 25px rgba(156, 141, 193, 0.40)',
+        'olive-glow': '0 10px 25px rgba(181, 139, 192, 0.40)',
         'champagne-glow': '0 10px 25px rgba(214, 184, 120, 0.35)',
       }
     },
