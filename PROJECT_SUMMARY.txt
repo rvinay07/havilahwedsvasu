@@ -16,7 +16,7 @@ Repository: https://github.com/rvinay07/havilahwedsvasu (main)
 - Autoplay & Audio Unlock: Instant 0ms HTML5 autoplay with first touch/click
   gesture unlock and live equalizer pill (Music ON / OFF).
 - Standardized Dates: Engagement (16 Feb 2026), Holy Matrimony (3 Feb 2027),
-  Reception (4 Feb 2027). Zero RSVP forms, zero Thanksgiving mentions.
+  Reception (9 Feb 2027 at Friends Foundation, Bacharam, Hyderabad). Zero RSVP forms, zero Thanksgiving mentions.
 - WhatsApp Integrations: Added guest invitation generator and developer connect.
 - Automated Testing: 49 unit tests + 95 CDP browser assertions (100% passing).
 - Multi-Cloud Hosting: Production CI/CD on Vercel and GitHub Pages.

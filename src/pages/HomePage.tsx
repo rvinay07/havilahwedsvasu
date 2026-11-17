@@ -29,7 +29,7 @@ export const HomePage: React.FC = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
-  const { ceremony } = weddingConfig.events;
+  const { ceremony, reception } = weddingConfig.events;
 
   const handleWhatsAppShare = () => {
     const shareMessage = getWeddingShareMessage();
@@ -214,13 +214,25 @@ export const HomePage: React.FC = () => {
               </div>
 
               <div className="mt-8 pt-6 border-t border-rose/20 dark:border-midnight-border flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div className="text-sm text-plum-muted dark:text-darktext-secondary space-y-1 text-center sm:text-left">
-                  <p className="font-bold text-plum dark:text-darktext-primary font-serif text-lg sm:text-xl">
-                    Wednesday, 3 February 2027 | 9:00 AM
-                  </p>
-                  <p className="font-sans text-sm text-plum-muted dark:text-darktext-secondary">
-                    {ceremony.venue}, {ceremony.address}
-                  </p>
+                <div className="text-sm text-plum-muted dark:text-darktext-secondary space-y-1.5 text-center sm:text-left">
+                  <div>
+                    <p className="font-bold text-plum dark:text-darktext-primary font-serif text-base sm:text-lg">
+                      Holy Matrimony: Wednesday, 3 February 2027 | 9:00 AM
+                    </p>
+                    <p className="font-sans text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
+                      {ceremony.venue}, {ceremony.address}
+                    </p>
+                  </div>
+                  {reception && (
+                    <div className="pt-1 border-t border-rose/10 dark:border-midnight-border/60">
+                      <p className="font-bold text-rose dark:text-champagne font-serif text-base sm:text-lg">
+                        Reception: {reception.displayDate} | {reception.displayTime}
+                      </p>
+                      <p className="font-sans text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
+                        {reception.venue}, {reception.address}
+                      </p>
+                    </div>
+                  )}
                 </div>
                 <button
                   onClick={handleWhatsAppShare}
@@ -577,6 +589,70 @@ export const HomePage: React.FC = () => {
               </div>
             </div>
           </motion.article>
+
+          {/* EVENT 2: WEDDING RECEPTION */}
+          {reception && (
+            <motion.article
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="p-8 sm:p-12 rounded-3xl bg-white dark:bg-midnight-card border border-rose/30 dark:border-midnight-border shadow-wedding relative overflow-hidden transition-colors mt-8"
+            >
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-rose/20 dark:border-midnight-border pb-6 mb-8">
+                <div>
+                  <span className="text-xs uppercase tracking-widest text-olive dark:text-darksage font-bold">
+                    {reception.eyebrow}
+                  </span>
+                  <h3 className="font-serif text-3xl sm:text-4xl text-plum dark:text-darktext-primary font-medium mt-1">
+                    {reception.title}
+                  </h3>
+                </div>
+                <div className="text-left md:text-right">
+                  <p className="font-serif text-2xl text-rose dark:text-champagne font-semibold">{reception.displayDate}</p>
+                  <p className="text-sm text-plum-muted dark:text-darktext-secondary font-medium">{reception.displayTime}</p>
+                </div>
+              </div>
+
+              <div className="max-w-2xl mx-auto space-y-6">
+                <div className="flex items-start gap-3.5">
+                  <MapPin className="w-5 h-5 text-rose dark:text-champagne mt-1 shrink-0" />
+                  <div>
+                    <h4 className="font-serif text-xl text-plum dark:text-darktext-primary font-semibold">
+                      {reception.venue}
+                    </h4>
+                    <p className="text-sm text-plum-muted dark:text-darktext-secondary">
+                      {reception.address}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-cream/50 dark:bg-midnight-elevated/60 border border-rose/20 dark:border-midnight-border">
+                  <Countdown targetDate={reception.date} label="Countdown to Wedding Reception" />
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2">
+                  <a
+                    href={reception.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-olive hover:bg-olive-dark dark:bg-midnight-elevated dark:border dark:border-midnight-border dark:hover:border-champagne dark:hover:text-champagne text-white dark:text-darktext-primary font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-sm"
+                  >
+                    <Navigation className="w-4 h-4" /> Google Maps ↗
+                  </a>
+                  <a
+                    href={reception.calendarUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto sm:flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-rose hover:bg-rose-dark dark:bg-champagne dark:hover:bg-champagne-hover text-white dark:text-midnight font-sans text-xs uppercase tracking-wider font-bold transition-all shadow-rose-glow dark:shadow-champagne-glow"
+                  >
+                    <Calendar className="w-4 h-4" /> Add to Calendar 📅
+                  </a>
+                </div>
+              </div>
+            </motion.article>
+          )}
         </div>
 
         {/* Minimal WhatsApp Sharing Button Above Pre-Wedding Film */}

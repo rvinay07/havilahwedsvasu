@@ -14,9 +14,10 @@ A digital Christian wedding invitation celebrating the Holy Matrimony of **Vasu 
 | **Core Scripture** | *“Therefore what God has joined together, let no one separate.”* — **Mark 10:9** |
 | **Engagement Ceremony** | **16 February 2026** *(Celebrated Milestone)* |
 | **Holy Matrimony Service** | **Wednesday, 3 February 2027 at 9:00 AM**<br>📍 **AB Function Hall (AC)**, Behind SSGS Degree College, SN Pet, Guntakal ([Google Maps](https://maps.app.goo.gl/V26a9HupTv4vn8A28)) |
+| **Wedding Reception** | **Tuesday, 9 February 2027 at 6:30 PM Onwards**<br>📍 **Friends Foundation**, Bacharam, Hyderabad ([Google Maps](https://maps.app.goo.gl/ekiJgkWFCmETRwWg6)) |
 | **The Ministry of the Ceremony** | • **Rev. A. P. Solomon Vijay Raj** (The Ministry of the Ceremony · Marriage Officiant · Agape A.G Church - Guntakal)<br>• **Pastor S. Gnana Jaya Prakash** (The Ministry of the Ceremony · Marriage Officiant · Bethlehem Gospel Ministries) |
-| **Family Contacts** | • **General Information:** `+91 8978148996`<br>• **Vasu (Groom):** `+91 9652296062`<br>• **Hoshi (Family):** `+91 6281047922` |
-| **Strict Policies** | Strictly **NO RSVP** forms/buttons · Strictly **NO Thanksgiving service** · Reception details excluded per family preference |
+| **Family Contacts** | • **Ranjit:** `+91 9963541004`<br>• **Prakash:** `+91 7989107503`<br>• **Akhil:** `+91 9059318618` |
+| **Strict Policies** | Strictly **NO RSVP** forms/buttons · Strictly **NO Thanksgiving service** |
 
 ---
 

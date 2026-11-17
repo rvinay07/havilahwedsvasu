@@ -30,9 +30,12 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
     assert.match(content, /Mark 10:9/, 'Must reference Mark 10:9');
   });
 
-  await t.test('Upcoming events are strictly Ceremony (No Reception, No Thanksgiving)', () => {
+  await t.test('Upcoming events contain Ceremony and Reception (No Thanksgiving)', () => {
     assert.match(content, /id:\s*["']ceremony["']/, 'Must have ceremony event');
-    assert.doesNotMatch(content, /reception/i, 'Must NOT contain any Reception service or event per family requirement');
+    assert.match(content, /id:\s*["']reception["']/, 'Must have reception event');
+    assert.match(content, /Friends Foundation/i, 'Must have Friends Foundation venue for reception');
+    assert.match(content, /Bacharam,\s*Hyderabad/i, 'Must have Bacharam, Hyderabad location for reception');
+    assert.match(content, /https:\/\/maps\.app\.goo\.gl\/ekiJgkWFCmETRwWg6/, 'Must contain Google Maps link for reception');
     assert.doesNotMatch(content, /thanksgiving/i, 'Must NOT contain any Thanksgiving service or event');
   });
 
@@ -49,12 +52,12 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
   });
 
   await t.test('Contact numbers contain all three family numbers with correct designations', () => {
-    assert.match(content, /9652296062/, 'Must contain Vasu (Groom) phone number');
-    assert.match(content, /6281047922/, 'Must contain Hoshi (Groom Brother) phone number');
-    assert.match(content, /8978148996/, 'Must contain N. Jephaniah (Groom Father) phone number');
-    assert.match(content, /Vasu\s*\(Groom\)/i, 'Must label Vasu as Groom');
-    assert.match(content, /Hoshi\s*\(Groom'?s\s*Brother\)/i, 'Must label Hoshi as Groom Brother');
-    assert.match(content, /Jephaniah\s*\(Groom'?s\s*Father\)/i, 'Must label Jephaniah as Groom Father');
+    assert.match(content, /9963541004/, 'Must contain Ranjit phone number');
+    assert.match(content, /7989107503/, 'Must contain Prakash phone number');
+    assert.match(content, /9059318618/, 'Must contain Akhil phone number');
+    assert.match(content, /Ranjit/i, 'Must label Ranjit');
+    assert.match(content, /Prakash/i, 'Must label Prakash');
+    assert.match(content, /Akhil/i, 'Must label Akhil');
   });
 
   await t.test('Minister of the ceremony is accurately defined', () => {

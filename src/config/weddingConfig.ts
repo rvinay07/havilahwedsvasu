@@ -11,9 +11,9 @@ export const weddingConfig = {
   brideMother: "S.ESTHER",
   
   contactNumbers: [
-    { label: "Vasu", number: "+91 9652296062", tel: "+919652296062" },
-    { label: "Hoshi", number: "+91 6281047922", tel: "+916281047922" },
-    { label: "Jephaniah", number: "+91 8978148996", tel: "+918978148996" }
+    { label: "Ranjit", number: "+91 9963541004", tel: "+919963541004" },
+    { label: "Prakash", number: "+91 7989107503", tel: "+917989107503" },
+    { label: "Akhil", number: "+91 9059318618", tel: "+919059318618" }
   ],
 
   hostingUrl: "https://vasuwedshavilah.vercel.app/",
@@ -51,7 +51,7 @@ export const weddingConfig = {
       title: "Wedding Ceremony",
       eyebrow: "A Sacred Beginning",
       date: "2027-02-03T09:00:00",
-      displayDate: "3 February 2027",
+      displayDate: "Wednesday, 3 February 2027",
       displayTime: "9:00 AM",
       venue: "AB Function Hall (AC)",
       address: "Behind SSGS Degree College, SN Pet, Guntakal",
@@ -63,6 +63,23 @@ export const weddingConfig = {
         { time: "10:00 AM", text: "Sacred Vows & Exchange of Rings" },
         { time: "10:30 AM", text: "Pastoral Blessing & Family Photographs" },
         { time: "11:30 AM", text: "Wedding Feast & Fellowship" }
+      ]
+    } as EventDetail,
+    reception: {
+      id: "reception",
+      title: "Wedding Reception",
+      eyebrow: "Celebration & Fellowship",
+      date: "2027-02-09T18:30:00",
+      displayDate: "Tuesday, 9 February 2027",
+      displayTime: "6:30 PM Onwards",
+      venue: "Friends Foundation",
+      address: "Bacharam, Hyderabad",
+      mapsUrl: "https://maps.app.goo.gl/ekiJgkWFCmETRwWg6",
+      calendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Reception+of+MERCY+HAVILAH+%26+VASU&dates=20270209T130000Z/20270209T173000Z&details=Wedding+Reception+Celebration+of+Mercy+Havilah+and+Vasu.&location=Friends+Foundation,+Bacharam,+Hyderabad",
+      schedule: [
+        { time: "06:30 PM", text: "Welcome & Guest Arrival" },
+        { time: "07:00 PM", text: "Celebration, Greetings & Fellowship" },
+        { time: "08:00 PM", text: "Wedding Reception Feast & Dinner" }
       ]
     } as EventDetail
   },
@@ -191,11 +208,16 @@ export function getWeddingShareMessage(): string {
     `📍 ${weddingConfig.events.ceremony.venue}, ${weddingConfig.events.ceremony.address}`,
     `🗺️ Google Maps: ${weddingConfig.events.ceremony.mapsUrl}`,
     `━━━━━━━━━━━━━━━━━━━━`,
+    `🎉 WEDDING RECEPTION:`,
+    `📅 Tuesday, 9 February 2027 · 6:30 PM Onwards`,
+    `📍 ${weddingConfig.events.reception.venue}, ${weddingConfig.events.reception.address}`,
+    `🗺️ Google Maps: ${weddingConfig.events.reception.mapsUrl}`,
+    `━━━━━━━━━━━━━━━━━━━━`,
     ``,
     `📞 Contacts:`,
-    `• Vasu (Groom): +91 9652296062`,
-    `• Hoshi (Groom's Brother): +91 6281047922`,
-    `• N. Jephaniah (Groom's Father): +91 8978148996`,
+    `• Ranjit: +91 9963541004`,
+    `• Prakash: +91 7989107503`,
+    `• Akhil: +91 9059318618`,
     `━━━━━━━━━━━━━━━━━━━━`,
     ``,
     `🌐 Open digital invitation for photos, timings & Google Maps directions:`,
