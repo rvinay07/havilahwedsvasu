@@ -478,6 +478,9 @@ export const HomePage: React.FC = () => {
 
         {/* Upcoming Events Stack */}
         <div className="pb-20 px-4 max-w-5xl mx-auto space-y-12">
+          {/* A Special Note from the Bride */}
+          <BrideGreetingCard className="max-w-3xl mx-auto" />
+
           {/* MINISTERS & MARRIAGE OFFICIANT */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -631,9 +634,6 @@ export const HomePage: React.FC = () => {
                 <div className="p-5 rounded-2xl bg-cream/50 dark:bg-midnight-elevated/60 border border-rose/20 dark:border-midnight-border">
                   <Countdown targetDate={reception.date} label="Countdown to Wedding Reception" />
                 </div>
-
-                {/* Bride's Personal Message */}
-                <BrideGreetingCard />
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2">

@@ -21,6 +21,9 @@ export const WeddingDetailsPage: React.FC = () => {
 
       {/* ================= UPCOMING EVENTS STACK ================= */}
       <section className="py-16 sm:py-20 px-4 max-w-5xl mx-auto space-y-12">
+        {/* A Special Note from the Bride */}
+        <BrideGreetingCard className="max-w-3xl mx-auto" />
+
         {/* MINISTERS & MARRIAGE OFFICIANT */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -241,9 +244,6 @@ export const WeddingDetailsPage: React.FC = () => {
             </div>
           </motion.article>
         )}
-
-        {/* Bride's Personal Message */}
-        <BrideGreetingCard className="max-w-3xl mx-auto" />
       </section>
 
       {/* ================= 3. PRE-WEDDING FILM SECTION ================= */}

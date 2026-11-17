@@ -155,7 +155,7 @@ test('Strict Business Rules & Prohibitions Verification', async (t) => {
     assert.strictEqual(fs.existsSync(path.join(ROOT, 'src/components/luxury')), false);
   });
 
-  await t.test('Bride Greeting Card is integrated below reception countdown on Home and below reception details on Wedding Details', () => {
+  await t.test('Bride Greeting Card is placed above wedding marriage details on both Home and Wedding Details pages', () => {
     const cardPath = path.join(ROOT, 'src/components/BrideGreetingCard.tsx');
     assert.strictEqual(fs.existsSync(cardPath), true, 'BrideGreetingCard.tsx must exist');
     const cardContent = fs.readFileSync(cardPath, 'utf8');
@@ -170,14 +170,20 @@ test('Strict Business Rules & Prohibitions Verification', async (t) => {
     // Strict user instruction: No "elder daughter" in signatures or badges
     assert.doesNotMatch(cardContent, /elder\s*daughter/i, 'Must not mention elder daughter');
 
-    // HomePage integration
+    // HomePage integration: placed above ministers and wedding marriage details
     const homeContent = fs.readFileSync(path.join(ROOT, 'src/pages/HomePage.tsx'), 'utf8');
     assert.match(homeContent, /import\s*\{\s*BrideGreetingCard\s*\}\s*from\s*['"]\.\.\/components\/BrideGreetingCard['"]/);
-    assert.match(homeContent, /<BrideGreetingCard\s*\/>/);
+    assert.match(homeContent, /<BrideGreetingCard[^>]*\/>/);
+    const homeBrideIdx = homeContent.indexOf('<BrideGreetingCard');
+    const homeMinistersIdx = homeContent.indexOf('SOLEMNIZATION OF MARRIAGE');
+    assert.ok(homeBrideIdx !== -1 && homeMinistersIdx !== -1 && homeBrideIdx < homeMinistersIdx, 'BrideGreetingCard must be placed above marriage details on HomePage');
 
-    // WeddingDetailsPage integration
+    // WeddingDetailsPage integration: placed above ministers and wedding marriage details
     const detailsContent = fs.readFileSync(path.join(ROOT, 'src/pages/WeddingDetailsPage.tsx'), 'utf8');
     assert.match(detailsContent, /import\s*\{\s*BrideGreetingCard\s*\}\s*from\s*['"]\.\.\/components\/BrideGreetingCard['"]/);
     assert.match(detailsContent, /<BrideGreetingCard[^>]*\/>/);
+    const detailsBrideIdx = detailsContent.indexOf('<BrideGreetingCard');
+    const detailsMinistersIdx = detailsContent.indexOf('SOLEMNIZATION OF MARRIAGE');
+    assert.ok(detailsBrideIdx !== -1 && detailsMinistersIdx !== -1 && detailsBrideIdx < detailsMinistersIdx, 'BrideGreetingCard must be placed above marriage details on WeddingDetailsPage');
   });
 });
