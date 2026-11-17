@@ -40,6 +40,8 @@ export interface MinisterDetail {
   heading: string;
   name: string;
   role?: string;
+  church?: string;
+  sectionHeading?: string;
   officiantHeading?: string;
   officiantName?: string;
   officiantRole?: string;

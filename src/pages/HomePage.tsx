@@ -469,7 +469,7 @@ export const HomePage: React.FC = () => {
               ✝
             </div>
             <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-4">
-              Ministers &amp; Marriage Officiants
+              {weddingConfig.minister.sectionHeading || "The Ministry of the Ceremony"}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 pt-2">
@@ -495,7 +495,7 @@ export const HomePage: React.FC = () => {
                 </h4>
                 <div className="w-8 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2" />
                 <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
-                  {weddingConfig.minister.officiantRole || 'Marriage Officiant & Solemnisation'}
+                  {weddingConfig.minister.officiantRole || 'Marriage Officiant'}
                 </p>
               </div>
             </div>

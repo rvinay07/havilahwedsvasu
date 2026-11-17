@@ -14,7 +14,7 @@ A digital Christian wedding invitation celebrating the Holy Matrimony of **Vasu 
 | **Core Scripture** | *“Therefore what God has joined together, let no one separate.”* — **Mark 10:9 / Matthew 19:6** |
 | **Engagement Ceremony** | **4 February 2026** *(Celebrated Milestone)* |
 | **Holy Matrimony Service** | **Wednesday, 3 February 2027 at 9:00 AM**<br>📍 **AB Function Hall (AC)**, Behind SSGS Degree College, SN Pet, Guntakal ([Google Maps](https://maps.app.goo.gl/V26a9HupTv4vn8A28)) |
-| **Ministers & Officiants** | • **Rev. A. P. Solomon Vijay Raj** (Minister of the Ceremony)<br>• **S. Gnana Jaya Prakash** (Marriage Officiant) |
+| **The Ministry of the Ceremony** | • **Rev. A. P. Solomon Vijay Raj** (Agape A.G Church - Guntakal)<br>• **S. Gnana Jaya Prakash** (Marriage Officiant) |
 | **Family Contacts** | • **General Information:** `+91 8978148996`<br>• **Vasu (Groom):** `+91 9652296062`<br>• **Hoshi (Family):** `+91 6281047922` |
 | **Strict Policies** | Strictly **NO RSVP** forms/buttons · Strictly **NO Thanksgiving service** · Reception details excluded per family preference |
 
@@ -91,7 +91,7 @@ The application features a toggleable dual-palette system designed for visual el
 3. **Wedding Details (`/wedding-details`)**:
    * **Holy Matrimony Service:** 3 February 2027, 9:00 AM at AB Function Hall (AC), Guntakal. Live countdown, Google Maps directions, Add to Calendar, and Order of Service.
    * Pre-wedding film video player (`wedding.mp4`).
-   * Ministers & Marriage Officiants card (Rev. A. P. Solomon Vijay Raj & S. Gnana Jaya Prakash).
+   * The Ministry of the Ceremony card (Rev. A. P. Solomon Vijay Raj · Agape A.G Church - Guntakal & S. Gnana Jaya Prakash · Marriage Officiant).
    * Family contact cards with click-to-call links.
    * Minimal WhatsApp share station above the footer.
 

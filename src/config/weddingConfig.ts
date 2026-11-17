@@ -69,23 +69,26 @@ export const weddingConfig = {
 
   minister: {
     heading: "The Minister of the Ceremony",
+    sectionHeading: "The Ministry of the Ceremony",
     name: "Rev. A. P. Solomon Vijay Raj",
-    role: "Officiating the Holy Matrimony & Pastoral Blessing",
+    church: "Agape A.G Church - Guntakal",
+    role: "Agape A.G Church - Guntakal",
     officiantHeading: "Marriage Officiant",
     officiantName: "S. Gnana Jaya Prakash",
-    officiantRole: "Marriage Officiant & Solemnisation"
+    officiantRole: "Marriage Officiant"
   } as MinisterDetail,
 
   ministers: [
     {
       heading: "The Minister of the Ceremony",
       name: "Rev. A. P. Solomon Vijay Raj",
-      role: "Officiating the Holy Matrimony & Pastoral Blessing"
+      church: "Agape A.G Church - Guntakal",
+      role: "Agape A.G Church - Guntakal"
     },
     {
       heading: "Marriage Officiant",
       name: "S. Gnana Jaya Prakash",
-      role: "Marriage Officiant & Solemnisation"
+      role: "Marriage Officiant"
     }
   ] as MinisterDetail[],
 
