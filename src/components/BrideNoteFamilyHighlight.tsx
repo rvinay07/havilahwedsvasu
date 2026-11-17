@@ -35,9 +35,6 @@ export const BrideNoteFamilyHighlight: React.FC<BrideNoteFamilyHighlightProps> =
             Friends Foundation Family
           </h3>
           <div className="w-16 h-[1.5px] bg-rose/40 dark:bg-champagne/40 mx-auto my-3" />
-          <p className="font-serif italic text-sm sm:text-base text-plum-muted dark:text-darktext-secondary max-w-xl mx-auto">
-            A sacred legacy of love, faith, and family devotion that nurtured our bride, Mercy Havilah.
-          </p>
         </div>
 
         {/* 2-Column Responsive Layout: Side-by-side on desktop (lg:grid-cols-12), stacked on mobile */}
