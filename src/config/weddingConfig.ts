@@ -69,30 +69,33 @@ export const weddingConfig = {
 
   minister: {
     heading: "The Minister of the Ceremony",
-    sectionHeading: "The Ministry of the Ceremony",
-    sectionSubheading: "Marriage Officiants",
+    sectionHeading: "Solemnization of Marriage",
+    displaySectionHeading: "✝ SOLEMNIZATION OF MARRIAGE ✝",
     name: "Rev. A. P. Solomon Vijay Raj",
-    title: "Minister & Marriage Officiant",
-    church: "Agape A.G Church - Guntakal",
-    role: "Agape A.G Church - Guntakal",
-    officiantHeading: "The Ministry of the Ceremony",
+    title: "MARRIAGE OFFICIANT",
+    church: "Agape A.G. Church, Guntakal",
+    role: "Agape A.G. Church, Guntakal",
+    officiantHeading: "The Minister of the Ceremony",
+    officiantTitle: "MARRIAGE OFFICIANT",
     officiantName: "S. Gnana Jaya Prakash",
-    officiantRole: "Marriage Officiant"
+    officiantRole: "Marriage Officiant",
+    officiantChurch: "[Church Name, Location]"
   } as MinisterDetail,
 
   ministers: [
     {
-      heading: "The Ministry of the Ceremony",
-      title: "Minister & Marriage Officiant",
+      heading: "SOLEMNIZATION OF MARRIAGE",
+      title: "MARRIAGE OFFICIANT",
       name: "Rev. A. P. Solomon Vijay Raj",
-      church: "Agape A.G Church - Guntakal",
-      role: "Agape A.G Church - Guntakal"
+      church: "Agape A.G. Church, Guntakal",
+      role: "Agape A.G. Church, Guntakal"
     },
     {
-      heading: "The Ministry of the Ceremony",
-      title: "Minister & Marriage Officiant",
+      heading: "SOLEMNIZATION OF MARRIAGE",
+      title: "MARRIAGE OFFICIANT",
       name: "S. Gnana Jaya Prakash",
-      role: "The Ministry of the Ceremony"
+      church: "[Church Name, Location]",
+      role: "[Church Name, Location]"
     }
   ] as MinisterDetail[],
 

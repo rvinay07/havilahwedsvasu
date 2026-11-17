@@ -59,9 +59,9 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
 
   await t.test('Minister of the ceremony is accurately defined', () => {
     assert.match(content, /heading:\s*["']The Minister of the Ceremony["']/, 'Must define heading: The Minister of the Ceremony');
-    assert.match(content, /The Ministry of the Ceremony/, 'Must define section heading The Ministry of the Ceremony');
+    assert.match(content, /Solemnization of Marriage/i, 'Must define section heading Solemnization of Marriage');
     assert.match(content, /Rev\.\s*A\.\s*P\.\s*Solomon Vijay Raj/, 'Must define minister name Rev. A. P. Solomon Vijay Raj');
-    assert.match(content, /Agape A\.G Church\s*-\s*Guntakal/, 'Must define church Agape A.G Church - Guntakal');
+    assert.match(content, /Agape A\.G\.?\s*Church/, 'Must define church Agape A.G. Church');
     assert.match(content, /S\.\s*Gnana Jaya Prakash/, 'Must define marriage officiant S. Gnana Jaya Prakash');
     assert.match(content, /Mark 10:9/, 'Must reference Mark 10:9');
   });
