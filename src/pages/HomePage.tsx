@@ -105,10 +105,10 @@ export const HomePage: React.FC = () => {
                 The wedding celebration of
               </p>
 
-              <h1 className="font-champagne text-4xl sm:text-6xl md:text-7xl font-normal tracking-wide text-white dark:text-darktext-primary mb-3 gsap-hero-title">
-                <span>Vasu</span>
-                <span className="text-rose dark:text-champagne inline-block mx-3 font-normal font-serif">&amp;</span>
-                <span>Mercy Havilah</span>
+              <h1 className="font-champagne text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-wide text-white dark:text-darktext-primary mb-3 gsap-hero-title flex flex-col items-center justify-center">
+                <span className="block leading-tight">Vasu</span>
+                <span className="block text-2xl sm:text-3xl md:text-4xl text-rose dark:text-champagne font-normal font-serif my-0.5 sm:my-1.5 leading-none">&amp;</span>
+                <span className="block leading-tight">Mercy Havilah</span>
               </h1>
 
               {/* Launch Page Scripture: Mark 10:9 */}
