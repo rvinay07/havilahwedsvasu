@@ -154,4 +154,30 @@ test('Strict Business Rules & Prohibitions Verification', async (t) => {
     assert.strictEqual(fs.existsSync(path.join(ROOT, 'src/pages/LuxuryInvitationPage.tsx')), false);
     assert.strictEqual(fs.existsSync(path.join(ROOT, 'src/components/luxury')), false);
   });
+
+  await t.test('Bride Greeting Card is integrated below reception countdown on Home and below reception details on Wedding Details', () => {
+    const cardPath = path.join(ROOT, 'src/components/BrideGreetingCard.tsx');
+    assert.strictEqual(fs.existsSync(cardPath), true, 'BrideGreetingCard.tsx must exist');
+    const cardContent = fs.readFileSync(cardPath, 'utf8');
+
+    // Message fidelity
+    assert.match(cardContent, /From FF Home to a New Home, By God's Grace!/i);
+    assert.match(cardContent, /7th wedding from FF Home/i);
+    assert.match(cardContent, /All glory to God!/i);
+    assert.match(cardContent, /~\s*Mercy Havilah/);
+    assert.match(cardContent, /The Bride/);
+
+    // Strict user instruction: No "elder daughter" in signatures or badges
+    assert.doesNotMatch(cardContent, /elder\s*daughter/i, 'Must not mention elder daughter');
+
+    // HomePage integration
+    const homeContent = fs.readFileSync(path.join(ROOT, 'src/pages/HomePage.tsx'), 'utf8');
+    assert.match(homeContent, /import\s*\{\s*BrideGreetingCard\s*\}\s*from\s*['"]\.\.\/components\/BrideGreetingCard['"]/);
+    assert.match(homeContent, /<BrideGreetingCard\s*\/>/);
+
+    // WeddingDetailsPage integration
+    const detailsContent = fs.readFileSync(path.join(ROOT, 'src/pages/WeddingDetailsPage.tsx'), 'utf8');
+    assert.match(detailsContent, /import\s*\{\s*BrideGreetingCard\s*\}\s*from\s*['"]\.\.\/components\/BrideGreetingCard['"]/);
+    assert.match(detailsContent, /<BrideGreetingCard[^>]*\/>/);
+  });
 });

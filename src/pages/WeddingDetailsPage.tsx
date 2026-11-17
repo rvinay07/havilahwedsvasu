@@ -5,6 +5,7 @@ import { weddingConfig } from '../config/weddingConfig';
 import { PageHero } from '../components/PageHero';
 import { Countdown } from '../components/Countdown';
 import { WhatsAppShareStation } from '../components/WhatsAppShareStation';
+import { BrideGreetingCard } from '../components/BrideGreetingCard';
 
 export const WeddingDetailsPage: React.FC = () => {
   const { ceremony, reception } = weddingConfig.events;
@@ -240,6 +241,9 @@ export const WeddingDetailsPage: React.FC = () => {
             </div>
           </motion.article>
         )}
+
+        {/* Bride's Personal Message */}
+        <BrideGreetingCard className="max-w-3xl mx-auto" />
       </section>
 
       {/* ================= 3. PRE-WEDDING FILM SECTION ================= */}

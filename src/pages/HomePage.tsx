@@ -23,6 +23,7 @@ import { weddingConfig, getWeddingShareMessage } from '../config/weddingConfig';
 import { AmbientCanvas } from '../components/AmbientCanvas';
 import { Countdown } from '../components/Countdown';
 import { WhatsAppShareStation } from '../components/WhatsAppShareStation';
+import { BrideGreetingCard } from '../components/BrideGreetingCard';
 
 export const HomePage: React.FC = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);
@@ -630,6 +631,9 @@ export const HomePage: React.FC = () => {
                 <div className="p-5 rounded-2xl bg-cream/50 dark:bg-midnight-elevated/60 border border-rose/20 dark:border-midnight-border">
                   <Countdown targetDate={reception.date} label="Countdown to Wedding Reception" />
                 </div>
+
+                {/* Bride's Personal Message */}
+                <BrideGreetingCard />
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 pt-2">
