@@ -177,14 +177,14 @@ export const Header: React.FC = () => {
             to="/"
             onClick={handleLogoClick}
             className="flex items-center gap-1 font-serif text-xl sm:text-2xl font-semibold tracking-wider hover:opacity-85 transition-opacity py-1 select-none cursor-pointer"
-            aria-label="Vasu & Mercy Havilah Wedding Home"
+            aria-label="Mercy Havilah & Vasu Wedding Home"
           >
             <span className={isHeaderElevated ? 'text-plum dark:text-darktext-primary' : 'text-white'}>
-              V
+              M
             </span>
             <span className="text-rose dark:text-champagne text-lg sm:text-xl font-normal mx-0.5">✝</span>
             <span className={isHeaderElevated ? 'text-plum dark:text-darktext-primary' : 'text-white'}>
-              M
+              V
             </span>
           </NavLink>
 
@@ -299,7 +299,7 @@ export const Header: React.FC = () => {
                   ✝
                 </div>
                 <div className="font-serif text-2xl sm:text-3xl font-medium text-plum dark:text-darktext-primary">
-                  Vasu &amp; Mercy Havilah
+                  Mercy Havilah &amp; Vasu
                 </div>
                 <div className="h-[1.5px] w-16 bg-rose/40 dark:bg-champagne/40 mx-auto" />
 

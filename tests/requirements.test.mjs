@@ -64,12 +64,12 @@ test('Strict Business Rules & Prohibitions Verification', async (t) => {
     assert.match(content, /label:\s*["']Gallery["']/, 'Header must have Gallery link');
   });
 
-  await t.test('Header uses sacred monogram V ✝ M', () => {
+  await t.test('Header uses sacred monogram M ✝ V', () => {
     const headerPath = path.join(ROOT, 'src/components/Header.tsx');
     const content = fs.readFileSync(headerPath, 'utf8');
-    assert.match(content, />\s*V\s*</, 'Monogram must contain V');
-    assert.match(content, />\s*✝\s*</, 'Monogram must contain sacred cross');
     assert.match(content, />\s*M\s*</, 'Monogram must contain M');
+    assert.match(content, />\s*✝\s*</, 'Monogram must contain sacred cross');
+    assert.match(content, />\s*V\s*</, 'Monogram must contain V');
   });
 
   await t.test('Enhanced Menu Top Button & Responsive Drawer Attributes', () => {

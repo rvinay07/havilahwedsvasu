@@ -13,9 +13,9 @@ export const Footer: React.FC = () => {
 
         {/* Names */}
         <h2 className="font-champagne text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide text-white dark:text-darktext-primary leading-normal pb-2 mb-4">
-          <span>{weddingConfig.groomDisplayName || 'Vasu'}</span>{' '}
+          <span>{weddingConfig.brideDisplayName || 'Mercy Havilah'}</span>{' '}
           <span className="text-rose dark:text-champagne inline-block mx-2 sm:mx-3 font-normal font-serif">&amp;</span>{' '}
-          <span>{weddingConfig.brideDisplayName || 'Mercy Havilah'}</span>
+          <span>{weddingConfig.groomDisplayName || 'Vasu'}</span>
         </h2>
 
         {/* Faith Note */}

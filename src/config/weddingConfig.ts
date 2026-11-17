@@ -56,7 +56,7 @@ export const weddingConfig = {
       venue: "AB Function Hall (AC)",
       address: "Behind SSGS Degree College, SN Pet, Guntakal",
       mapsUrl: "https://maps.app.goo.gl/V26a9HupTv4vn8A28",
-      calendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Celebration+of+VASU+%26+MERCY+HAVILAH&dates=20270203T033000Z/20270203T083000Z&details=Holy+Matrimony+of+Vasu+and+Mercy+Havilah.&location=AB+Function+Hall+(AC),+Behind+SSGS+Degree+College,+SN+Pet,+Guntakal",
+      calendarUrl: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Celebration+of+MERCY+HAVILAH+%26+VASU&dates=20270203T033000Z/20270203T083000Z&details=Holy+Matrimony+of+Mercy+Havilah+and+Vasu.&location=AB+Function+Hall+(AC),+Behind+SSGS+Degree+College,+SN+Pet,+Guntakal",
       schedule: [
         { time: "08:30 AM", text: "Arrival of Guests & Prelude Worship Hymns" },
         { time: "09:00 AM", text: "Holy Matrimony Service & Scripture Readings" },
@@ -127,12 +127,12 @@ export const weddingConfig = {
   ] as StoryMilestone[],
 
   gallery: [
-    { src: "./assets/images/gallery-1.jpg", caption: "", alt: "Vasu and Mercy Havilah portrait 1" },
-    { src: "./assets/images/gallery-2.jpg", caption: "", alt: "Vasu and Mercy Havilah portrait 2" },
-    { src: "./assets/images/gallery-3.jpg", caption: "", alt: "Vasu and Mercy Havilah portrait 3" },
-    { src: "./assets/images/gallery-4.jpg", caption: "", alt: "Vasu and Mercy Havilah portrait 4" },
-    { src: "./assets/images/gallery-5.jpg", caption: "", alt: "Vasu and Mercy Havilah portrait 5" },
-    { src: "./assets/images/gallery-6.jpg", caption: "", alt: "Vasu and Mercy Havilah portrait 6" },
+    { src: "./assets/images/gallery-1.jpg", caption: "", alt: "Mercy Havilah and Vasu portrait 1" },
+    { src: "./assets/images/gallery-2.jpg", caption: "", alt: "Mercy Havilah and Vasu portrait 2" },
+    { src: "./assets/images/gallery-3.jpg", caption: "", alt: "Mercy Havilah and Vasu portrait 3" },
+    { src: "./assets/images/gallery-4.jpg", caption: "", alt: "Mercy Havilah and Vasu portrait 4" },
+    { src: "./assets/images/gallery-5.jpg", caption: "", alt: "Mercy Havilah and Vasu portrait 5" },
+    { src: "./assets/images/gallery-6.jpg", caption: "", alt: "Mercy Havilah and Vasu portrait 6" },
   ] as GalleryPhoto[],
 
   scriptures: [
@@ -170,7 +170,7 @@ export const weddingConfig = {
 export function getWeddingShareMessage(): string {
   return [
     `✝ WEDDING INVITATION ✝`,
-    `VASU & MERCY HAVILAH`,
+    `MERCY HAVILAH & VASU`,
     ``,
     `🌐 Digital Invitation & Preview:`,
     weddingConfig.hostingUrl,
@@ -179,11 +179,11 @@ export function getWeddingShareMessage(): string {
     ``,
     `With praise and gratitude to God, we joyfully invite you and your family to celebrate our Holy Matrimony:`,
     ``,
-    `🤵 Groom: ${weddingConfig.groomName}`,
-    `Son of Mr. ${weddingConfig.groomFather} & Mrs. ${weddingConfig.groomMother}`,
-    ``,
     `👰 Bride: ${weddingConfig.brideName}`,
     `Daughter of Mr. ${weddingConfig.brideFather} & Mrs. ${weddingConfig.brideMother}`,
+    ``,
+    `🤵 Groom: ${weddingConfig.groomName}`,
+    `Son of Mr. ${weddingConfig.groomFather} & Mrs. ${weddingConfig.groomMother}`,
     ``,
     `━━━━━━━━━━━━━━━━━━━━`,
     `💍 HOLY MATRIMONY SERVICE:`,

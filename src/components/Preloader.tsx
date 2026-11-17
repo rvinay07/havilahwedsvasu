@@ -26,7 +26,7 @@ export const Preloader: React.FC = () => {
             className="text-center"
           >
             <div className="font-serif text-4xl sm:text-5xl font-medium tracking-wide">
-              V <span className="text-rose dark:text-champagne inline-block mx-1">✝</span> M
+              M <span className="text-rose dark:text-champagne inline-block mx-1">✝</span> V
             </div>
             <motion.div
               initial={{ width: 16 }}
@@ -35,7 +35,7 @@ export const Preloader: React.FC = () => {
               className="h-[1.5px] bg-rose dark:bg-champagne mx-auto my-3"
             />
             <p className="font-champagne text-xl sm:text-2xl text-plum dark:text-champagne font-normal">
-              Vasu &amp; Mercy Havilah
+              Mercy Havilah &amp; Vasu
             </p>
           </motion.div>
         </motion.div>

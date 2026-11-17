@@ -84,7 +84,7 @@ export const HomePage: React.FC = () => {
           <div className="absolute inset-0 z-0">
             <img
               src={weddingConfig.media.hero}
-              alt="Vasu and Mercy Havilah"
+              alt="Mercy Havilah and Vasu"
               className="w-full h-full object-cover object-[center_20%] animate-kenburns scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-plum-midnight/75 via-plum-dark/45 to-plum-midnight/90 dark:from-midnight/80 dark:via-midnight-subtle/55 dark:to-midnight/95 transition-colors" />
@@ -106,9 +106,9 @@ export const HomePage: React.FC = () => {
               </p>
 
               <h1 className="font-champagne text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-wide text-white dark:text-darktext-primary mb-4 sm:mb-6 gsap-hero-title flex flex-col items-center justify-center">
-                <span className="block leading-normal">Vasu</span>
+                <span className="block leading-normal">Mercy Havilah</span>
                 <span className="block text-xl sm:text-2xl md:text-3xl text-rose dark:text-champagne font-normal font-serif my-1 sm:my-2 leading-none">&amp;</span>
-                <span className="block leading-normal pb-2 sm:pb-3">Mercy Havilah</span>
+                <span className="block leading-normal pb-2 sm:pb-3">Vasu</span>
               </h1>
 
               {/* Launch Page Scripture: Mark 10:9 */}
@@ -185,7 +185,7 @@ export const HomePage: React.FC = () => {
                 </p>
                 <div className="my-3 sm:my-4">
                   <span className="font-champagne text-3xl sm:text-4xl md:text-[2.65rem] text-rose dark:text-champagne font-normal tracking-wide block leading-normal py-1 select-none">
-                    Vasu &amp; Mercy Havilah
+                    Mercy Havilah &amp; Vasu
                   </span>
                 </div>
                 <p className="mt-2">
@@ -193,22 +193,22 @@ export const HomePage: React.FC = () => {
                 </p>
               </div>
 
-              {/* Parents Grid */}
+              {/* Parents Grid - Bride First */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-rose/20 dark:border-midnight-border text-center">
-                <div>
-                  <small className="block text-xs uppercase tracking-wider text-rose dark:text-champagne font-bold mb-1">
-                    Groom’s Parents
-                  </small>
-                  <strong className="font-serif text-lg sm:text-xl text-plum dark:text-darktext-primary">
-                    {weddingConfig.groomFather} &amp; {weddingConfig.groomMother}
-                  </strong>
-                </div>
                 <div>
                   <small className="block text-xs uppercase tracking-wider text-rose dark:text-champagne font-bold mb-1">
                     Bride’s Parents
                   </small>
                   <strong className="font-serif text-lg sm:text-xl text-plum dark:text-darktext-primary">
                     {weddingConfig.brideFather} &amp; {weddingConfig.brideMother}
+                  </strong>
+                </div>
+                <div>
+                  <small className="block text-xs uppercase tracking-wider text-rose dark:text-champagne font-bold mb-1">
+                    Groom’s Parents
+                  </small>
+                  <strong className="font-serif text-lg sm:text-xl text-plum dark:text-darktext-primary">
+                    {weddingConfig.groomFather} &amp; {weddingConfig.groomMother}
                   </strong>
                 </div>
               </div>
@@ -259,43 +259,12 @@ export const HomePage: React.FC = () => {
         {/* The Couple Portraits */}
         <div className="pb-16 px-4 max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
-            {/* Groom Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-midnight-card border border-rose/25 dark:border-midnight-border shadow-wedding text-center transition-colors"
-            >
-              <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto rounded-full overflow-hidden border-2 border-rose/40 dark:border-champagne/40 shadow-md mb-5">
-                <img
-                  src={weddingConfig.media.groom}
-                  alt="Portrait of the groom"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-xs uppercase tracking-widest text-rose dark:text-champagne font-bold mb-1">
-                The Groom
-              </p>
-              <h3 className="font-champagne text-2xl sm:text-3xl md:text-4xl font-normal text-plum dark:text-darktext-primary leading-normal pb-2 mb-2 sm:mb-3">
-                {weddingConfig.groomDisplayName || "Vasu"}
-              </h3>
-              <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium pt-1 sm:pt-2">
-                <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] sm:text-xs uppercase tracking-wider mb-1">
-                  Beloved son of
-                </span>
-                <p className="text-sm sm:text-base font-serif text-plum dark:text-darktext-primary">
-                  {weddingConfig.groomFather} &amp; {weddingConfig.groomMother}
-                </p>
-              </div>
-            </motion.div>
-
             {/* Bride Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.6 }}
               className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-midnight-card border border-rose/25 dark:border-midnight-border shadow-wedding text-center transition-colors"
             >
               <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto rounded-full overflow-hidden border-2 border-rose/40 dark:border-champagne/40 shadow-md mb-5">
@@ -320,6 +289,37 @@ export const HomePage: React.FC = () => {
                 </p>
               </div>
             </motion.div>
+
+            {/* Groom Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="p-6 sm:p-8 rounded-3xl bg-white dark:bg-midnight-card border border-rose/25 dark:border-midnight-border shadow-wedding text-center transition-colors"
+            >
+              <div className="w-40 h-40 sm:w-48 sm:h-48 mx-auto rounded-full overflow-hidden border-2 border-rose/40 dark:border-champagne/40 shadow-md mb-5">
+                <img
+                  src={weddingConfig.media.groom}
+                  alt="Portrait of the groom"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-xs uppercase tracking-widest text-rose dark:text-champagne font-bold mb-1">
+                The Groom
+              </p>
+              <h3 className="font-champagne text-2xl sm:text-3xl md:text-4xl font-normal text-plum dark:text-darktext-primary leading-normal pb-2 mb-2 sm:mb-3">
+                {weddingConfig.groomDisplayName || "Vasu"}
+              </h3>
+              <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium pt-1 sm:pt-2">
+                <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] sm:text-xs uppercase tracking-wider mb-1">
+                  Beloved son of
+                </span>
+                <p className="text-sm sm:text-base font-serif text-plum dark:text-darktext-primary">
+                  {weddingConfig.groomFather} &amp; {weddingConfig.groomMother}
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
 
@@ -336,33 +336,12 @@ export const HomePage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+              {/* Bride's Family */}
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="p-6 rounded-2xl bg-white dark:bg-midnight-card border border-rose/25 dark:border-midnight-border shadow-wedding text-center"
-              >
-                <div className="aspect-[4/3] rounded-xl overflow-hidden mb-4 border border-rose/20 dark:border-midnight-border">
-                  <img
-                    src={weddingConfig.media.groomParents}
-                    alt="Groom's family"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <p className="text-xs uppercase tracking-widest text-rose dark:text-champagne font-bold mb-1">
-                  Groom's Family
-                </p>
-                <h4 className="font-serif text-xl text-plum dark:text-darktext-primary font-medium">
-                  {weddingConfig.groomFather} &amp; {weddingConfig.groomMother}
-                </h4>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
                 className="p-6 rounded-2xl bg-white dark:bg-midnight-card border border-rose/25 dark:border-midnight-border shadow-wedding text-center"
               >
                 <div className="aspect-[4/3] rounded-xl overflow-hidden mb-4 border border-rose/20 dark:border-midnight-border">
@@ -377,6 +356,29 @@ export const HomePage: React.FC = () => {
                 </p>
                 <h4 className="font-serif text-xl text-plum dark:text-darktext-primary font-medium">
                   {weddingConfig.brideFather} &amp; {weddingConfig.brideMother}
+                </h4>
+              </motion.div>
+
+              {/* Groom's Family */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="p-6 rounded-2xl bg-white dark:bg-midnight-card border border-rose/25 dark:border-midnight-border shadow-wedding text-center"
+              >
+                <div className="aspect-[4/3] rounded-xl overflow-hidden mb-4 border border-rose/20 dark:border-midnight-border">
+                  <img
+                    src={weddingConfig.media.groomParents}
+                    alt="Groom's family"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-xs uppercase tracking-widest text-rose dark:text-champagne font-bold mb-1">
+                  Groom's Family
+                </p>
+                <h4 className="font-serif text-xl text-plum dark:text-darktext-primary font-medium">
+                  {weddingConfig.groomFather} &amp; {weddingConfig.groomMother}
                 </h4>
               </motion.div>
             </div>
