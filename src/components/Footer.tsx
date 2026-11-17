@@ -7,22 +7,24 @@ export const Footer: React.FC = () => {
     <footer className="relative overflow-hidden bg-plum-dark dark:bg-midnight text-cream/90 dark:text-darktext-secondary pt-16 pb-12 px-4 text-center border-t border-rose/25 dark:border-midnight-border transition-colors">
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         {/* Sacred Cross */}
-        <div className="text-rose dark:text-champagne text-3xl font-serif mb-2" aria-hidden="true">
+        <div className="text-rose dark:text-champagne text-2xl sm:text-3xl font-serif mb-2" aria-hidden="true">
           ✝
         </div>
 
         {/* Names */}
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white dark:text-darktext-primary mb-3">
-          {weddingConfig.groomName} &amp; {weddingConfig.brideName}
+        <h2 className="font-champagne text-3xl sm:text-4xl md:text-5xl font-normal tracking-wide text-white dark:text-darktext-primary mb-3">
+          <span>{weddingConfig.groomDisplayName || 'Vasu'}</span>{' '}
+          <span className="text-rose dark:text-champagne inline-block mx-2 sm:mx-3 font-normal font-serif">&amp;</span>{' '}
+          <span>{weddingConfig.brideDisplayName || 'Mercy Havilah'}</span>
         </h2>
 
         {/* Faith Note */}
-        <p className="font-serif italic text-base sm:text-lg text-cream/80 dark:text-darktext-secondary max-w-lg mb-6">
+        <p className="font-serif italic text-sm sm:text-base md:text-lg text-cream/80 dark:text-darktext-secondary max-w-lg mb-6 px-2">
           “Two hearts, one faith, one beautiful journey — blessed by God.”
         </p>
 
         {/* Contact Numbers */}
-        <div className="w-full max-w-xl py-3.5 border-y border-rose/25 dark:border-midnight-border flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs tracking-wider text-cream/85 dark:text-darktext-primary font-medium mb-6">
+        <div className="w-full max-w-xl py-3.5 border-y border-rose/25 dark:border-midnight-border flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs sm:text-sm tracking-wider text-cream/85 dark:text-darktext-primary font-medium mb-6">
           {weddingConfig.contactNumbers.map((c) => (
             <a
               key={c.tel}
