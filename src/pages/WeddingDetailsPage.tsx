@@ -20,27 +20,48 @@ export const WeddingDetailsPage: React.FC = () => {
 
       {/* ================= UPCOMING EVENTS STACK ================= */}
       <section className="py-16 sm:py-20 px-4 max-w-5xl mx-auto space-y-12">
-        {/* MINISTER OF THE CEREMONY */}
+        {/* MINISTERS & MARRIAGE OFFICIANT */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="p-7 sm:p-9 rounded-3xl bg-cream-soft/60 dark:bg-midnight-card border border-rose/30 dark:border-midnight-border shadow-wedding text-center max-w-2xl mx-auto transition-colors"
+          className="p-7 sm:p-9 rounded-3xl bg-cream-soft/60 dark:bg-midnight-card border border-rose/30 dark:border-midnight-border shadow-wedding text-center max-w-3xl mx-auto transition-colors"
         >
           <div className="text-rose dark:text-champagne text-2xl font-serif mb-2" aria-hidden="true">
             ✝
           </div>
-          <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-            {weddingConfig.minister.heading}
+          <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-4">
+            Ministers &amp; Marriage Officiants
           </p>
-          <h4 className="font-serif text-2xl sm:text-3xl font-medium text-plum dark:text-darktext-primary mb-2">
-            {weddingConfig.minister.name}
-          </h4>
-          <div className="w-12 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-3" />
-          <p className="font-serif italic text-sm sm:text-base text-plum-muted dark:text-darktext-secondary">
-            {weddingConfig.minister.role}
-          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 pt-2">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-midnight-elevated/40 border border-rose/15 dark:border-midnight-border">
+              <p className="text-xs uppercase tracking-wider text-rose dark:text-champagne font-bold mb-1">
+                {weddingConfig.minister.heading}
+              </p>
+              <h4 className="font-serif text-xl sm:text-2xl font-semibold text-plum dark:text-darktext-primary mb-1">
+                {weddingConfig.minister.name}
+              </h4>
+              <div className="w-8 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2" />
+              <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
+                {weddingConfig.minister.role}
+              </p>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-midnight-elevated/40 border border-rose/15 dark:border-midnight-border">
+              <p className="text-xs uppercase tracking-wider text-rose dark:text-champagne font-bold mb-1">
+                {weddingConfig.minister.officiantHeading || 'Marriage Officiant'}
+              </p>
+              <h4 className="font-serif text-xl sm:text-2xl font-semibold text-plum dark:text-darktext-primary mb-1">
+                {weddingConfig.minister.officiantName || 'S. Gnana Jaya Prakash'}
+              </h4>
+              <div className="w-8 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2" />
+              <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
+                {weddingConfig.minister.officiantRole || 'Marriage Officiant & Solemnisation'}
+              </p>
+            </div>
+          </div>
         </motion.div>
 
         {/* EVENT 1: WEDDING CEREMONY */}

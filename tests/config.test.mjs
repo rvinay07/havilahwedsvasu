@@ -60,10 +60,13 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
   await t.test('Minister of the ceremony is accurately defined', () => {
     assert.match(content, /heading:\s*["']The Minister of the Ceremony["']/, 'Must define heading: The Minister of the Ceremony');
     assert.match(content, /Rev\.\s*A\.\s*P\.\s*Solomon Vijay Raj/, 'Must define minister name Rev. A. P. Solomon Vijay Raj');
+    assert.match(content, /S\.\s*Gnana Jaya Prakash/, 'Must define marriage officiant S. Gnana Jaya Prakash');
+    assert.match(content, /Mark 10:9/, 'Must reference Mark 10:9');
   });
 
   await t.test('All referenced media assets physically exist on disk', () => {
     const mediaFiles = [
+      'assets/fonts/Champagne.ttf',
       'assets/images/hero.jpg',
       'assets/images/groom.jpg',
       'assets/images/bride.jpg',

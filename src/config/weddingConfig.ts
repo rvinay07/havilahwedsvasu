@@ -28,6 +28,10 @@ export const weddingConfig = {
     quote: "Therefore what God has joined together, let no one separate.",
     reference: "Matthew 19:6"
   },
+  markVerse: {
+    quote: "Therefore what God has joined together, let no one separate.",
+    reference: "Mark 10:9"
+  },
 
   media: {
     hero: "./assets/images/hero.jpg",
@@ -64,8 +68,24 @@ export const weddingConfig = {
   minister: {
     heading: "The Minister of the Ceremony",
     name: "Rev. A. P. Solomon Vijay Raj",
-    role: "Officiating the Holy Matrimony & Pastoral Blessing"
+    role: "Officiating the Holy Matrimony & Pastoral Blessing",
+    officiantHeading: "Marriage Officiant",
+    officiantName: "S. Gnana Jaya Prakash",
+    officiantRole: "Marriage Officiant & Solemnisation"
   } as MinisterDetail,
+
+  ministers: [
+    {
+      heading: "The Minister of the Ceremony",
+      name: "Rev. A. P. Solomon Vijay Raj",
+      role: "Officiating the Holy Matrimony & Pastoral Blessing"
+    },
+    {
+      heading: "Marriage Officiant",
+      name: "S. Gnana Jaya Prakash",
+      role: "Marriage Officiant & Solemnisation"
+    }
+  ] as MinisterDetail[],
 
   milestones: [
     {
@@ -104,6 +124,10 @@ export const weddingConfig = {
   ] as GalleryPhoto[],
 
   scriptures: [
+    {
+      quote: "Therefore what God has joined together, let no one separate.",
+      reference: "Mark 10:9"
+    },
     {
       quote: "Love is patient, love is kind. It does not envy, it does not boast, it is not proud. It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. Love never fails.",
       reference: "1 Corinthians 13:4–8"

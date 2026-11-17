@@ -25,6 +25,9 @@ export default defineConfig({
                 '.svg': 'image/svg+xml',
                 '.mp3': 'audio/mpeg',
                 '.mp4': 'video/mp4',
+                '.ttf': 'font/ttf',
+                '.woff': 'font/woff',
+                '.woff2': 'font/woff2',
               };
               res.setHeader('Content-Type', mimes[ext] || 'application/octet-stream');
               return fs.createReadStream(assetPath).pipe(res);

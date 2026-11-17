@@ -105,15 +105,25 @@ export const HomePage: React.FC = () => {
                 The wedding celebration of
               </p>
 
-              <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl font-medium tracking-tight text-white dark:text-darktext-primary mb-4 gsap-hero-title">
+              <h1 className="font-champagne text-4xl sm:text-6xl md:text-7xl font-normal tracking-wide text-white dark:text-darktext-primary mb-3 gsap-hero-title">
                 <span>{weddingConfig.groomName}</span>
-                <span className="text-rose dark:text-champagne inline-block mx-3 font-normal">&amp;</span>
+                <span className="text-rose dark:text-champagne inline-block mx-3 font-normal font-serif">&amp;</span>
                 <span>{weddingConfig.brideName}</span>
               </h1>
 
-              <div className="w-24 h-[1.5px] bg-rose dark:bg-champagne mx-auto my-4 gsap-hero-sub" />
+              {/* Launch Page Scripture: Mark 10:9 */}
+              <div className="max-w-xl mx-auto my-3 gsap-hero-sub">
+                <p className="font-serif italic text-sm sm:text-base text-cream/95 dark:text-champagne/95 leading-relaxed">
+                  “Therefore what God has joined together, let no one separate.”
+                </p>
+                <span className="inline-block text-[0.68rem] uppercase tracking-[0.2em] font-sans font-bold text-rose dark:text-champagne mt-0.5">
+                  — Mark 10:9 —
+                </span>
+              </div>
 
-              <p className="font-sans text-sm sm:text-base tracking-widest text-cream dark:text-darktext-primary uppercase font-semibold mb-8 gsap-hero-sub">
+              <div className="w-20 h-[1.5px] bg-rose/60 dark:bg-champagne/60 mx-auto my-4 gsap-hero-sub" />
+
+              <p className="font-sans text-xs sm:text-sm tracking-widest text-cream dark:text-darktext-primary uppercase font-semibold mb-8 gsap-hero-sub">
                 3 February 2027 · Guntakal
               </p>
 
@@ -153,15 +163,25 @@ export const HomePage: React.FC = () => {
               <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
                 By the Grace of God
               </p>
-              <h2 className="font-serif text-3xl sm:text-4xl text-plum dark:text-darktext-primary font-medium mb-5">
+              <h2 className="font-serif text-3xl sm:text-4xl text-plum dark:text-darktext-primary font-medium mb-3">
                 A Joyful Invitation
               </h2>
+
+              {/* Mark 10:9 Focal Scripture */}
+              <div className="inline-block px-5 py-2 rounded-full bg-cream-soft dark:bg-midnight-elevated/70 border border-rose/25 dark:border-midnight-border mb-5">
+                <p className="font-serif italic text-sm sm:text-base text-rose-deep dark:text-champagne">
+                  “Therefore what God has joined together, let no one separate.”
+                </p>
+                <span className="text-[0.65rem] uppercase tracking-widest text-olive dark:text-darksage font-bold font-sans">
+                  — Mark 10:9
+                </span>
+              </div>
 
               <div className="w-16 h-[1.5px] bg-rose/40 dark:bg-champagne/40 mx-auto mb-6" />
 
               <p className="font-serif text-lg sm:text-xl text-plum-muted dark:text-darktext-secondary leading-relaxed mb-8 max-w-xl mx-auto">
                 With grateful hearts, we invite you to celebrate with us as{' '}
-                <strong className="text-plum dark:text-darktext-primary font-semibold">
+                <strong className="font-champagne text-2xl sm:text-3xl text-plum dark:text-darktext-primary font-normal">
                   {weddingConfig.groomName} &amp; {weddingConfig.brideName}
                 </strong>{' '}
                 are united in holy matrimony. Your presence and prayers will mean the world to us as we begin this new chapter in Christ.
@@ -251,7 +271,7 @@ export const HomePage: React.FC = () => {
               <p className="text-xs uppercase tracking-widest text-rose dark:text-champagne font-bold mb-1">
                 The Groom
               </p>
-              <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-plum dark:text-darktext-primary mb-2">
+              <h3 className="font-champagne text-3xl sm:text-4xl font-normal text-plum dark:text-darktext-primary mb-2">
                 {weddingConfig.groomName}
               </h3>
               <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium">
@@ -282,7 +302,7 @@ export const HomePage: React.FC = () => {
               <p className="text-xs uppercase tracking-widest text-rose dark:text-champagne font-bold mb-1">
                 The Bride
               </p>
-              <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-plum dark:text-darktext-primary mb-2">
+              <h3 className="font-champagne text-3xl sm:text-4xl font-normal text-plum dark:text-darktext-primary mb-2">
                 {weddingConfig.brideName}
               </h3>
               <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium">
@@ -437,27 +457,48 @@ export const HomePage: React.FC = () => {
 
         {/* Upcoming Events Stack */}
         <div className="pb-20 px-4 max-w-5xl mx-auto space-y-12">
-          {/* MINISTER OF THE CEREMONY */}
+          {/* MINISTERS & MARRIAGE OFFICIANT */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="p-7 sm:p-9 rounded-3xl bg-cream-soft/60 dark:bg-midnight-card border border-rose/30 dark:border-midnight-border shadow-wedding text-center max-w-2xl mx-auto transition-colors"
+            className="p-7 sm:p-9 rounded-3xl bg-cream-soft/60 dark:bg-midnight-card border border-rose/30 dark:border-midnight-border shadow-wedding text-center max-w-3xl mx-auto transition-colors"
           >
             <div className="text-rose dark:text-champagne text-2xl font-serif mb-2" aria-hidden="true">
               ✝
             </div>
-            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-2">
-              {weddingConfig.minister.heading}
+            <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-4">
+              Ministers &amp; Marriage Officiants
             </p>
-            <h4 className="font-serif text-2xl sm:text-3xl font-medium text-plum dark:text-darktext-primary mb-2">
-              {weddingConfig.minister.name}
-            </h4>
-            <div className="w-12 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-3" />
-            <p className="font-serif italic text-sm sm:text-base text-plum-muted dark:text-darktext-secondary">
-              {weddingConfig.minister.role}
-            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 pt-2">
+              <div className="p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-midnight-elevated/40 border border-rose/15 dark:border-midnight-border">
+                <p className="text-xs uppercase tracking-wider text-rose dark:text-champagne font-bold mb-1">
+                  {weddingConfig.minister.heading}
+                </p>
+                <h4 className="font-serif text-xl sm:text-2xl font-semibold text-plum dark:text-darktext-primary mb-1">
+                  {weddingConfig.minister.name}
+                </h4>
+                <div className="w-8 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2" />
+                <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
+                  {weddingConfig.minister.role}
+                </p>
+              </div>
+
+              <div className="p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-midnight-elevated/40 border border-rose/15 dark:border-midnight-border">
+                <p className="text-xs uppercase tracking-wider text-rose dark:text-champagne font-bold mb-1">
+                  {weddingConfig.minister.officiantHeading || 'Marriage Officiant'}
+                </p>
+                <h4 className="font-serif text-xl sm:text-2xl font-semibold text-plum dark:text-darktext-primary mb-1">
+                  {weddingConfig.minister.officiantName || 'S. Gnana Jaya Prakash'}
+                </h4>
+                <div className="w-8 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2" />
+                <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
+                  {weddingConfig.minister.officiantRole || 'Marriage Officiant & Solemnisation'}
+                </p>
+              </div>
+            </div>
           </motion.div>
 
           {/* EVENT 1: WEDDING CEREMONY */}

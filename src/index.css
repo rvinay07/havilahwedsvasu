@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: 'Champagne';
+    src: url('../assets/fonts/Champagne.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
   :root {
     --color-rose: #C98271;
     --color-olive: #67724A;
@@ -56,6 +64,10 @@
 
   h1, h2, h3, h4, .font-serif {
     font-family: 'Cormorant Garamond', Garamond, Georgia, serif;
+  }
+
+  .font-champagne {
+    font-family: 'Champagne', 'Cormorant Garamond', Garamond, Georgia, serif;
   }
 }
 
