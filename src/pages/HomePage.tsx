@@ -106,9 +106,9 @@ export const HomePage: React.FC = () => {
               </p>
 
               <h1 className="font-champagne text-4xl sm:text-6xl md:text-7xl font-normal tracking-wide text-white dark:text-darktext-primary mb-3 gsap-hero-title">
-                <span>{weddingConfig.groomName}</span>
+                <span>Vasu</span>
                 <span className="text-rose dark:text-champagne inline-block mx-3 font-normal font-serif">&amp;</span>
-                <span>{weddingConfig.brideName}</span>
+                <span>Mercy havilah</span>
               </h1>
 
               {/* Launch Page Scripture: Mark 10:9 */}
@@ -182,7 +182,7 @@ export const HomePage: React.FC = () => {
               <p className="font-serif text-lg sm:text-xl text-plum-muted dark:text-darktext-secondary leading-relaxed mb-8 max-w-xl mx-auto">
                 With grateful hearts, we invite you to celebrate with us as{' '}
                 <strong className="font-champagne text-2xl sm:text-3xl text-plum dark:text-darktext-primary font-normal">
-                  {weddingConfig.groomName} &amp; {weddingConfig.brideName}
+                  Vasu &amp; Mercy havilah
                 </strong>{' '}
                 are united in holy matrimony. Your presence and prayers will mean the world to us as we begin this new chapter in Christ.
               </p>
@@ -272,7 +272,7 @@ export const HomePage: React.FC = () => {
                 The Groom
               </p>
               <h3 className="font-champagne text-3xl sm:text-4xl font-normal text-plum dark:text-darktext-primary mb-2">
-                {weddingConfig.groomName}
+                {weddingConfig.groomDisplayName || "Vasu"}
               </h3>
               <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium">
                 <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] uppercase tracking-wider mb-0.5">
@@ -303,7 +303,7 @@ export const HomePage: React.FC = () => {
                 The Bride
               </p>
               <h3 className="font-champagne text-3xl sm:text-4xl font-normal text-plum dark:text-darktext-primary mb-2">
-                {weddingConfig.brideName}
+                {weddingConfig.brideDisplayName || "Mercy havilah"}
               </h3>
               <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium">
                 <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] uppercase tracking-wider mb-0.5">

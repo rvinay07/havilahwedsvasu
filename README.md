@@ -107,6 +107,7 @@ The application features a toggleable dual-palette system designed for visual el
 
 - **React 18 + Vite 5 + TypeScript**: Modern frontend architecture with strict type safety.
 - **Tailwind CSS**: Dual-palette styling with custom color tokens and dark theme support.
+- **Champagne Calligraphy Font**: Custom script typeface for couple title typography (`Vasu & Mercy havilah`).
 - **React Router v6**: HashRouter-based multi-page routing for GitHub Pages and Vercel compatibility.
 - **Motion for React (Framer Motion)**: Page transitions and scroll animations.
 - **GSAP (GreenSock)**: Cinematic text reveals on hero titles.
