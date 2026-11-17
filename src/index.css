@@ -34,26 +34,26 @@
   }
 
   [data-theme="dark"] {
-    /* ── Midnight Champagne Luxury Tokens ── */
-    --bg-page: #101820;          /* Main background */
-    --bg-alt: #151F28;           /* Secondary background */
-    --bg-card: #1B2732;          /* Card background */
-    --bg-elevated: #24313B;      /* Elevated surfaces */
-    --bg-soft: #151F28;
+    /* ── Lavender Deep Dark Theme Tokens ── */
+    --bg-page: #191621;          /* Deep eggplant main background */
+    --bg-alt: #221E2C;           /* Secondary deep surface */
+    --bg-card: #292532;          /* Deep #292532 card surface */
+    --bg-elevated: #363142;      /* Elevated surface */
+    --bg-soft: #221E2C;
 
-    --text-main: #F1EBDD;        /* Primary text */
-    --text-secondary: #C1C5C4;   /* Secondary text */
-    --text-muted: #A0AAA9;       /* Muted text */
-    --text-soft: #A0AAA9;
+    --text-main: #F4F4F6;        /* Neutral #F4F4F6 primary text */
+    --text-secondary: #D3D0DD;   /* Soft #D3D0DD secondary text */
+    --text-muted: #9E9AA8;       /* Muted text */
+    --text-soft: #9E9AA8;
 
-    --champagne: #D6B878;        /* Champagne gold */
-    --champagne-hover: #E6CC91;  /* Gold hover */
-    --sage-accent: #A6B3A1;      /* Sage accent */
-    --border: #34424C;           /* Border */
+    --champagne: #9C8DC1;        /* Main #9C8DC1 lavender accent */
+    --champagne-hover: #B2A5D8;  /* Lavender hover */
+    --sage-accent: #B58BC0;      /* Accent #B58BC0 lilac */
+    --border: #484157;           /* Lavender-dark border */
 
-    --border-rose: #34424C;
-    --border-subtle: #34424C;
-    --nav-glass: rgba(16, 24, 32, 0.96);
+    --border-rose: #484157;
+    --border-subtle: #484157;
+    --nav-glass: rgba(25, 22, 33, 0.96);
   }
 
   body {

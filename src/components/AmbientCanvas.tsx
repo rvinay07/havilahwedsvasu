@@ -30,10 +30,10 @@ export const AmbientCanvas: React.FC<{ className?: string }> = ({ className = ''
     ];
 
     const darkColors = [
-      'rgba(214, 184, 120, ', // Champagne Gold (#D6B878)
-      'rgba(241, 235, 221, ', // Primary Ivory (#F1EBDD)
-      'rgba(166, 179, 161, ', // Sage Accent (#A6B3A1)
-      'rgba(230, 204, 145, ', // Gold Hover (#E6CC91)
+      'rgba(156, 141, 193, ', // Main Wisteria Lavender (#9C8DC1)
+      'rgba(244, 244, 246, ', // Neutral Ivory (#F4F4F6)
+      'rgba(181, 139, 192, ', // Accent Lilac Orchid (#B58BC0)
+      'rgba(211, 208, 221, ', // Soft Lavender Mist (#D3D0DD)
     ];
 
     const particleCount = Math.min(36, Math.floor((width * height) / 25000));

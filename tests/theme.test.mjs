@@ -34,26 +34,25 @@ test('Design Tokens & Dual-Theme System Verification', async (t) => {
     assert.match(cssContent, /--color-plum:\s*#292532/i, 'CSS --color-plum must use #292532');
   });
 
-  await t.test('Midnight Champagne Luxury dark theme tokens are present and exact', () => {
-    assert.match(tailwindContent, /#101820/i, 'Main background #101820 must exist');
-    assert.match(tailwindContent, /#151F28/i, 'Secondary background #151F28 must exist');
-    assert.match(tailwindContent, /#1B2732/i, 'Card background #1B2732 must exist');
-    assert.match(tailwindContent, /#24313B/i, 'Elevated surface #24313B must exist');
-    assert.match(tailwindContent, /#F1EBDD/i, 'Primary text #F1EBDD must exist');
-    assert.match(tailwindContent, /#C1C5C4/i, 'Secondary text #C1C5C4 must exist');
-    assert.match(tailwindContent, /#A0AAA9/i, 'Muted text #A0AAA9 must exist');
-    assert.match(tailwindContent, /#D6B878/i, 'Champagne gold #D6B878 must exist');
-    assert.match(tailwindContent, /#E6CC91/i, 'Gold hover #E6CC91 must exist');
-    assert.match(tailwindContent, /#A6B3A1/i, 'Sage accent #A6B3A1 must exist');
-    assert.match(tailwindContent, /#34424C/i, 'Border #34424C must exist');
+  await t.test('Dark theme tokens adapt palette into dark mode values', () => {
+    assert.match(tailwindContent, /#191621/i, 'Dark canvas background #191621 must exist');
+    assert.match(tailwindContent, /#221E2C/i, 'Dark subtle surface #221E2C must exist');
+    assert.match(tailwindContent, /#292532/i, 'Dark card surface #292532 (Deep) must exist');
+    assert.match(tailwindContent, /#363142/i, 'Dark elevated surface #363142 must exist');
+    assert.match(tailwindContent, /#484157/i, 'Dark border #484157 must exist');
+    assert.match(tailwindContent, /#9C8DC1/i, 'Dark primary accent #9C8DC1 (Main) must exist');
+    assert.match(tailwindContent, /#B58BC0/i, 'Dark secondary accent #B58BC0 (Accent) must exist');
+    assert.match(tailwindContent, /#F4F4F6/i, 'Dark primary text #F4F4F6 (Neutral) must exist');
+    assert.match(tailwindContent, /#D3D0DD/i, 'Dark secondary text #D3D0DD (Soft) must exist');
   });
 
-  await t.test('CSS custom properties match Midnight Champagne theme', () => {
+  await t.test('CSS custom properties match Lavender Deep dark theme', () => {
     assert.match(cssContent, /\[data-theme="dark"\]/, 'Must declare [data-theme="dark"] selector');
-    assert.match(cssContent, /#101820/i, 'CSS dark --bg-page must use #101820');
-    assert.match(cssContent, /#1B2732/i, 'CSS dark --bg-card must use #1B2732');
-    assert.match(cssContent, /#F1EBDD/i, 'CSS dark --text-main must use #F1EBDD');
-    assert.match(cssContent, /#D6B878/i, 'CSS dark --champagne must use #D6B878');
+    assert.match(cssContent, /--bg-page:\s*#191621/i, 'CSS dark --bg-page must use #191621');
+    assert.match(cssContent, /--bg-card:\s*#292532/i, 'CSS dark --bg-card must use #292532');
+    assert.match(cssContent, /--text-main:\s*#F4F4F6/i, 'CSS dark --text-main must use #F4F4F6');
+    assert.match(cssContent, /--champagne:\s*#9C8DC1/i, 'CSS dark --champagne must use #9C8DC1');
+    assert.match(cssContent, /--sage-accent:\s*#B58BC0/i, 'CSS dark --sage-accent must use #B58BC0');
   });
 });
 

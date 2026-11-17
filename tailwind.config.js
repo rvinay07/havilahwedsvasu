@@ -42,28 +42,28 @@ export default {
           midnight: '#131018',
         },
 
-        // Midnight Champagne Luxury Dark Theme
+        // Deep Eggplant & Lavender Luxury Dark Theme (Palette adapted for Dark Mode)
         midnight: {
-          DEFAULT: '#101820', // Main background
-          subtle: '#151F28',  // Secondary background
-          card: '#1B2732',    // Card background
-          elevated: '#24313B',// Elevated surfaces
-          border: '#34424C',  // Border
+          DEFAULT: '#191621', // Deep eggplant canvas background
+          subtle: '#221E2C',  // Subtle deep surface
+          card: '#292532',    // Deep #292532 card surface
+          elevated: '#363142',// Elevated lavender-dark surface
+          border: '#484157',  // Soft lavender-tinted dark border
         },
         champagne: {
-          DEFAULT: '#D6B878', // Champagne gold
-          hover: '#E6CC91',   // Gold hover
-          soft: '#F5EAD4',
-          glow: 'rgba(214, 184, 120, 0.35)',
+          DEFAULT: '#9C8DC1', // Main #9C8DC1 Wisteria Lavender
+          hover: '#B2A5D8',   // Lighter lavender hover
+          soft: '#D3D0DD',    // Soft #D3D0DD Lavender Mist
+          glow: 'rgba(156, 141, 193, 0.40)',
         },
         darktext: {
-          primary: '#F1EBDD',   // Primary text
-          secondary: '#C1C5C4', // Secondary text
-          muted: '#A0AAA9',     // Muted text
+          primary: '#F4F4F6',   // Neutral #F4F4F6 Primary Text
+          secondary: '#D3D0DD', // Soft #D3D0DD Secondary Text
+          muted: '#9E9AA8',     // Muted Lavender-Gray Text
         },
         darksage: {
-          DEFAULT: '#A6B3A1', // Sage accent
-          soft: 'rgba(166, 179, 161, 0.2)',
+          DEFAULT: '#B58BC0', // Accent #B58BC0 Lilac Orchid
+          soft: 'rgba(181, 139, 192, 0.25)',
         }
       },
       fontFamily: {
@@ -76,7 +76,7 @@ export default {
         'wedding-lg': '0 20px 50px rgba(41, 37, 50, 0.12)',
         'rose-glow': '0 10px 25px rgba(156, 141, 193, 0.40)',
         'olive-glow': '0 10px 25px rgba(181, 139, 192, 0.40)',
-        'champagne-glow': '0 10px 25px rgba(214, 184, 120, 0.35)',
+        'champagne-glow': '0 10px 25px rgba(156, 141, 193, 0.40)',
       }
     },
   },
