@@ -4,7 +4,7 @@ export const weddingConfig = {
   groomName: "VASU",
   brideName: "MERCY HAVILAH",
   groomDisplayName: "Vasu",
-  brideDisplayName: "Mercy havilah",
+  brideDisplayName: "Mercy Havilah",
   groomFather: "N.JEPHANIAH",
   groomMother: "N.UMA DEVI",
   brideFather: "S.DEENA SHEKHAR",
