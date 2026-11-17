@@ -187,16 +187,16 @@ test('Strict Business Rules & Prohibitions Verification', async (t) => {
     assert.ok(detailsBrideIdx !== -1 && detailsMinistersIdx !== -1 && detailsBrideIdx < detailsMinistersIdx, 'BrideGreetingCard must be placed above marriage details on WeddingDetailsPage');
   });
 
-  await t.test('Reception marriage officiant and chief guest are rendered on Home and Wedding Details pages', () => {
+  await t.test('Reception etiquette and chief guest are rendered on Home and Wedding Details pages', () => {
     const homeContent = fs.readFileSync(path.join(ROOT, 'src/pages/HomePage.tsx'), 'utf8');
     const detailsContent = fs.readFileSync(path.join(ROOT, 'src/pages/WeddingDetailsPage.tsx'), 'utf8');
 
     assert.match(homeContent, /reception\.dignitaries/, 'HomePage must render reception dignitaries');
-    assert.match(homeContent, /RECEPTION OFFICIANT/, 'HomePage must label reception officiant');
+    assert.match(homeContent, /RECEPTION ETIQUETTE/, 'HomePage must label reception etiquette');
     assert.match(homeContent, /CHIEF GUEST/, 'HomePage must label chief guest');
 
     assert.match(detailsContent, /reception\.dignitaries/, 'WeddingDetailsPage must render reception dignitaries');
-    assert.match(detailsContent, /RECEPTION OFFICIANT/, 'WeddingDetailsPage must label reception officiant');
+    assert.match(detailsContent, /RECEPTION ETIQUETTE/, 'WeddingDetailsPage must label reception etiquette');
     assert.match(detailsContent, /CHIEF GUEST/, 'WeddingDetailsPage must label chief guest');
   });
 

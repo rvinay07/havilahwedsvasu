@@ -83,7 +83,7 @@ export const weddingConfig = {
       ],
       dignitaries: {
         officiant: {
-          title: "MARRIAGE OFFICIANT",
+          title: "RECEPTION ETIQUETTE",
           name: "U. Joshua Ranjit",
           organization: "Friends Foundation"
         },
@@ -224,7 +224,7 @@ export function getWeddingShareMessage(): string {
     `📅 Tuesday, 9 February 2027 · 6:30 PM Onwards`,
     `📍 ${weddingConfig.events.reception.venue}, ${weddingConfig.events.reception.address}`,
     `🗺️ Google Maps: ${weddingConfig.events.reception.mapsUrl}`,
-    `✝ Officiant: U. Joshua Ranjit (Friends Foundation)`,
+    `✝ Reception Etiquette: U. Joshua Ranjit (Friends Foundation)`,
     `🌟 Chief Guest: Pastor Chitti Babu`,
     `━━━━━━━━━━━━━━━━━━━━`,
     ``,
