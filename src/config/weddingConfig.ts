@@ -111,10 +111,10 @@ export const weddingConfig = {
     {
       id: "engagement",
       status: "completed",
-      badge: "Celebrated · 4 Feb 2026",
+      badge: "Celebrated · 16 Feb 2026",
       title: "Our Engagement Ceremony",
       scripture: "“I have found the one whom my soul loves.” — Song of Solomon 3:4",
-      description: "On 4 February 2026, surrounded by our loved ones and covered in prayer, our engagement was celebrated with joyful praise and devotion as we committed our lifelong journey into God's hands."
+      description: "On 16 February 2026, surrounded by our loved ones and covered in prayer, our engagement was celebrated with joyful praise and devotion as we committed our lifelong journey into God's hands."
     },
     {
       id: "matrimony",

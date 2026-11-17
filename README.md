@@ -12,7 +12,7 @@ A digital Christian wedding invitation celebrating the Holy Matrimony of **Vasu 
 | **Groom** | **VASU** (Son of Mr. **N. Jephaniah** & Mrs. **N. Uma Devi**) |
 | **Bride** | **MERCY HAVILAH** (Daughter of Mr. **S. Deena Shekhar** & Mrs. **S. Esther**) |
 | **Core Scripture** | *“Therefore what God has joined together, let no one separate.”* — **Mark 10:9** |
-| **Engagement Ceremony** | **4 February 2026** *(Celebrated Milestone)* |
+| **Engagement Ceremony** | **16 February 2026** *(Celebrated Milestone)* |
 | **Holy Matrimony Service** | **Wednesday, 3 February 2027 at 9:00 AM**<br>📍 **AB Function Hall (AC)**, Behind SSGS Degree College, SN Pet, Guntakal ([Google Maps](https://maps.app.goo.gl/V26a9HupTv4vn8A28)) |
 | **The Ministry of the Ceremony** | • **Rev. A. P. Solomon Vijay Raj** (The Ministry of the Ceremony · Marriage Officiant · Agape A.G Church - Guntakal)<br>• **Pastor S. Gnana Jaya Prakash** (The Ministry of the Ceremony · Marriage Officiant · Bethlehem Gospel Ministries) |
 | **Family Contacts** | • **General Information:** `+91 8978148996`<br>• **Vasu (Groom):** `+91 9652296062`<br>• **Hoshi (Family):** `+91 6281047922` |
@@ -85,7 +85,7 @@ The application features a toggleable dual-palette system designed for visual el
 2. **Our Story (`/our-story`)**:
    * The Couple portrait cards with parentage lines for Vasu and Mercy Havilah.
    * Family portrait cards for the Groom's and Bride's parents.
-   * Faith Journey Timeline featuring **Engagement on 4 February 2026** as a celebrated completed milestone (Song of Solomon 3:4).
+   * Faith Journey Timeline featuring **Engagement on 16 February 2026** as a celebrated completed milestone (Song of Solomon 3:4).
    * Minimal WhatsApp share station above the footer.
 
 3. **Wedding Details (`/wedding-details`)**:

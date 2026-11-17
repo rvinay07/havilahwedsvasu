@@ -15,7 +15,7 @@ Repository: https://github.com/rvinay07/havilahwedsvasu (main)
   (Dark) with persistent toggle.
 - Autoplay & Audio Unlock: Instant 0ms HTML5 autoplay with first touch/click
   gesture unlock and live equalizer pill (Music ON / OFF).
-- Standardized Dates: Engagement (4 Feb 2026), Holy Matrimony (3 Feb 2027),
+- Standardized Dates: Engagement (16 Feb 2026), Holy Matrimony (3 Feb 2027),
   Reception (4 Feb 2027). Zero RSVP forms, zero Thanksgiving mentions.
 - WhatsApp Integrations: Added guest invitation generator and developer connect.
 - Automated Testing: 49 unit tests + 95 CDP browser assertions (100% passing).
@@ -62,7 +62,7 @@ Repository: https://github.com/rvinay07/havilahwedsvasu (main)
 - Fixed premature listener removal: Audio reliably starts on first touch/click.
 - Eliminated horizontal scroll overflows on 320px-390px mobile screens.
 - Normalized image file casing (.jpg / .JPG) for Linux/Vercel compatibility.
-- Standardized engagement date to 4 February 2026 across all files.
+- Standardized engagement date to 16 February 2026 across all files.
 
 [UI/UX Polish]
 - Minimalist 700ms monogram splash replacing intrusive modal popups.
