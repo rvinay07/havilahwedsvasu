@@ -62,7 +62,8 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
     assert.match(content, /Solemnization of Marriage/i, 'Must define section heading Solemnization of Marriage');
     assert.match(content, /Rev\.\s*A\.\s*P\.\s*Solomon Vijay Raj/, 'Must define minister name Rev. A. P. Solomon Vijay Raj');
     assert.match(content, /Agape A\.G\.?\s*Church/, 'Must define church Agape A.G. Church');
-    assert.match(content, /S\.\s*Gnana Jaya Prakash/, 'Must define marriage officiant S. Gnana Jaya Prakash');
+    assert.match(content, /Pastor\s*S\.\s*Gnana Jaya Prakash/, 'Must define marriage officiant Pastor S. Gnana Jaya Prakash');
+    assert.match(content, /Bethlehem Gospel Ministries/i, 'Must define church Bethlehem Gospel Ministries');
     assert.match(content, /Mark 10:9/, 'Must reference Mark 10:9');
   });
 

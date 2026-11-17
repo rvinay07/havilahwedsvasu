@@ -77,9 +77,9 @@ export const weddingConfig = {
     role: "Agape A.G. Church, Guntakal",
     officiantHeading: "The Minister of the Ceremony",
     officiantTitle: "MARRIAGE OFFICIANT",
-    officiantName: "S. Gnana Jaya Prakash",
+    officiantName: "Pastor S. Gnana Jaya Prakash",
     officiantRole: "Marriage Officiant",
-    officiantChurch: "[Church Name, Location]"
+    officiantChurch: "Bethlehem Gospel Ministries"
   } as MinisterDetail,
 
   ministers: [
@@ -93,9 +93,9 @@ export const weddingConfig = {
     {
       heading: "SOLEMNIZATION OF MARRIAGE",
       title: "MARRIAGE OFFICIANT",
-      name: "S. Gnana Jaya Prakash",
-      church: "[Church Name, Location]",
-      role: "[Church Name, Location]"
+      name: "Pastor S. Gnana Jaya Prakash",
+      church: "Bethlehem Gospel Ministries",
+      role: "Bethlehem Gospel Ministries"
     }
   ] as MinisterDetail[],
 

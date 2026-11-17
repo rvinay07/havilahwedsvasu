@@ -14,7 +14,7 @@ A digital Christian wedding invitation celebrating the Holy Matrimony of **Vasu 
 | **Core Scripture** | *“Therefore what God has joined together, let no one separate.”* — **Mark 10:9** |
 | **Engagement Ceremony** | **4 February 2026** *(Celebrated Milestone)* |
 | **Holy Matrimony Service** | **Wednesday, 3 February 2027 at 9:00 AM**<br>📍 **AB Function Hall (AC)**, Behind SSGS Degree College, SN Pet, Guntakal ([Google Maps](https://maps.app.goo.gl/V26a9HupTv4vn8A28)) |
-| **The Ministry of the Ceremony** | • **Rev. A. P. Solomon Vijay Raj** (The Ministry of the Ceremony · Marriage Officiant · Agape A.G Church - Guntakal)<br>• **S. Gnana Jaya Prakash** (The Ministry of the Ceremony · Marriage Officiant) |
+| **The Ministry of the Ceremony** | • **Rev. A. P. Solomon Vijay Raj** (The Ministry of the Ceremony · Marriage Officiant · Agape A.G Church - Guntakal)<br>• **Pastor S. Gnana Jaya Prakash** (The Ministry of the Ceremony · Marriage Officiant · Bethlehem Gospel Ministries) |
 | **Family Contacts** | • **General Information:** `+91 8978148996`<br>• **Vasu (Groom):** `+91 9652296062`<br>• **Hoshi (Family):** `+91 6281047922` |
 | **Strict Policies** | Strictly **NO RSVP** forms/buttons · Strictly **NO Thanksgiving service** · Reception details excluded per family preference |
 
@@ -91,7 +91,7 @@ The application features a toggleable dual-palette system designed for visual el
 3. **Wedding Details (`/wedding-details`)**:
    * **Holy Matrimony Service:** 3 February 2027, 9:00 AM at AB Function Hall (AC), Guntakal. Live countdown, Google Maps directions, Add to Calendar, and Order of Service.
    * Pre-wedding film video player (`wedding.mp4`).
-   * The Ministry of the Ceremony & Marriage Officiants (Rev. A. P. Solomon Vijay Raj · Agape A.G Church - Guntakal & S. Gnana Jaya Prakash).
+   * The Ministry of the Ceremony & Marriage Officiants (Rev. A. P. Solomon Vijay Raj · Agape A.G Church - Guntakal & Pastor S. Gnana Jaya Prakash · Bethlehem Gospel Ministries).
    * Family contact cards with click-to-call links.
    * Minimal WhatsApp share station above the footer.
 

@@ -105,18 +105,18 @@ export const HomePage: React.FC = () => {
                 The wedding celebration of
               </p>
 
-              <h1 className="font-champagne text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-wide text-white dark:text-darktext-primary mb-3 gsap-hero-title flex flex-col items-center justify-center">
-                <span className="block leading-tight">Vasu</span>
-                <span className="block text-2xl sm:text-3xl md:text-4xl text-rose dark:text-champagne font-normal font-serif my-0.5 sm:my-1.5 leading-none">&amp;</span>
-                <span className="block leading-tight">Mercy Havilah</span>
+              <h1 className="font-champagne text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-wide text-white dark:text-darktext-primary mb-4 sm:mb-6 gsap-hero-title flex flex-col items-center justify-center">
+                <span className="block leading-normal">Vasu</span>
+                <span className="block text-xl sm:text-2xl md:text-3xl text-rose dark:text-champagne font-normal font-serif my-1 sm:my-2 leading-none">&amp;</span>
+                <span className="block leading-normal pb-2 sm:pb-3">Mercy Havilah</span>
               </h1>
 
               {/* Launch Page Scripture: Mark 10:9 */}
-              <div className="max-w-xl mx-auto my-3 gsap-hero-sub">
+              <div className="max-w-xl mx-auto mt-4 sm:mt-5 mb-4 gsap-hero-sub">
                 <p className="font-serif italic text-sm sm:text-base text-cream/95 dark:text-champagne/95 leading-relaxed">
                   “Therefore what God has joined together, let no one separate.”
                 </p>
-                <span className="inline-block text-[0.68rem] uppercase tracking-[0.2em] font-sans font-bold text-rose dark:text-champagne mt-0.5">
+                <span className="inline-block text-[0.68rem] uppercase tracking-[0.2em] font-sans font-bold text-rose dark:text-champagne mt-1">
                   — Mark 10:9 —
                 </span>
               </div>
@@ -179,13 +179,19 @@ export const HomePage: React.FC = () => {
 
               <div className="w-16 h-[1.5px] bg-rose/40 dark:bg-champagne/40 mx-auto mb-6" />
 
-              <p className="font-serif text-lg sm:text-xl text-plum-muted dark:text-darktext-secondary leading-relaxed mb-8 max-w-xl mx-auto">
-                With grateful hearts, we invite you to celebrate with us as{' '}
-                <strong className="font-champagne text-2xl sm:text-3xl text-plum dark:text-darktext-primary font-normal">
-                  Vasu &amp; Mercy Havilah
-                </strong>{' '}
-                are united in holy matrimony. Your presence and prayers will mean the world to us as we begin this new chapter in Christ.
-              </p>
+              <div className="font-serif text-base sm:text-lg text-plum-muted dark:text-darktext-secondary leading-relaxed mb-8 max-w-xl mx-auto">
+                <p className="mb-2">
+                  With grateful hearts, we invite you to celebrate with us as
+                </p>
+                <div className="my-3 sm:my-4">
+                  <span className="font-champagne text-3xl sm:text-4xl md:text-[2.65rem] text-rose dark:text-champagne font-normal tracking-wide block leading-normal py-1 select-none">
+                    Vasu &amp; Mercy Havilah
+                  </span>
+                </div>
+                <p className="mt-2">
+                  are united in holy matrimony. Your presence and prayers will mean the world to us as we begin this new chapter in Christ.
+                </p>
+              </div>
 
               {/* Parents Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-rose/20 dark:border-midnight-border text-center">
@@ -271,14 +277,14 @@ export const HomePage: React.FC = () => {
               <p className="text-xs uppercase tracking-widest text-rose dark:text-champagne font-bold mb-1">
                 The Groom
               </p>
-              <h3 className="font-champagne text-3xl sm:text-4xl font-normal text-plum dark:text-darktext-primary mb-2">
+              <h3 className="font-champagne text-2xl sm:text-3xl md:text-4xl font-normal text-plum dark:text-darktext-primary leading-normal pb-2 mb-2 sm:mb-3">
                 {weddingConfig.groomDisplayName || "Vasu"}
               </h3>
-              <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium">
-                <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] uppercase tracking-wider mb-0.5">
+              <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium pt-1 sm:pt-2">
+                <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] sm:text-xs uppercase tracking-wider mb-1">
                   Beloved son of
                 </span>
-                <p className="text-sm font-serif text-plum dark:text-darktext-primary">
+                <p className="text-sm sm:text-base font-serif text-plum dark:text-darktext-primary">
                   {weddingConfig.groomFather} &amp; {weddingConfig.groomMother}
                 </p>
               </div>
@@ -302,14 +308,14 @@ export const HomePage: React.FC = () => {
               <p className="text-xs uppercase tracking-widest text-rose dark:text-champagne font-bold mb-1">
                 The Bride
               </p>
-              <h3 className="font-champagne text-3xl sm:text-4xl font-normal text-plum dark:text-darktext-primary mb-2">
+              <h3 className="font-champagne text-2xl sm:text-3xl md:text-4xl font-normal text-plum dark:text-darktext-primary leading-normal pb-2 mb-2 sm:mb-3">
                 {weddingConfig.brideDisplayName || "Mercy Havilah"}
               </h3>
-              <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium">
-                <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] uppercase tracking-wider mb-0.5">
+              <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium pt-1 sm:pt-2">
+                <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] sm:text-xs uppercase tracking-wider mb-1">
                   Beloved daughter of
                 </span>
-                <p className="text-sm font-serif text-plum dark:text-darktext-primary">
+                <p className="text-sm sm:text-base font-serif text-plum dark:text-darktext-primary">
                   {weddingConfig.brideFather} &amp; {weddingConfig.brideMother}
                 </p>
               </div>
@@ -495,13 +501,13 @@ export const HomePage: React.FC = () => {
                     MARRIAGE OFFICIANT
                   </p>
                   <h4 className="font-serif text-xl sm:text-2xl font-semibold text-plum dark:text-darktext-primary mb-1">
-                    {weddingConfig.minister.officiantName || 'S. Gnana Jaya Prakash'}
+                    {weddingConfig.minister.officiantName || 'Pastor S. Gnana Jaya Prakash'}
                   </h4>
                 </div>
                 <div>
                   <div className="w-12 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-3" />
                   <p className="font-serif italic text-sm text-plum-muted dark:text-darktext-secondary">
-                    {weddingConfig.minister.officiantChurch || '[Church Name, Location]'}
+                    {weddingConfig.minister.officiantChurch || 'Bethlehem Gospel Ministries'}
                   </p>
                 </div>
               </div>

@@ -58,13 +58,13 @@ export const WeddingDetailsPage: React.FC = () => {
                   MARRIAGE OFFICIANT
                 </p>
                 <h4 className="font-serif text-xl sm:text-2xl font-semibold text-plum dark:text-darktext-primary mb-1">
-                  {weddingConfig.minister.officiantName || 'S. Gnana Jaya Prakash'}
+                  {weddingConfig.minister.officiantName || 'Pastor S. Gnana Jaya Prakash'}
                 </h4>
               </div>
               <div>
                 <div className="w-12 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-3" />
                 <p className="font-serif italic text-sm text-plum-muted dark:text-darktext-secondary">
-                  {weddingConfig.minister.officiantChurch || '[Church Name, Location]'}
+                  {weddingConfig.minister.officiantChurch || 'Bethlehem Gospel Ministries'}
                 </p>
               </div>
             </div>

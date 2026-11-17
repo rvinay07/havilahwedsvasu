@@ -53,8 +53,8 @@ export const OurStoryPage: React.FC = () => {
             <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-plum dark:text-darktext-primary mb-2">
               {weddingConfig.groomName}
             </h3>
-            <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium">
-              <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] uppercase tracking-wider mb-0.5">
+            <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium pt-1">
+              <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] uppercase tracking-wider mb-1">
                 Beloved son of
               </span>
               <p className="text-sm font-serif text-plum dark:text-darktext-primary">
@@ -89,8 +89,8 @@ export const OurStoryPage: React.FC = () => {
             <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-plum dark:text-darktext-primary mb-2">
               {weddingConfig.brideName}
             </h3>
-            <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium">
-              <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] uppercase tracking-wider mb-0.5">
+            <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium pt-1">
+              <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] uppercase tracking-wider mb-1">
                 Beloved daughter of
               </span>
               <p className="text-sm font-serif text-plum dark:text-darktext-primary">
