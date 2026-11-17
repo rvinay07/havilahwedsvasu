@@ -39,9 +39,11 @@ export interface BibleVerse {
 export interface MinisterDetail {
   heading: string;
   name: string;
+  title?: string;
   role?: string;
   church?: string;
   sectionHeading?: string;
+  sectionSubheading?: string;
   officiantHeading?: string;
   officiantName?: string;
   officiantRole?: string;

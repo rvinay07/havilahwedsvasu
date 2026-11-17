@@ -31,35 +31,52 @@ export const WeddingDetailsPage: React.FC = () => {
           <div className="text-rose dark:text-champagne text-2xl font-serif mb-2" aria-hidden="true">
             ✝
           </div>
-          <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-4">
+          <p className="text-[0.7rem] uppercase tracking-[0.25em] text-olive dark:text-darksage font-bold mb-1">
             {weddingConfig.minister.sectionHeading || "The Ministry of the Ceremony"}
+          </p>
+          <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-champagne/90 mb-4">
+            Marriage Officiants
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 pt-2">
-            <div className="p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-midnight-elevated/40 border border-rose/15 dark:border-midnight-border">
-              <p className="text-xs uppercase tracking-wider text-rose dark:text-champagne font-bold mb-1">
-                {weddingConfig.minister.heading}
-              </p>
-              <h4 className="font-serif text-xl sm:text-2xl font-semibold text-plum dark:text-darktext-primary mb-1">
-                {weddingConfig.minister.name}
-              </h4>
-              <div className="w-8 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2" />
-              <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
-                {weddingConfig.minister.role}
-              </p>
+            <div className="p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-midnight-elevated/40 border border-rose/15 dark:border-midnight-border flex flex-col justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-wider text-rose dark:text-champagne font-bold mb-0.5">
+                  The Ministry of the Ceremony
+                </p>
+                <p className="text-[0.68rem] uppercase tracking-widest text-plum-soft dark:text-darktext-muted font-bold mb-2">
+                  Marriage Officiant
+                </p>
+                <h4 className="font-serif text-xl sm:text-2xl font-semibold text-plum dark:text-darktext-primary mb-1">
+                  {weddingConfig.minister.name}
+                </h4>
+              </div>
+              <div>
+                <div className="w-8 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2" />
+                <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
+                  {weddingConfig.minister.church || weddingConfig.minister.role}
+                </p>
+              </div>
             </div>
 
-            <div className="p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-midnight-elevated/40 border border-rose/15 dark:border-midnight-border">
-              <p className="text-xs uppercase tracking-wider text-rose dark:text-champagne font-bold mb-1">
-                {weddingConfig.minister.officiantHeading || 'Marriage Officiant'}
-              </p>
-              <h4 className="font-serif text-xl sm:text-2xl font-semibold text-plum dark:text-darktext-primary mb-1">
-                {weddingConfig.minister.officiantName || 'S. Gnana Jaya Prakash'}
-              </h4>
-              <div className="w-8 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2" />
-              <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
-                {weddingConfig.minister.officiantRole || 'Marriage Officiant'}
-              </p>
+            <div className="p-4 sm:p-5 rounded-2xl bg-white/70 dark:bg-midnight-elevated/40 border border-rose/15 dark:border-midnight-border flex flex-col justify-between">
+              <div>
+                <p className="text-xs uppercase tracking-wider text-rose dark:text-champagne font-bold mb-0.5">
+                  The Ministry of the Ceremony
+                </p>
+                <p className="text-[0.68rem] uppercase tracking-widest text-plum-soft dark:text-darktext-muted font-bold mb-2">
+                  Marriage Officiant
+                </p>
+                <h4 className="font-serif text-xl sm:text-2xl font-semibold text-plum dark:text-darktext-primary mb-1">
+                  {weddingConfig.minister.officiantName || 'S. Gnana Jaya Prakash'}
+                </h4>
+              </div>
+              <div>
+                <div className="w-8 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2" />
+                <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
+                  The Ministry of the Ceremony
+                </p>
+              </div>
             </div>
           </div>
         </motion.div>
