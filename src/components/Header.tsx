@@ -298,7 +298,7 @@ export const Header: React.FC = () => {
                 <div className="text-rose dark:text-champagne text-2xl font-serif" aria-hidden="true">
                   ✝
                 </div>
-                <div className="font-serif text-2xl sm:text-3xl font-medium text-plum dark:text-darktext-primary">
+                <div className="font-champagne text-2xl sm:text-3xl font-normal text-plum dark:text-darktext-primary leading-normal pb-1">
                   Mercy Havilah &amp; Vasu
                 </div>
                 <div className="h-[1.5px] w-16 bg-rose/40 dark:bg-champagne/40 mx-auto" />

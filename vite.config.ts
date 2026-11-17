@@ -81,7 +81,7 @@ export default defineConfig({
           for (const f of files) {
             const src = path.join(distAssets, f);
             const dst = path.join(srcAssets, f);
-            if (fs.statSync(src).isFile() && (f.endsWith('.js') || f.endsWith('.css') || f.endsWith('.map'))) {
+            if (fs.statSync(src).isFile()) {
               fs.copyFileSync(src, dst);
             }
           }

@@ -105,14 +105,14 @@ export const HomePage: React.FC = () => {
                 The wedding celebration of
               </p>
 
-              <h1 className="font-champagne text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-wide text-white dark:text-darktext-primary mb-4 sm:mb-6 gsap-hero-title flex flex-col items-center justify-center">
+              <h1 className="font-champagne text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-wide text-white dark:text-darktext-primary mb-5 sm:mb-7 gsap-hero-title flex flex-col items-center justify-center">
                 <span className="block leading-normal">Mercy Havilah</span>
-                <span className="block text-xl sm:text-2xl md:text-3xl text-rose dark:text-champagne font-normal font-serif my-1 sm:my-2 leading-none">&amp;</span>
+                <span className="block text-xl sm:text-2xl md:text-3xl text-rose dark:text-champagne font-normal my-1 sm:my-2 leading-none">&amp;</span>
                 <span className="block leading-normal pb-2 sm:pb-3">Vasu</span>
               </h1>
 
               {/* Launch Page Scripture: Mark 10:9 */}
-              <div className="max-w-xl mx-auto mt-4 sm:mt-5 mb-4 gsap-hero-sub">
+              <div className="max-w-xl mx-auto mt-5 sm:mt-6 mb-4 gsap-hero-sub">
                 <p className="font-serif italic text-sm sm:text-base text-cream/95 dark:text-champagne/95 leading-relaxed">
                   “Therefore what God has joined together, let no one separate.”
                 </p>
@@ -184,7 +184,7 @@ export const HomePage: React.FC = () => {
                   With grateful hearts, we invite you to celebrate with us as
                 </p>
                 <div className="my-3 sm:my-4">
-                  <span className="font-champagne text-3xl sm:text-4xl md:text-[2.65rem] text-rose dark:text-champagne font-normal tracking-wide block leading-normal py-1 select-none">
+                  <span className="font-champagne text-2xl sm:text-3xl md:text-4xl lg:text-[2.65rem] text-rose dark:text-champagne font-normal tracking-wide block leading-relaxed py-1 select-none">
                     Mercy Havilah &amp; Vasu
                   </span>
                 </div>
@@ -277,10 +277,10 @@ export const HomePage: React.FC = () => {
               <p className="text-xs uppercase tracking-widest text-rose dark:text-champagne font-bold mb-1">
                 The Bride
               </p>
-              <h3 className="font-champagne text-2xl sm:text-3xl md:text-4xl font-normal text-plum dark:text-darktext-primary leading-normal pb-2 mb-2 sm:mb-3">
+              <h3 className="font-champagne text-2xl sm:text-3xl md:text-4xl font-normal text-plum dark:text-darktext-primary leading-relaxed pb-1 mb-3 sm:mb-4">
                 {weddingConfig.brideDisplayName || "Mercy Havilah"}
               </h3>
-              <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium pt-1 sm:pt-2">
+              <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium pt-2 sm:pt-3">
                 <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] sm:text-xs uppercase tracking-wider mb-1">
                   Beloved daughter of
                 </span>
@@ -308,10 +308,10 @@ export const HomePage: React.FC = () => {
               <p className="text-xs uppercase tracking-widest text-rose dark:text-champagne font-bold mb-1">
                 The Groom
               </p>
-              <h3 className="font-champagne text-2xl sm:text-3xl md:text-4xl font-normal text-plum dark:text-darktext-primary leading-normal pb-2 mb-2 sm:mb-3">
+              <h3 className="font-champagne text-2xl sm:text-3xl md:text-4xl font-normal text-plum dark:text-darktext-primary leading-relaxed pb-1 mb-3 sm:mb-4">
                 {weddingConfig.groomDisplayName || "Vasu"}
               </h3>
-              <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium pt-1 sm:pt-2">
+              <div className="text-xs text-plum-muted dark:text-darktext-secondary font-medium pt-2 sm:pt-3">
                 <span className="block text-plum-soft dark:text-darktext-muted text-[0.68rem] sm:text-xs uppercase tracking-wider mb-1">
                   Beloved son of
                 </span>
