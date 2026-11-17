@@ -481,57 +481,6 @@ export const HomePage: React.FC = () => {
           {/* A Special Note from the Bride */}
           <BrideGreetingCard className="max-w-3xl mx-auto" />
 
-          {/* MINISTERS & MARRIAGE OFFICIANT */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="p-7 sm:p-9 rounded-3xl bg-cream-soft/60 dark:bg-midnight-card border border-rose/30 dark:border-midnight-border shadow-wedding text-center max-w-3xl mx-auto transition-colors"
-          >
-            <h3 className="text-xs sm:text-sm uppercase tracking-[0.25em] text-olive dark:text-champagne font-bold mb-6">
-              ✝ SOLEMNIZATION OF MARRIAGE ✝
-            </h3>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 pt-2">
-              {/* Officiant 1 */}
-              <div className="p-6 sm:p-7 rounded-2xl bg-white/70 dark:bg-midnight-elevated/40 border border-rose/15 dark:border-midnight-border flex flex-col justify-between">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-rose dark:text-champagne font-bold mb-2">
-                    MARRIAGE OFFICIANT
-                  </p>
-                  <h4 className="font-serif text-xl sm:text-2xl font-semibold text-plum dark:text-darktext-primary mb-1">
-                    {weddingConfig.minister.name}
-                  </h4>
-                </div>
-                <div>
-                  <div className="w-12 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-3" />
-                  <p className="font-serif italic text-sm text-plum-muted dark:text-darktext-secondary">
-                    {weddingConfig.minister.church || weddingConfig.minister.role}
-                  </p>
-                </div>
-              </div>
-
-              {/* Officiant 2 */}
-              <div className="p-6 sm:p-7 rounded-2xl bg-white/70 dark:bg-midnight-elevated/40 border border-rose/15 dark:border-midnight-border flex flex-col justify-between">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.2em] text-rose dark:text-champagne font-bold mb-2">
-                    MARRIAGE OFFICIANT
-                  </p>
-                  <h4 className="font-serif text-xl sm:text-2xl font-semibold text-plum dark:text-darktext-primary mb-1">
-                    {weddingConfig.minister.officiantName || 'Pastor S. Gnana Jaya Prakash'}
-                  </h4>
-                </div>
-                <div>
-                  <div className="w-12 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-3" />
-                  <p className="font-serif italic text-sm text-plum-muted dark:text-darktext-secondary">
-                    {weddingConfig.minister.officiantChurch || 'Bethlehem Gospel Ministries'}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
           {/* EVENT 1: WEDDING CEREMONY */}
           <motion.article
             initial={{ opacity: 0, y: 25 }}
@@ -565,6 +514,50 @@ export const HomePage: React.FC = () => {
                   <p className="text-sm text-plum-muted dark:text-darktext-secondary">
                     {ceremony.address}
                   </p>
+                </div>
+              </div>
+
+              {/* Ministers & Solemnization of Marriage */}
+              <div className="p-6 rounded-2xl bg-cream-soft/80 dark:bg-midnight-elevated/40 border border-rose/20 dark:border-midnight-border">
+                <h4 className="text-xs uppercase tracking-[0.22em] text-olive dark:text-champagne font-bold mb-4 text-center">
+                  ✝ SOLEMNIZATION OF MARRIAGE ✝
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {/* Officiant 1 */}
+                  <div className="p-5 rounded-xl bg-white/80 dark:bg-midnight-card/80 border border-rose/15 dark:border-midnight-border text-center flex flex-col justify-between">
+                    <div>
+                      <p className="text-[0.68rem] uppercase tracking-[0.2em] text-rose dark:text-champagne font-bold mb-1.5">
+                        MARRIAGE OFFICIANT
+                      </p>
+                      <h5 className="font-serif text-lg sm:text-xl font-semibold text-plum dark:text-darktext-primary mb-1">
+                        {weddingConfig.minister.name}
+                      </h5>
+                    </div>
+                    <div>
+                      <div className="w-10 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2.5" />
+                      <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
+                        {weddingConfig.minister.church || weddingConfig.minister.role}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Officiant 2 */}
+                  <div className="p-5 rounded-xl bg-white/80 dark:bg-midnight-card/80 border border-rose/15 dark:border-midnight-border text-center flex flex-col justify-between">
+                    <div>
+                      <p className="text-[0.68rem] uppercase tracking-[0.2em] text-rose dark:text-champagne font-bold mb-1.5">
+                        MARRIAGE OFFICIANT
+                      </p>
+                      <h5 className="font-serif text-lg sm:text-xl font-semibold text-plum dark:text-darktext-primary mb-1">
+                        {weddingConfig.minister.officiantName || 'Pastor S. Gnana Jaya Prakash'}
+                      </h5>
+                    </div>
+                    <div>
+                      <div className="w-10 h-[1px] bg-rose/40 dark:bg-champagne/40 mx-auto my-2.5" />
+                      <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary">
+                        {weddingConfig.minister.officiantChurch || 'Bethlehem Gospel Ministries'}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 

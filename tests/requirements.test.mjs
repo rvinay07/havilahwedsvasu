@@ -199,4 +199,21 @@ test('Strict Business Rules & Prohibitions Verification', async (t) => {
     assert.match(detailsContent, /RECEPTION OFFICIANT/, 'WeddingDetailsPage must label reception officiant');
     assert.match(detailsContent, /CHIEF GUEST/, 'WeddingDetailsPage must label chief guest');
   });
+
+  await t.test('Solemnization of marriage details are placed above wedding ceremony countdown on Home and Wedding Details pages', () => {
+    const homeContent = fs.readFileSync(path.join(ROOT, 'src/pages/HomePage.tsx'), 'utf8');
+    const detailsContent = fs.readFileSync(path.join(ROOT, 'src/pages/WeddingDetailsPage.tsx'), 'utf8');
+
+    // HomePage
+    const homeSolemnizationIdx = homeContent.indexOf('SOLEMNIZATION OF MARRIAGE');
+    const homeCountdownIdx = homeContent.indexOf('Countdown to Holy Matrimony');
+    assert.ok(homeSolemnizationIdx !== -1 && homeCountdownIdx !== -1, 'HomePage must contain both solemnization and ceremony countdown');
+    assert.ok(homeSolemnizationIdx < homeCountdownIdx, 'Solemnization details must be placed above ceremony countdown on HomePage');
+
+    // WeddingDetailsPage
+    const detailsSolemnizationIdx = detailsContent.indexOf('SOLEMNIZATION OF MARRIAGE');
+    const detailsCountdownIdx = detailsContent.indexOf('Countdown to Holy Matrimony');
+    assert.ok(detailsSolemnizationIdx !== -1 && detailsCountdownIdx !== -1, 'WeddingDetailsPage must contain both solemnization and ceremony countdown');
+    assert.ok(detailsSolemnizationIdx < detailsCountdownIdx, 'Solemnization details must be placed above ceremony countdown on WeddingDetailsPage');
+  });
 });
