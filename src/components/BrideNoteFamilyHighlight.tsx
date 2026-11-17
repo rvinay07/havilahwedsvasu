@@ -76,13 +76,10 @@ export const BrideNoteFamilyHighlight: React.FC<BrideNoteFamilyHighlightProps> =
             </div>
 
             {/* Photo Caption Card */}
-            <div className="mt-4 p-4 rounded-xl bg-white/75 dark:bg-midnight-elevated/50 border border-rose/15 dark:border-midnight-border text-center">
+            <div className="mt-4 p-3.5 rounded-xl bg-white/75 dark:bg-midnight-elevated/50 border border-rose/15 dark:border-midnight-border text-center">
               <h4 className="font-serif text-base sm:text-lg font-semibold text-plum dark:text-darktext-primary">
                 Friends Foundation Family
               </h4>
-              <p className="font-serif italic text-xs sm:text-sm text-plum-muted dark:text-darktext-secondary mt-1">
-                Pic : Location &amp; date
-              </p>
             </div>
           </div>
 
