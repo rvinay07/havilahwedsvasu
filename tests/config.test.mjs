@@ -52,10 +52,10 @@ test('Centralized Wedding Configuration Integrity', async (t) => {
   });
 
   await t.test('Contact numbers contain all three family numbers with correct designations', () => {
-    assert.match(content, /9963541004/, 'Must contain Ranjit phone number');
+    assert.match(content, /9963541004/, 'Must contain Ranjith phone number');
     assert.match(content, /7989107503/, 'Must contain Prakash phone number');
     assert.match(content, /9059318618/, 'Must contain Akhil phone number');
-    assert.match(content, /Ranjit/i, 'Must label Ranjit');
+    assert.match(content, /Ranjith/i, 'Must label Ranjith');
     assert.match(content, /Prakash/i, 'Must label Prakash');
     assert.match(content, /Akhil/i, 'Must label Akhil');
   });

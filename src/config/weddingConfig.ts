@@ -11,7 +11,7 @@ export const weddingConfig = {
   brideMother: "S.ESTHER",
   
   contactNumbers: [
-    { label: "Ranjit", number: "+91 9963541004", tel: "+919963541004" },
+    { label: "Ranjith", number: "+91 9963541004", tel: "+919963541004" },
     { label: "Prakash", number: "+91 7989107503", tel: "+917989107503" },
     { label: "Akhil", number: "+91 9059318618", tel: "+919059318618" }
   ],
@@ -215,7 +215,7 @@ export function getWeddingShareMessage(): string {
     `━━━━━━━━━━━━━━━━━━━━`,
     ``,
     `📞 Contacts:`,
-    `• Ranjit: +91 9963541004`,
+    `• Ranjith: +91 9963541004`,
     `• Prakash: +91 7989107503`,
     `• Akhil: +91 9059318618`,
     `━━━━━━━━━━━━━━━━━━━━`,
